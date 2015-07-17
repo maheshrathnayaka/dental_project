@@ -34,7 +34,6 @@
     <!-- END HEAD -->
     <!-- BEGIN BODY -->
     <body class="fixed-top">
-        <?php echo base_url(); ?>
         <!-- BEGIN HEADER -->
         <div id="header" class="navbar navbar-inverse navbar-fixed-top">
             <!-- BEGIN TOP NAVIGATION BAR -->

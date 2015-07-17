@@ -34,7 +34,6 @@
     <!-- END HEAD -->
     <!-- BEGIN BODY -->
     <body class="fixed-top">
-        <?php echo base_url(); ?>
         <!-- BEGIN HEADER -->
         <div id="header" class="navbar navbar-inverse navbar-fixed-top">
             <!-- BEGIN TOP NAVIGATION BAR -->
@@ -122,7 +121,128 @@
                     <!-- END PAGE HEADER-->
                     <!-- BEGIN PAGE CONTENT-->
                     <div class="row-fluid">
-                        
+                        <div class="metro-nav metro-fix-view">
+                    <div class="metro-nav-block nav-block-green long">
+                        <a href="#" class="text-center" data-original-title="">
+                            <span class="value">
+                                <i class="icon-user"></i>
+                                329
+                            </span>
+                            <div class="status">New User</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-orange">
+                        <a href="#" data-original-title="">
+                            <i class="icon-envelope"></i>
+                            <div class="info">321</div>
+                            <div class="status">Mail</div>
+                        </a>
+                    </div>
+
+                   <div class="metro-nav-block nav-light-yellow">
+                       <a href="#" data-original-title="">
+                           <i class="icon-comments-alt"></i>
+                           <div class="info">49</div>
+                           <div class="status">Comments</div>
+                       </a>
+                   </div>
+                    <div class="metro-nav-block nav-block-blue double">
+                        <a href="#" data-original-title="">
+                            <i class="icon-tasks"></i>
+                            <div class="info">$37624</div>
+                            <div class="status">Stock</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-yellow">
+                        <a href="#" data-original-title="">
+                            <i class="icon-tags"></i>
+                            <div class="info">+970</div>
+                            <div class="status">Sales</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-grey">
+                        <a href="#" class="text-center" data-original-title="">
+                            <i class="icon-phone"></i>
+                            <div class="status">Phone</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-red double">
+                        <a href="#" data-original-title="">
+                            <i class="icon-bar-chart"></i>
+                            <div class="info">+288</div>
+                            <div class="status">Update</div>
+                        </a>
+                    </div>
+
+                    <div class="metro-nav-block nav-olive">
+                        <a href="#" data-original-title="" class="text-center">
+                            <i class="icon-star-empty"></i>
+                            <div class="status">Rattings</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-block-purple double">
+                        <a href="#" data-original-title="">
+                            <i class="icon-eye-open"></i>
+                            <div class="info">+8914</div>
+                            <div class="status">Unique Visitor</div>
+                        </a>
+                    </div>
+
+                    <div class="metro-nav-block nav-deep-red">
+                        <a href="#" data-original-title="">
+                            <i class="icon-shopping-cart"></i>
+                            <div class="info">29</div>
+                            <div class="status">New Order</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-deep-gray">
+                        <a href="#" data-original-title="">
+                            <i class="icon-remove-sign"></i>
+                            <div class="info">34 </div>
+                            <div class="status">Cancelled</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-light-purple">
+                        <a href="#" data-original-title="" class="text-center">
+                            <i class="icon-cogs"></i>
+                            <div class="status">Settings</div>
+                        </a>
+                    </div>
+
+                    <div class="metro-nav-block nav-light-brown">
+                        <a href="#" data-original-title="">
+                            <i class="icon-shopping-cart"></i>
+                            <div class="info">29</div>
+                            <div class="status">New Order</div>
+                        </a>
+                    </div>
+
+                    <div class="metro-nav-block nav-deep-terques double">
+                        <a href="#" data-original-title="">
+                            <i class="icon-external-link"></i>
+                            <div class="info">$53412</div>
+                            <div class="status">Total Profit</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-light-blue ">
+                        <a href="#" class="text-center" data-original-title="">
+                            <i class="icon-dashboard"></i>
+                            <div class="status">Dashboard</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-deep-thistle">
+                        <a href="#" class="text-center" data-original-title="">
+                            <i class="icon-signout"></i>
+                            <div class="status">Sign Out</div>
+                        </a>
+                    </div>
+                    <div class="metro-nav-block nav-light-green">
+                        <a href="#" class="text-center" data-original-title="">
+                            <i class=" icon-puzzle-piece"></i>
+                            <div class="status">Warning</div>
+                        </a>
+                    </div>
+                </div>
                     </div>
                     <!-- END PAGE CONTENT-->
                 </div>
