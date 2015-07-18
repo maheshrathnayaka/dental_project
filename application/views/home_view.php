@@ -9,24 +9,24 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
-        <link href="<?php echo base_url(); ?>/assets/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>/assets/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>/assets/assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>/assets/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>/assets/css/style-responsive.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>/assets/css/style-default.css" rel="stylesheet" id="style_color" />
-        <link href="<?php echo base_url(); ?>/assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/uniform/css/uniform.default.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/chosen-bootstrap/chosen/chosen.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/jquery-tags-input/jquery.tagsinput.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/clockface/css/clockface.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/bootstrap-datepicker/css/datepicker.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/bootstrap-timepicker/compiled/timepicker.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/assets/bootstrap-colorpicker/css/colorpicker.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/ assets/bootstrap-daterangepicker/daterangepicker.css" />
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/css/style-responsive.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/css/style-default.css" rel="stylesheet" id="style_color" />
+        <link href="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/uniform/css/uniform.default.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/jquery-tags-input/jquery.tagsinput.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/clockface/css/clockface.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-datepicker/css/datepicker.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-timepicker/compiled/timepicker.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/css/colorpicker.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/ assets/bootstrap-daterangepicker/daterangepicker.css" />
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
 
@@ -46,7 +46,7 @@
                     <!--END SIDEBAR TOGGLE-->
                     <!-- BEGIN LOGO -->
                     <a class="brand" href="<?php echo base_url(); ?>index.php">
-                        <img src="<?php echo base_url(); ?>/assets/img/logo.png" alt="DentAssist" />
+                        <img src="<?php echo base_url(); ?>assets/img/logo.png" alt="DentAssist" />
                     </a>
                     <!-- END LOGO -->
                     <!-- BEGIN RESPONSIVE MENU TOGGLER -->
@@ -70,7 +70,7 @@
                     <ul class="sidebar-menu">
                         <li class="sub-menu">
                             <a href="<?php echo base_url(); ?>index.php/registration" class="">
-                                <i class="icon-pencil"></i>
+                                <i class="icon-user"></i>
                                 <span>Patient Registration</span>
                             </a>
                         </li>
@@ -81,15 +81,15 @@
                             </a>
                         </li>
                         <li class="sub-menu">
-                            <a href="<?php echo base_url(); ?>index.php/knowladge" class="">
+                            <a href="<?php echo base_url(); ?>index.php/knowledge" class="">
                                 <i class="icon-link"></i>
-                                <span>Knowladge Base</span>
+                                <span>Knowledge Base</span>
                             </a>
                         </li>
                         <li class="sub-menu">
                             <a href="<?php echo base_url(); ?>index.php/telehealth" class="">
                                 <i class="icon-camera"></i>
-                                <span>Telehealth</span>
+                                <span>Tele-health</span>
                             </a>
                         </li>
                         <li class="sub-menu">
@@ -122,127 +122,57 @@
                     <!-- BEGIN PAGE CONTENT-->
                     <div class="row-fluid">
                         <div class="metro-nav metro-fix-view">
-                    <div class="metro-nav-block nav-block-green long">
-                        <a href="#" class="text-center" data-original-title="">
-                            <span class="value">
-                                <i class="icon-user"></i>
-                                329
-                            </span>
-                            <div class="status">New User</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-orange">
-                        <a href="#" data-original-title="">
-                            <i class="icon-envelope"></i>
-                            <div class="info">321</div>
-                            <div class="status">Mail</div>
-                        </a>
-                    </div>
-
-                   <div class="metro-nav-block nav-light-yellow">
-                       <a href="#" data-original-title="">
-                           <i class="icon-comments-alt"></i>
-                           <div class="info">49</div>
-                           <div class="status">Comments</div>
-                       </a>
-                   </div>
-                    <div class="metro-nav-block nav-block-blue double">
-                        <a href="#" data-original-title="">
-                            <i class="icon-tasks"></i>
-                            <div class="info">$37624</div>
-                            <div class="status">Stock</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-yellow">
-                        <a href="#" data-original-title="">
-                            <i class="icon-tags"></i>
-                            <div class="info">+970</div>
-                            <div class="status">Sales</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-grey">
-                        <a href="#" class="text-center" data-original-title="">
-                            <i class="icon-phone"></i>
-                            <div class="status">Phone</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-red double">
-                        <a href="#" data-original-title="">
-                            <i class="icon-bar-chart"></i>
-                            <div class="info">+288</div>
-                            <div class="status">Update</div>
-                        </a>
-                    </div>
-
-                    <div class="metro-nav-block nav-olive">
-                        <a href="#" data-original-title="" class="text-center">
-                            <i class="icon-star-empty"></i>
-                            <div class="status">Rattings</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-purple double">
-                        <a href="#" data-original-title="">
-                            <i class="icon-eye-open"></i>
-                            <div class="info">+8914</div>
-                            <div class="status">Unique Visitor</div>
-                        </a>
-                    </div>
-
-                    <div class="metro-nav-block nav-deep-red">
-                        <a href="#" data-original-title="">
-                            <i class="icon-shopping-cart"></i>
-                            <div class="info">29</div>
-                            <div class="status">New Order</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-deep-gray">
-                        <a href="#" data-original-title="">
-                            <i class="icon-remove-sign"></i>
-                            <div class="info">34 </div>
-                            <div class="status">Cancelled</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-light-purple">
-                        <a href="#" data-original-title="" class="text-center">
-                            <i class="icon-cogs"></i>
-                            <div class="status">Settings</div>
-                        </a>
-                    </div>
-
-                    <div class="metro-nav-block nav-light-brown">
-                        <a href="#" data-original-title="">
-                            <i class="icon-shopping-cart"></i>
-                            <div class="info">29</div>
-                            <div class="status">New Order</div>
-                        </a>
-                    </div>
-
-                    <div class="metro-nav-block nav-deep-terques double">
-                        <a href="#" data-original-title="">
-                            <i class="icon-external-link"></i>
-                            <div class="info">$53412</div>
-                            <div class="status">Total Profit</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-light-blue ">
-                        <a href="#" class="text-center" data-original-title="">
-                            <i class="icon-dashboard"></i>
-                            <div class="status">Dashboard</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-deep-thistle">
-                        <a href="#" class="text-center" data-original-title="">
-                            <i class="icon-signout"></i>
-                            <div class="status">Sign Out</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-light-green">
-                        <a href="#" class="text-center" data-original-title="">
-                            <i class=" icon-puzzle-piece"></i>
-                            <div class="status">Warning</div>
-                        </a>
-                    </div>
-                </div>
+                            <div class="metro-nav-block nav-block-green long">
+                                <a href="<?php echo base_url(); ?>index.php/registration" class="text-center" data-original-title="">
+                                    <span class="value">
+                                        <i class="icon-user"></i>
+                                    </span>
+                                    <div class="status"><h3><b>Patient Registration</b></h3></div>
+                                </a>
+                            </div>
+                            <div class="metro-nav-block nav-block-orange long">
+                                <a href="<?php echo base_url(); ?>index.php/history" class="text-center" data-original-title="">
+                                    <span class="value">
+                                        <i class="icon-book"></i>
+                                    </span>
+                                    <div class="status"><h3><b>Dental History</b></h3></div>
+                                </a>
+                            </div>
+                            <div class="metro-nav-block nav-block-purple long">
+                                <a href="<?php echo base_url(); ?>index.php/knowledge" class="text-center" data-original-title="">
+                                    <span class="value">
+                                        <i class="icon-link"></i>
+                                    </span>
+                                    <div class="status"><h3><b>Knowledge Base</b></h3></div>
+                                </a>
+                            </div>
+                            <div class="metro-nav-block nav-block-yellow long">
+                                <a href="<?php echo base_url(); ?>index.php/telehealth" class="text-center" data-original-title="">
+                                    <span class="value">
+                                        <i class="icon-camera"></i>
+                                    </span>
+                                    <div class="status"><h3><b>Tele-health</b></h3></div>
+                                </a>
+                            </div>
+                            <div class="metro-nav-block nav-block-blue double">
+                                <a href="<?php echo base_url(); ?>index.php/contact" data-original-title="">
+                                    <i class="icon-bullhorn"></i>
+                                    <div class="status"><h4><b>Contact Us</b></h4></div>
+                                </a>
+                            </div>                                                        
+                            <div class="metro-nav-block nav-block-red double">
+                                <a href="<?php echo base_url(); ?>index.php/about" data-original-title="">
+                                    <i class="icon-bookmark"></i>
+                                    <div class="status"><h4><b>About Us</b></h4></div>
+                                </a>
+                            </div>
+                            <div class="metro-nav-block nav-deep-red double">
+                                <a href="<?php echo base_url(); ?>index.php/login" data-original-title="">
+                                    <i class="icon-unlock-alt"></i>
+                                    <div class="status"><h4><b>Login</b></h4></div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <!-- END PAGE CONTENT-->
                 </div>
@@ -260,32 +190,32 @@
 
         <!-- BEGIN JAVASCRIPTS -->
         <!-- Load javascripts at bottom, this will reduce page load time -->
-        <script src="<?php echo base_url(); ?>/assets/js/jquery-1.8.3.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/ckeditor/ckeditor.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap/js/bootstrap-fileupload.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.blockui.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/ckeditor/ckeditor.js"></script>
+        <script src="<?php echo base_url(); ?>assets/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap/js/bootstrap-fileupload.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery.blockui.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/jQuery.dualListBox-1.3.js" language="javascript" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jQuery.dualListBox-1.3.js" language="javascript" type="text/javascript"></script>
 
 
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/uniform/jquery.uniform.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/clockface/js/clockface.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-daterangepicker/date.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/assets/fancybox/source/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/uniform/jquery.uniform.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/clockface/js/clockface.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/date.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.pack.js"></script>
 
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.scrollTo.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery.scrollTo.min.js"></script>
 
         <!-- ie8 fixes -->
         <!--[if lt IE 9]>
@@ -294,14 +224,15 @@
         <![endif]-->
 
         <!--common script for all pages-->
-        <script src="<?php echo base_url(); ?>/assets/js/common-scripts.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/common-scripts.js"></script>
         <!--script for this page-->
-        <script src="<?php echo base_url(); ?>/assets/js/form-component.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/form-component.js"></script>
         <!-- END JAVASCRIPTS -->
         <script language="javascript" type="text/javascript">
             $(function() {
                 $.configureBoxes();
             });
+
         </script>
     </body>
     <!-- END BODY -->
