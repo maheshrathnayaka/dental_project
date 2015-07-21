@@ -17,17 +17,17 @@
         <link href="<?php echo base_url(); ?>assets/css/style-responsive.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>assets/css/style-default.css" rel="stylesheet" id="style_color" />
         <link href="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/uniform/css/uniform.default.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/jquery-tags-input/jquery.tagsinput.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/clockface/css/clockface.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-datepicker/css/datepicker.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-timepicker/compiled/timepicker.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/css/colorpicker.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/ assets/bootstrap-daterangepicker/daterangepicker.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link href="<?php echo base_url(); ?>assets/assets/uniform/css/uniform.default.css" />
+        <link href="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/jquery-tags-input/jquery.tagsinput.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/clockface/css/clockface.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap-timepicker/compiled/timepicker.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>assets/ assets/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
 
 
     </head>
