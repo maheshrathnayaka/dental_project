@@ -5,7 +5,7 @@
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8" />
-        <title>DentAssist - Patient Registration</title>
+        <title>DentAssist - Tele-health</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -131,9 +131,9 @@
                     <div class="row-fluid">
                         <div class="span12">
                             <!-- BEGIN BLANK PAGE PORTLET-->
-                            <div class="widget green">
+                            <div class="widget yellow">
                                 <div class="widget-title">
-                                    <h4><i class="icon-edit"></i> Patient Regisration</h4>
+                                    <h4><i class="icon-edit"></i> Tele-health</h4>
                                     <span class="tools">
                                         <a href="javascript:;" class="icon-chevron-down"></a>
                                     </span>
