@@ -7,17 +7,17 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class History extends CI_Controller
+class Channeling extends CI_Controller
 {
 
     public function index()
     {
         $dynamic_data = array(
-            'title' => 'Dental History'
+            'title' => 'Channeling'
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');
-        $this->load->view('core/history_view');
+        $this->load->view('core/channeling_view');
         $this->load->view('common/footer');
     }
 }

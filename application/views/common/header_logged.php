@@ -1,89 +1,76 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+    <meta charset="utf-8"/>
+    <title><?php echo $title ?></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/css/style-responsive.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/css/style-default.css" rel="stylesheet" id="style_color"/>
+    <link href="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/assets/uniform/css/uniform.default.css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/jquery-tags-input/jquery.tagsinput.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/clockface/css/clockface.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap-datepicker/css/datepicker.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap-timepicker/compiled/timepicker.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet"
+          type="text/css"/>
+    <link
+        href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css"
+        rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/ assets/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
 </head>
-<body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+<!-- BEGIN HEADER -->
+<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <!--BEGIN SIDEBAR TOGGLE-->
+            <div class="sidebar-toggle-box hidden-phone">
+                <div class="icon-reorder tooltips" data-placement="right" data-original-title="Toggle Menu"></div>
+            </div>
+            <!--END SIDEBAR TOGGLE-->
+            <!-- BEGIN LOGO -->
+            <a class="brand" href="<?php echo base_url(); ?>index.php">
+                <img src="<?php echo base_url(); ?>assets/img/logo.png" alt="DentAssist"/>
+            </a>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse"
+               data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION BAR -->
 </div>
-
-</body>
-</html>
+<!-- END HEADER -->
+<!-- BEGIN CONTAINER -->
+<div id="container" class="row-fluid">
