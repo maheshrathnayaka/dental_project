@@ -12,6 +12,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
+    <link href="<?php echo base_url(); ?>assets/img/favicon.gif" rel="icon" type="image/gif">
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet"/>
@@ -37,7 +38,7 @@
     <link
         href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css"
         rel="stylesheet"/>
-    <link href="<?php echo base_url(); ?>assets/ assets/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"
           type="text/css"/>
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
 </head>

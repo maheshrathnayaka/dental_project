@@ -47,8 +47,8 @@
 
 <!-- ie8 fixes -->
 <!--[if lt IE 9]>
-<script src="js/excanvas.js"></script>
-<script src="js/respond.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/excanvas.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/respond.js"></script>
 <![endif]-->
 
 <!--common script for all pages-->

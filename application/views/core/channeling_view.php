@@ -26,7 +26,7 @@
                                 <?php
                                 foreach($channeling_data as $element){?>
                                     <div class="metro-nav-block nav-deep-red">
-                                    <a href="#" data-original-title="">
+                                    <a href="<?php echo base_url(); ?>index.php/channeling/profile/<?php echo $element["P_ID"]; ?>" data-original-title="">
                                         <div class="text-center"><h2><b><?php echo $element["channel_number"]; ?></b></h2></div>
                                         <div class="status"><?php echo $element["patient_first_name"]; ?></div>
                                     </a>
