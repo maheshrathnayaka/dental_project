@@ -1,5 +1,4 @@
-# dental_project
-Smart DentAssist - Final Year Project (Ongoing)
+# Smart DentAssist - Final Year Project (Ongoing)
 
 Database - General
 ``````````````````
