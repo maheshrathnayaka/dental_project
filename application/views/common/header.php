@@ -12,7 +12,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
-    <link href="<?php echo base_url(); ?>assets/img/favicon.gif" rel="icon" type="image/gif">
+    <link href="<?php echo base_url(); ?>assets/img/favicon.png" rel="icon" type="image/png">
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet"/>
@@ -20,6 +20,7 @@
     <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/css/style-responsive.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/css/style-default.css" rel="stylesheet" id="style_color"/>
+    <link href="<?php echo base_url(); ?>assets/assets/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/uniform/css/uniform.default.css"/>
     <link href="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.css" rel="stylesheet"
@@ -35,11 +36,11 @@
           type="text/css"/>
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet"
           type="text/css"/>
-    <link
-        href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css"
+    <link href="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css"
         rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"
           type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet"/>
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
 </head>
 <!-- END HEAD -->

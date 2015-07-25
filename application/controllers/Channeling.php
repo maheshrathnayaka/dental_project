@@ -32,17 +32,30 @@ class Channeling extends CI_Controller
         return $this->channeling_model->get_channel_queue();
     }
 
+    public function filter_health_history($column, $value){
+        return $column.':'.$value.'-';
+    }
+
     public function profile($pid){
         $patient_data = $this->channeling_model->get_patient_profile($pid);
         $address_data = $this->channeling_model->get_patient_address($pid);
         $contact_data = $this->channeling_model->get_patient_contact($pid);
         $channel_data = $this->channeling_model->get_channel_info($pid);
+        $age_data = $this->channeling_model->get_patient_age($pid);
+        $dental_health_history_data = $this->channeling_model->get_dental_health_history($pid);
+        /*$history_data='';
+        foreach($dental_health_history_data as $key => $history){
+            $history_data .= $this->filter_health_history($key, $history);
+        }
+        echo $history_data;*/
         $dynamic_data = array(
             'title' => 'Patient Profile',
             'profile_data' => $patient_data,
             'address_data' => $address_data,
             'contact_data' => $contact_data,
-            'channel_data' => $channel_data
+            'channel_data' => $channel_data,
+            'age_data' => $age_data,
+            'dental_health_history_data' => $dental_health_history_data
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');

@@ -132,14 +132,10 @@
                                         </div>
                                     </div>
                                     <div class="row-fluid">
-                                        <div class="span4">
+                                        <div class="span4" id="sandbox-container">
                                             <div class="control-group">
-                                                <label class="control-label"><b>Occupation</b></label>
-
-                                                <div class="controls controls-row">
-                                                    <input type="text" class="input-block-level"
-                                                           placeholder="occupation here..." name="" tabindex="5">
-                                                </div>
+                                                <label class="control-label"><b>Birthday</b></label>
+                                                <input id="dp1" type="text" placeholder="birthday here..." size="16" class="m-ctrl-medium span12">
                                             </div>
                                         </div>
                                         <div class="span4">
@@ -164,7 +160,17 @@
                                         </div>
                                     </div>
                                     <div class="row-fluid">
-                                        <div class="span6">
+                                        <div class="span4">
+                                            <div class="control-group">
+                                                <label class="control-label"><b>Occupation</b></label>
+
+                                                <div class="controls controls-row">
+                                                    <input type="text" class="input-block-level"
+                                                           placeholder="occupation here..." name="" tabindex="5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="span4">
                                             <div class="control-group">
                                                 <label class="control-label"><b>Main reason for today’s
                                                         visit</b></label>
@@ -177,7 +183,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="span6">
+                                        <div class="span4">
                                             <div class="control-group">
                                                 <label class="control-label"><b>Known Allergies</b></label>
 

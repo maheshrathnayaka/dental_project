@@ -19,24 +19,43 @@
                            </span>
                     </div>
                     <div class="widget-body">
-                        <!--BEGIN METRO STATES-->
-                        <div class="row-fluid">
-                            <!--BEGIN METRO STATES-->
-                            <div class="metro-nav metro-fix-view">
-                                <?php
-                                foreach($channeling_data as $element){?>
-                                    <div class="metro-nav-block nav-deep-red">
-                                    <a href="<?php echo base_url(); ?>index.php/channeling/profile/<?php echo $element["P_ID"]; ?>" data-original-title="">
-                                        <div class="text-center"><h2><b><?php echo $element["channel_number"]; ?></b></h2></div>
-                                        <div class="status"><?php echo $element["patient_first_name"]; ?></div>
-                                    </a>
-                                </div>
-                                <?php
-                                }
-                                ?>
+                        <?php if (empty($channeling_data)) {
+                            ?>
+                            <div class="alert alert-block alert-info fade in">
+                                <button data-dismiss="alert" class="close" type="button">×</button>
+                                <h4 class="alert-heading">Oops !</h4>
+
+                                <p>
+                                    Currently patient queue is empty
+                                </p>
                             </div>
-                            <!--END METRO STATES-->
-                        </div>
+                            <?php
+                        } else { ?>
+
+                            <!--BEGIN METRO STATES-->
+                            <div class="row-fluid">
+                                <!--BEGIN METRO STATES-->
+                                <div class="metro-nav metro-fix-view">
+                                    <?php
+                                    foreach ($channeling_data as $element) {
+                                        ?>
+                                        <div class="metro-nav-block nav-deep-red">
+                                            <a href="<?php echo base_url(); ?>index.php/channeling/profile/<?php echo $element["P_ID"]; ?>"
+                                               data-original-title="">
+                                                <div class="text-center"><h2>
+                                                        <b><?php echo $element["channel_number"]; ?></b></h2></div>
+                                                <div class="status"><?php echo $element["patient_first_name"]; ?></div>
+                                            </a>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                                <!--END METRO STATES-->
+                            </div>
+                            <?php
+                        }
+                        ?>
                         <div class="clearfix"></div>
                         <!--END METRO STATES-->
                     </div>
