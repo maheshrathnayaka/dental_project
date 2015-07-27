@@ -23,9 +23,6 @@
                         <div class="row-fluid">
                             <!-- BEGIN PROFILE PORTLET-->
                             <div class=" profile span12">
-                                <!--                                <div class="span2">-->
-                                <!--                                    -->
-                                <!--                                </div>-->
                                 <div class="span12">
                                     <div class="profile-head" style="min-height: 50px;">
                                         <div class="span5">
@@ -159,8 +156,6 @@
                                                     <button data-dismiss="alert" class="close" type="button">x</button>
                                                     <h4 class="alert-heading text-center">Oops ! No medical health
                                                         history data found for this patient</h4>
-
-
                                                 </div>
                                                 <?php
                                             } else {
@@ -191,27 +186,41 @@
                                                     <?php
                                                     if ($dental_health_history_womens_health_data['Are_you_pregnant'] == 1) {
                                                         ?>
-                                                        <div class="space6">
+                                                        <div class="span6">
                                                             <h4 class="text-warning bold">Pregnancy Details</h4>
-                                                            <h4 class="text-warning">Number of weeks
+                                                            <h4 class="bold">Number of weeks
                                                                 : <?php echo $dental_health_history_womens_health_data["Number_of_weeks"]; ?>
                                                             </h4>
-                                                            <h4 class="text-warning">Total number of pregnancies
+                                                            <h4 class="bold">Total number of pregnancies
                                                                 : <?php echo $dental_health_history_womens_health_data["Total_number_of_pregnancies"]; ?>
                                                             </h4>
-                                                            <h4 class="text-warning">Number of births
+                                                            <h4 class="bold">Number of births
                                                                 : <?php echo $dental_health_history_womens_health_data["Number_of_births"]; ?>
-                                                            </h4></div>
+                                                            </h4>
+                                                        </div>
                                                         <?php
                                                     }
                                                     if ($dental_health_history_womens_health_data['Nursing'] == 1) {
+                                                        ?>
+                                                        <div class="span6">
+                                                            <h4 class="text-warning bold">Nursing Details</h4>
+                                                            <h4 class="bold">Date of last menstrual period
+                                                                : <?php echo $dental_health_history_womens_health_data["if_you_are_still_menstruating"]; ?>
+                                                            </h4>
+                                                            <h4 class="bold">Age at beginning of periods
+                                                                : <?php echo $dental_health_history_womens_health_data["Age_at_beginning_of_periods"]; ?>
+                                                            </h4>
+                                                            <h4 class="bold">Age at end of periods
+                                                                : <?php echo $dental_health_history_womens_health_data["Age_at_end_of_periods"]; ?>
+                                                            </h4>
+                                                        </div>
+                                                        <?php
                                                     }
                                                     ?>
                                                 </div>
                                                 <?php
                                             }
                                             ?>
-
 
                                             <h3 class="text-info bold">Past Treatments</h3>
                                             <?php
@@ -221,8 +230,6 @@
                                                     <button data-dismiss="alert" class="close" type="button">x</button>
                                                     <h4 class="alert-heading text-center">Oops ! No past treatment data
                                                         found for this patient</h4>
-
-
                                                 </div>
                                                 <?php
                                             } else {
@@ -237,7 +244,6 @@
                                                 }
                                             }
                                             ?>
-
 
                                             <div class="space5"></div>
                                             <div class="text-left">
@@ -306,61 +312,12 @@
                                             <div class="space20"></div>
 
                                         </div>
-                                        <!--<div class="span4">
-                                            <div class="profile-side-box red">
-                                                <h1>Recommended By</h1>
-                                                <div class="desk">
-                                                    <div class="row-fluid">
-                                                        <div class="span4">
-                                                            <div class="text-center">
-                                                                <a href="#"><img src="img/avatar1.jpg" alt=""></a>
-                                                                <p><a href="#">Fill Martin</a></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="span4">
-                                                            <div class="text-center">
-                                                                <a href="#"><img src="img/avatar2.jpg" alt=""></a>
-                                                                <p><a href="#">Scatel Filip</a></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="span4">
-                                                            <div class="text-center">
-                                                                <a href="#"><img src="img/avatar3.jpg" alt=""></a>
-                                                                <p><a href="#">Paul Robin</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="profile-side-box green">
-                                                <h1>Experience</h1>
-                                                <div class="desk">
-                                                    <div class="row-fluid experience">
-                                                        <h4>Envato</h4>
-                                                        <p>Duration: 4 years as Senior Designer from June 2033 to June 2007</p>
-                                                        <a href="#">www.abccompany.com</a>
-                                                    </div>
-                                                    <div class="space10"></div>
-                                                    <div class="row-fluid experience">
-                                                        <h4>Themeforest</h4>
-                                                        <p>Duration: 4 years as Senior Designer from June 2033 to June 2007</p>
-                                                        <a href="#">www.abccompany.com</a>
-                                                    </div>
-                                                    <div class="space10"></div>
-                                                    <div class="row-fluid experience">
-                                                        <h4>Vector Lab</h4>
-                                                        <p>Duration: 4 years as Senior Designer from June 2033 to June 2007</p>
-                                                        <a href="#">www.abccompany.com</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>-->
+
                                     </div>
                                 </div>
                             </div>
                             <!-- END PROFILE PORTLET-->
                         </div>
-                        <!--                        <div class="clearfix"></div>-->
                         <!--END METRO STATES-->
                     </div>
                 </div>
