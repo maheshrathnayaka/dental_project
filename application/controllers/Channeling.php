@@ -45,6 +45,7 @@ class Channeling extends CI_Controller
         $dental_health_history_data = $this->channeling_model->get_dental_health_history($pid);
         $dental_health_history_habitual_data = $this->channeling_model->get_dental_health_history_habitual($pid);
         $dental_health_history_feel_twinges_data = $this->channeling_model->get_dental_health_history_feel_twinges($pid);
+        $dental_health_history_womens_health_data = $this->channeling_model->get_dental_health_history_womens_health($pid);
         $dental_health_history_past_treatments_data = $this->channeling_model->get_dental_health_history_past_treatments($pid);
         $dental_health_history_other_data = $this->channeling_model->get_dental_health_history_other($pid);
         $medical_health_history_data = $this->channeling_model->get_medical_health_history($pid);
@@ -64,6 +65,7 @@ class Channeling extends CI_Controller
             'dental_health_history_data' => $dental_health_history_data,
             'dental_health_history_habitual_data' => $dental_health_history_habitual_data,
             'dental_health_history_feel_twinges_data' => $dental_health_history_feel_twinges_data,
+            'dental_health_history_womens_health_data' => $dental_health_history_womens_health_data,
             'dental_health_history_past_treatments_data' => $dental_health_history_past_treatments_data,
             'dental_health_history_other_data' => $dental_health_history_other_data,
             'medical_health_history_data' => $medical_health_history_data,

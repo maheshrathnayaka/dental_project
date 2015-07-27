@@ -149,10 +149,6 @@
                                                         class="icon-pencil icon-white"></i> Change
                                                 </button>
                                             </div>
-                                            <!--                                            </ul>-->
-                                            <!--<span class="label label-important">Important</span>
-                                            <span class="label label-important">Important</span>
-                                            <span class="label label-important">Important</span>-->
 
                                             <h3 class="text-info bold">Medical Health History</h3>
 
@@ -191,7 +187,27 @@
                                             if ($profile_data['patient_gender'] == 'F') {
                                                 ?>
                                                 <h3 class="text-info bold">Women's Health</h3>
-
+                                                <div class="span12">
+                                                    <?php
+                                                    if ($dental_health_history_womens_health_data['Are_you_pregnant'] == 1) {
+                                                        ?>
+                                                        <div class="space6">
+                                                            <h4 class="text-warning bold">Pregnancy Details</h4>
+                                                            <h4 class="text-warning">Number of weeks
+                                                                : <?php echo $dental_health_history_womens_health_data["Number_of_weeks"]; ?>
+                                                            </h4>
+                                                            <h4 class="text-warning">Total number of pregnancies
+                                                                : <?php echo $dental_health_history_womens_health_data["Total_number_of_pregnancies"]; ?>
+                                                            </h4>
+                                                            <h4 class="text-warning">Number of births
+                                                                : <?php echo $dental_health_history_womens_health_data["Number_of_births"]; ?>
+                                                            </h4></div>
+                                                        <?php
+                                                    }
+                                                    if ($dental_health_history_womens_health_data['Nursing'] == 1) {
+                                                    }
+                                                    ?>
+                                                </div>
                                                 <?php
                                             }
                                             ?>

@@ -105,6 +105,15 @@ class Channeling_model extends CI_Model
         return $query->row_array();
     }
 
+    public function get_dental_health_history_womens_health($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("Are_you_pregnant, Nursing, Number_of_weeks, if_you_are_still_menstruating, Total_number_of_pregnancies, Age_at_beginning_of_periods, Number_of_births, Age_at_end_of_periods");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_dental_history');
+        return $query->row_array();
+    }
+
     public function get_dental_health_history_other($pid)
     {
         $General = $this->load->database('group_gen', TRUE);
