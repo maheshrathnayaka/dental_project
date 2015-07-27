@@ -22,7 +22,7 @@
                     </a>
                 </div>
                 <div class="metro-nav-block nav-block-orange long">
-                    <a href="<?php echo base_url(); ?>index.php/existing" class="text-center" data-original-title="">
+                    <a href="<?php echo base_url(); ?>index.php/search" class="text-center" data-original-title="">
                                     <span class="value">
                                         <i class="icon-book"></i>
                                     </span>
