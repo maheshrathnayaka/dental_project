@@ -72,9 +72,63 @@ class Channeling_model extends CI_Model
     public function get_dental_health_history($pid)
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select("p_id AS 'p_id', difficulty_in_chewing_your_food AS 'Difficulty in chewing food', chew_on_only_one_side_of_your_mouth AS 'Chew on only one side of mouth', avoid_brushing_any_part_of_your_mouth_because_of_pain AS 'Avoid brushing part of mouth because of pain', gums_bleed_when_you_floss AS 'Gums bleed when flossing', gums_feel_swollen_or_tender AS 'Gums feel swollen or tender', your_teeth_sensitive AS 'Teeth sensitive', hurt_when_you_chew_or_open_wide_to_take_a_bite AS 'Hurt when chew or open wide to take a bite', ever_noticed_slow_healing_sores_in_or_about_your_mouth AS 'Ever noticed slow healing sores in or about mouth', Have_you_had_a_blow_to_the_jaw AS 'Have had a blow to the jaw', have_pain_in_the_f_j_j_t_t AS 'Have pain in the face cheeks jaws joints throat or temples', Gum_chewer AS 'Gum chewer', Pipe_smoker AS 'Pipe smoker', Betel_chewer AS 'Betel chewer', Cigarette_smoker AS 'Cigarette smoker', Hot_foods_or_liquids AS 'Hot foods or liquids', Sours AS 'Sours', Cold_foods_or_liquids AS 'Cold foods or liquids', Sweets AS 'Sweets', health_history_other AS 'Health history other', Removal AS 'Removal', Wound_treatment AS 'Wound treatment', Fillings AS 'Fillings', Sealants AS 'Sealants', Retainers AS 'Retainers', Braces AS 'Braces', Cleaning AS 'Cleaning', Polishing AS 'Polishing', Bridges AS 'Bridges', Dentures AS 'Dentures', Implants AS 'Implants', Urgent_Treatment AS 'Urgent treatment', Restorative_Care AS 'Restorative care', Preventive_Care AS 'Preventive care', treatment_need_other AS 'Treatment need other', Antibiotic AS 'Antibiotic', Sedative AS 'Sedative', Anti_inflammatory AS 'Anti-inflammatory', drugs_prescribed_other AS 'Drugs prescribed other', Caries AS 'Caries', Initial AS 'Initial', Dentine AS 'Dentine', Pulp_exposed AS 'Pulp exposed', Periodontal_diseases AS 'Periodontal diseases', Gingivitis AS 'Gingivitis', Periodontitis AS 'Periodontitis', Lesions AS 'Lesions', Premalignant AS 'Premalignant', Cancerous AS 'Cancerous', Non_Cancerous AS 'Non cancerous', Malocclusion AS 'Malocclusion', Class_2_Division_1 AS 'Class 2 Division 1', Class_2_Division_2 AS 'Class 2 Division 2', Class_3 AS 'Class 3', Fluorosis AS 'Fluorosis', Missing_Teeth AS 'Missing teeth', Dry_Mouth AS 'Dry mouth', Extra_Oral AS 'Extra oral', Facial_issues AS 'Facial issues', Swellings AS 'Swellings', Dental_examination_other AS 'Dental examination other', Sensitivity AS 'Sensitivity', tooth_decay AS 'Tooth decay', Fractured_teeth AS 'Fractured teeth', Worn_fillings AS 'Worn fillings', Gum_disease AS 'Gum disease', Worn_tooth_enamel AS 'Worn tooth enamel', Exposed_tooth_root AS 'Exposed tooth root', Oropharyngeal_Cancer AS 'Oropharyngeal cancer', Sores_that_bleed_easily AS 'Sores that bleed easily or do not heal', Thick_or_hard_spot_or_lump AS 'Thick or hard spot or lump', Roughened_or_crusted_area AS 'Roughened or crusted area', Numbness_pain_or_tenderness AS 'Numbness pain or tenderness', Change_in_the_way_your_teeth_fit_together_when_you_bite_down AS 'Change in the way teeth fit together when bite down', dental_examination_comment AS 'Dental examination comment'");
+        $General->select("p_id AS 'p_id', difficulty_in_chewing_your_food AS 'Difficulty in chewing food', chew_on_only_one_side_of_your_mouth AS 'Chew on only one side of mouth', avoid_brushing_any_part_of_your_mouth_because_of_pain AS 'Avoid brushing part of mouth because of pain', gums_bleed_when_you_floss AS 'Gums bleed when flossing', gums_feel_swollen_or_tender AS 'Gums feel swollen or tender', your_teeth_sensitive AS 'Teeth sensitive', hurt_when_you_chew_or_open_wide_to_take_a_bite AS 'Hurt when chew or open wide to take a bite', ever_noticed_slow_healing_sores_in_or_about_your_mouth AS 'Ever noticed slow healing sores in or about mouth', Have_you_had_a_blow_to_the_jaw AS 'Have had a blow to the jaw (Trauma)', have_pain_in_the_f_j_j_t_t AS 'Have pain in the face cheeks jaws joints throat or temples'");
         $General->where('P_ID', $pid);
         $query = $General->get('tbl_patient_dental_history');
+        return $query->row_array();
+    }
+
+    public function get_dental_health_history_habitual($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("p_id AS 'p_id', Gum_chewer AS 'Gum chewer', Pipe_smoker AS 'Pipe smoker', Betel_chewer AS 'Betel chewer', Cigarette_smoker AS 'Cigarette smoker'");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_dental_history');
+        return $query->row_array();
+    }
+
+    public function get_dental_health_history_feel_twinges($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("p_id AS 'p_id', Hot_foods_or_liquids AS 'Hot foods or liquids', Sours AS 'Sours', Cold_foods_or_liquids AS 'Cold foods or liquids', Sweets AS 'Sweets'");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_dental_history');
+        return $query->row_array();
+    }
+
+    public function get_dental_health_history_past_treatments($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("p_id AS 'p_id', Removal AS 'Removal', Wound_treatment AS 'Wound treatment', Fillings AS 'Fillings', Sealants AS 'Sealants', Retainers AS 'Retainers', Braces AS 'Braces', Cleaning AS 'Cleaning', Polishing AS 'Polishing', Bridges AS 'Bridges', Dentures AS 'Dentures', Implants AS 'Implants'");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_dental_history');
+        return $query->row_array();
+    }
+
+    public function get_dental_health_history_other($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("p_id, health_history_other");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_dental_history');
+        return $query->row_array();
+    }
+
+    public function get_medical_health_history($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("P_ID AS 'p_id', diabetes AS 'Diabetes', high_cholesterol AS 'High cholesterol', high_bood_pressure AS 'High blood pressure', low_bood_pressure AS 'Low blood pressure', heartburn AS 'Heartburn(reflux)', anemia_bood_problems AS 'Anemia/blood problems', swollen_ankies AS 'Swollen ankles', depression_anxiety AS 'Depression/Anxiety', tyroid_problems AS 'Thyroid problems', shortness_of_breath AS 'Shortness of breath', tonsilitis AS 'Tonsillitis', asthma AS 'Asthma', stroke AS 'Stroke', sinus_problems AS 'Sinus problems', arthiritis AS 'Arthritis', cancer AS 'Cancer', ulcers__colities AS 'Ulcers/colitis', gastric_irritation AS 'Gastric irritation', heart_disease_murmur_angine AS 'Heart disease/Murmur/Angina', kidney_bladder_problems AS 'Kidney/Bladder problems', lung_problems_cough AS 'Lung problems/cough', liver_problems_hepatitis AS 'Liver problems/Hepatitis', headaches_migrains AS 'Headaches/Migraines', neurological_problems AS 'Neurological problems', eye_disorder_glaucoma AS 'Eye disorder/Glaucoma', ear_problems AS 'Ear problems', seasonal_allergies AS 'Seasonal allergies'");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_health');
+        return $query->row_array();
+    }
+
+    public function get_medical_health_history_other($pid)
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select("P_ID, other");
+        $General->where('P_ID', $pid);
+        $query = $General->get('tbl_patient_health');
         return $query->row_array();
     }
 

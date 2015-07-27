@@ -1,5 +1,5 @@
 <!-- BEGIN PAGE -->
-<div id="main-content">
+<div id="main-content" style="margin-left: 0px;">
     <!-- BEGIN PAGE CONTAINER-->
     <div class="container-fluid">
         <!-- BEGIN PAGE HEADER-->
@@ -22,12 +22,12 @@
                     </a>
                 </div>
                 <div class="metro-nav-block nav-block-orange long">
-                    <a href="<?php echo base_url(); ?>index.php/history" class="text-center" data-original-title="">
+                    <a href="<?php echo base_url(); ?>index.php/existing" class="text-center" data-original-title="">
                                     <span class="value">
                                         <i class="icon-book"></i>
                                     </span>
 
-                        <div class="status"><h3><b>Dental History</b></h3></div>
+                        <div class="status"><h3><b>Existing Patient</b></h3></div>
                     </a>
                 </div>
                 <div class="metro-nav-block nav-block-red long">

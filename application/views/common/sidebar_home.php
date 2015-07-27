@@ -1,6 +1,6 @@
 <!-- BEGIN SIDEBAR -->
 <div class="sidebar-scroll">
-    <div id="sidebar" class="nav-collapse collapse">
+    <div id="sidebar" class="nav-collapse collapse" style="margin-left: -180px;">
         <!-- BEGIN SIDEBAR MENU -->
         <ul class="sidebar-menu">
             <li class="sub-menu">

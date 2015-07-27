@@ -43,6 +43,12 @@ class Channeling extends CI_Controller
         $channel_data = $this->channeling_model->get_channel_info($pid);
         $age_data = $this->channeling_model->get_patient_age($pid);
         $dental_health_history_data = $this->channeling_model->get_dental_health_history($pid);
+        $dental_health_history_habitual_data = $this->channeling_model->get_dental_health_history_habitual($pid);
+        $dental_health_history_feel_twinges_data = $this->channeling_model->get_dental_health_history_feel_twinges($pid);
+        $dental_health_history_past_treatments_data = $this->channeling_model->get_dental_health_history_past_treatments($pid);
+        $dental_health_history_other_data = $this->channeling_model->get_dental_health_history_other($pid);
+        $medical_health_history_data = $this->channeling_model->get_medical_health_history($pid);
+        $medical_health_history_other_data = $this->channeling_model->get_medical_health_history_other($pid);
         /*$history_data='';
         foreach($dental_health_history_data as $key => $history){
             $history_data .= $this->filter_health_history($key, $history);
@@ -55,12 +61,17 @@ class Channeling extends CI_Controller
             'contact_data' => $contact_data,
             'channel_data' => $channel_data,
             'age_data' => $age_data,
-            'dental_health_history_data' => $dental_health_history_data
+            'dental_health_history_data' => $dental_health_history_data,
+            'dental_health_history_habitual_data' => $dental_health_history_habitual_data,
+            'dental_health_history_feel_twinges_data' => $dental_health_history_feel_twinges_data,
+            'dental_health_history_past_treatments_data' => $dental_health_history_past_treatments_data,
+            'dental_health_history_other_data' => $dental_health_history_other_data,
+            'medical_health_history_data' => $medical_health_history_data,
+            'medical_health_history_other_data' => $medical_health_history_other_data
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');
         $this->load->view('core/profile_view');
         $this->load->view('common/footer');
-//        var_dump($data);
     }
 }

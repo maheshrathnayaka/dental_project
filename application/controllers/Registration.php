@@ -14,7 +14,7 @@ class Registration extends CI_Controller
     {
 
         $dynamic_data = array(
-            'title' => 'Patient Registration'
+            'title' => 'New Patient'
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');

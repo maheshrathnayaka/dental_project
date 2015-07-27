@@ -38,17 +38,6 @@
 
                                         <div class="span2">
                                             <h1>Queue : <b><?php echo $channel_data["channel_number"]; ?></b></h1>
-                                            <!--<ul class="social-link-pf">
-                                                <li><a href="#">
-                                                        <i class="icon-facebook"></i>
-                                                    </a></li>
-                                                <li><a href="#">
-                                                        <i class="icon-twitter"></i>
-                                                    </a></li>
-                                                <li><a href="#">
-                                                        <i class="icon-linkedin"></i>
-                                                    </a></li>
-                                            </ul>-->
                                         </div>
 
                                         <div class="span5 text-right">
@@ -60,7 +49,6 @@
                                             } else {
                                                 ?>
                                                 <h1> Age : <b><?php echo $age_data["age"]; ?></b> Years</h1>
-                                                <!--                                            <a href="edit_profile.html" class="btn btn-edit btn-large pull-right mtop20"> Edit Profile </a>-->
                                                 <?php
                                             }
                                             ?>
@@ -72,31 +60,175 @@
                                                 : <?php echo $channel_data["patient_main_reason"]; ?></h3>
 
                                             <h3 class="text-info bold">Dental Health History</h3>
-                                            <ul class="social-link-pf">
+                                            <?php
+                                            if (empty($dental_health_history_data)) {
+                                                ?>
+                                                <div class="alert alert-block alert-info fade in">
+                                                    <button data-dismiss="alert" class="close" type="button">x</button>
+                                                    <h4 class="alert-heading text-center">Oops ! No dental health
+                                                        history data found for this patient</h4>
+
+
+                                                </div>
                                                 <?php
+                                            } else {
                                                 foreach ($dental_health_history_data as $key => $value) {
                                                     if ($value == 1) {
                                                         ?>
-                                                        <!--                                                        <span class="label label-important">--><?php //echo $key; ?><!--</span>-->
-                                                        <li><?php echo $key; ?></li>
+                                                        <span class="label label-important"
+                                                              style="margin-right: 2px; margin-top: 5px;"><?php echo $key; ?></span>
                                                         <?php
                                                     }
                                                 }
+                                            }
+                                            ?>
+
+
+                                            <?php
+                                            if (!empty($dental_health_history_habitual_data)) {
                                                 ?>
-                                            </ul>
+                                                <h4 class="text-warning bold">Habitual :
+                                                    <?php
+                                                    foreach ($dental_health_history_habitual_data as $key => $value) {
+                                                        if ($value == 1) {
+                                                            ?>
+                                                            <span class="label gray"
+                                                                  style="margin-right: 2px; margin-top: 5px;"><?php echo $key; ?></span>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                </h4>
+                                                <?php
+                                            }
+                                            ?>
+
+                                            <?php
+                                            if (!empty($dental_health_history_feel_twinges_data)) {
+                                                ?>
+                                                <h4 class="text-warning bold">Feel twinges of pain when teeth come in
+                                                    contact with :
+                                                    <?php
+                                                    foreach ($dental_health_history_feel_twinges_data as $key => $value) {
+                                                        if ($value == 1) {
+                                                            ?>
+                                                            <span class="label gray"
+                                                                  style="margin-right: 2px; margin-top: 5px;"><?php echo $key; ?></span>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                </h4>
+                                                <?php
+                                            }
+                                            ?>
+
+                                            <?php
+                                            if ($profile_data["patient_allergies"] != null || $profile_data["patient_allergies"] != '') {
+                                                ?>
+                                                <h4 class="text-warning bold">Allergies
+                                                    : <?php echo $profile_data["patient_allergies"]; ?>
+                                                </h4>
+                                                <?php
+                                            }
+                                            ?>
+
+                                            <?php
+                                            if ($dental_health_history_other_data["health_history_other"] != null || $dental_health_history_other_data["health_history_other"] != '') {
+                                                ?>
+                                                <h4 class="text-warning bold">Other
+                                                    : <?php echo $dental_health_history_other_data["health_history_other"]; ?>
+                                                </h4>
+                                                <?php
+                                            }
+                                            ?>
+
+                                            <div class="space5"></div>
+                                            <div class="text-left">
+                                                <button id="btnEditDentalHealthHistory" class="btn btn-primary"><i
+                                                        class="icon-pencil icon-white"></i> Change
+                                                </button>
+                                            </div>
+                                            <!--                                            </ul>-->
                                             <!--<span class="label label-important">Important</span>
                                             <span class="label label-important">Important</span>
                                             <span class="label label-important">Important</span>-->
 
                                             <h3 class="text-info bold">Medical Health History</h3>
 
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                                                illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                                explicabo. Donec ut volutpat metus. Aliquam tortor lorem, fringilla
-                                                tempor dignissim at, pretium et arcu. Sed ut perspiciatis unde omnis
-                                                iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                                                rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                                            <?php
+                                            if (empty($medical_health_history_data)) {
+                                                ?>
+                                                <div class="alert alert-block alert-info fade in">
+                                                    <button data-dismiss="alert" class="close" type="button">x</button>
+                                                    <h4 class="alert-heading text-center">Oops ! No medical health
+                                                        history data found for this patient</h4>
+
+
+                                                </div>
+                                                <?php
+                                            } else {
+                                                foreach ($medical_health_history_data as $key => $value) {
+                                                    if ($value == 1) {
+                                                        ?>
+                                                        <span class="label label-important"
+                                                              style="margin-right: 2px; margin-top: 5px;"><?php echo $key; ?>
+                                                        </span>
+                                                        <?php
+                                                    }
+                                                }
+                                                if (!empty($medical_health_history_other_data)) {
+                                                    ?>
+                                                    <span class="label label-inverse"
+                                                          style="margin-right: 2px; margin-top: 5px;">Other : <?php echo $medical_health_history_other_data['other']; ?>
+                                                    </span>
+                                                    <?php
+                                                }
+                                            }
+                                            ?>
+
+                                            <?php
+                                            if ($profile_data['patient_gender'] == 'F') {
+                                                ?>
+                                                <h3 class="text-info bold">Women's Health</h3>
+
+                                                <?php
+                                            }
+                                            ?>
+
+
+                                            <h3 class="text-info bold">Past Treatments</h3>
+                                            <?php
+                                            if (empty($dental_health_history_past_treatments_data)) {
+                                                ?>
+                                                <div class="alert alert-block alert-info fade in">
+                                                    <button data-dismiss="alert" class="close" type="button">x</button>
+                                                    <h4 class="alert-heading text-center">Oops ! No past treatment data
+                                                        found for this patient</h4>
+
+
+                                                </div>
+                                                <?php
+                                            } else {
+                                                foreach ($dental_health_history_past_treatments_data as $key => $value) {
+                                                    if ($value == 1) {
+                                                        ?>
+                                                        <span class="label label-important"
+                                                              style="margin-right: 2px; margin-top: 5px;"><?php echo $key; ?>
+                                                        </span>
+                                                        <?php
+                                                    }
+                                                }
+                                            }
+                                            ?>
+
+
+                                            <div class="space5"></div>
+                                            <div class="text-left">
+                                                <button id="btnEditMedicalHealthHistory" class="btn btn-primary"><i
+                                                        class="icon-pencil icon-white"></i> Change
+                                                </button>
+                                            </div>
 
                                             <div class="space15"></div>
                                             <h2>Bio Graph</h2>
