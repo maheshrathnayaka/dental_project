@@ -434,7 +434,7 @@
                             </div>
                         </div>
                         <!-- END BLANK PAGE PORTLET-->
-                        <div class="form-actions">
+                        <div class="form-actions text-right">
                             <button type="reset" name="reset" class="btn btn-large btn-success" tabindex="46"><i class="icon-refresh"></i> Reset</button>
                             <button type="submit" name="register" class="btn btn-large btn-success" tabindex="47"><i class="icon-ok"></i> Save</button>
                             <button type="button" name="cancel" class="btn btn-large btn-success" tabindex="48"><i class=" icon-remove"></i> Cancel</button>
