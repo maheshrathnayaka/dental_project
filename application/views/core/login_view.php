@@ -48,7 +48,7 @@
         </form>
     </div>
     <div class="metro single-size terques login">
-        <form action="index.html">
+        <form action="<?php echo base_url(); ?>">
             <button type="submit" class="btn login-btn">
                 Login
                 <i class=" icon-long-arrow-right"></i>
