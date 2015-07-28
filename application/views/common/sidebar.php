@@ -10,7 +10,7 @@
                 </a>
             </li>
             <li class="sub-menu">
-                <a href="<?php echo base_url(); ?>index.php/existing" class="">
+                <a href="<?php echo base_url(); ?>index.php/search" class="">
                     <i class="icon-book"></i>
                     <span>Existing Patient</span>
                 </a>
