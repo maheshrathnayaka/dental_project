@@ -18,18 +18,14 @@ class Channeling_model extends CI_Model
     public function get_channel_queue()
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('P_ID, patient_first_name, patient_gender, patient_main_reason, channel_number');
-        $General->where('check_status', '1');
-        $General->where('channel_number !=', 0);
-        $General->order_by('channel_number', 'ASC');
-        $query = $General->get('tbl_patients_queue');
+        $query = $General->query("SELECT p.patient_id, p.patient_first_name, p.patient_last_name, p.patient_email, p.patient_gender, p.patient_occupation, p.patient_allergies, p.patient_barcode, p.patient_birthday, q.patient_main_reason, q.check_status, q.channel_number FROM tbl_patient p, tbl_patients_queue q WHERE p.patient_id = q.P_ID AND q.check_status = 1 AND q.channel_number!=0 ORDER BY q.channel_number ASC;");
         return $query->result_array();
     }
 
     public function get_patient_profile($pid)
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('patient_id, patient_first_name, patient_last_name, patient_email, patient_gender, patient_occupation, patient_allergies, patient_barcode');
+        $General->select('patient_id, patient_first_name, patient_last_name, patient_email, patient_gender, patient_birthday, patient_occupation, patient_allergies, patient_barcode');
         $General->where('patient_id', $pid);
         $query = $General->get('tbl_patient');
         return $query->row_array();
@@ -56,7 +52,7 @@ class Channeling_model extends CI_Model
     public function get_channel_info($pid)
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('P_ID, patient_first_name, patient_gender, patient_main_reason, channel_number');
+        $General->select('P_ID, patient_main_reason, channel_number, check_status');
         $General->where('P_ID', $pid);
         $query = $General->get('tbl_patients_queue');
         return $query->row_array();
@@ -72,7 +68,7 @@ class Channeling_model extends CI_Model
     public function get_dental_health_history($pid)
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select("p_id AS 'p_id', difficulty_in_chewing_your_food AS 'Difficulty in chewing food', chew_on_only_one_side_of_your_mouth AS 'Chew on only one side of mouth', avoid_brushing_any_part_of_your_mouth_because_of_pain AS 'Avoid brushing part of mouth because of pain', gums_bleed_when_you_floss AS 'Gums bleed when flossing', gums_feel_swollen_or_tender AS 'Gums feel swollen or tender', your_teeth_sensitive AS 'Teeth sensitive', hurt_when_you_chew_or_open_wide_to_take_a_bite AS 'Hurt when chew or open wide to take a bite', ever_noticed_slow_healing_sores_in_or_about_your_mouth AS 'Ever noticed slow healing sores in or about mouth', Have_you_had_a_blow_to_the_jaw AS 'Have had a blow to the jaw (Trauma)', have_pain_in_the_f_j_j_t_t AS 'Have pain in the face cheeks jaws joints throat or temples'");
+        $General->select("p_id AS 'p_id', difficulty_in_chewing_your_food AS 'Difficulty in chewing food', chew_on_only_one_side_of_your_mouth AS 'Chew on only one side of mouth', avoid_brushing_any_part_of_your_mouth_because_of_pain AS 'Avoid brushing part of mouth because of pain', gums_bleed_when_you_floss AS 'Gums bleed when flossing', gums_feel_swollen_or_tender AS 'Gums feel swollen or tender', your_teeth_sensitive AS 'Teeth sensitive', hurt_when_you_chew_or_open_wide_to_take_a_bite AS 'Hurt when chew or open wide to take a bite', ever_noticed_slow_healing_sores_in_or_about_your_mouth AS 'Ever noticed slow healing sores in or about mouth', Have_you_had_a_blow_to_the_jaw AS 'Had a blow to the jaw (Trauma)', have_pain_in_the_f_j_j_t_t AS 'Pain in the face cheeks jaws joints throat or temples'");
         $General->where('P_ID', $pid);
         $query = $General->get('tbl_patient_dental_history');
         return $query->row_array();
@@ -139,6 +135,14 @@ class Channeling_model extends CI_Model
         $General->where('P_ID', $pid);
         $query = $General->get('tbl_patient_health');
         return $query->row_array();
+    }
+
+    public function get_medications()
+    {
+        $Knowledge = $this->load->database('group_knwbase', TRUE);
+        $Knowledge->select();
+        $query = $Knowledge->get('medication');
+        return $query->result_array();
     }
 
 }

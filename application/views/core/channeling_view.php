@@ -21,13 +21,9 @@
                     <div class="widget-body">
                         <?php if (empty($channeling_data)) {
                             ?>
-                            <div class="alert alert-block alert-info fade in">
-                                <button data-dismiss="alert" class="close" type="button">×</button>
-                                <h4 class="alert-heading">Oops !</h4>
-
-                                <p>
-                                    Currently patient queue is empty
-                                </p>
+                            <div class="alert alert-block alert-info fade in text-center">
+                                <button data-dismiss="alert" class="close" type="button">x</button>
+                                <h4 class="alert-heading">Oops! Currently patient queue is empty</h4>
                             </div>
                             <?php
                         } else { ?>
@@ -40,7 +36,7 @@
                                     foreach ($channeling_data as $element) {
                                         ?>
                                         <div class="metro-nav-block nav-deep-red">
-                                            <a href="<?php echo base_url(); ?>index.php/channeling/profile/<?php echo $element["P_ID"]; ?>"
+                                            <a href="<?php echo base_url(); ?>index.php/channeling/profile/<?php echo $element["patient_id"]; ?>"
                                                data-original-title="">
                                                 <div class="text-center"><h2>
                                                         <b><?php echo $element["channel_number"]; ?></b></h2></div>

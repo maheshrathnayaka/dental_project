@@ -50,11 +50,8 @@ class Channeling extends CI_Controller
         $dental_health_history_other_data = $this->channeling_model->get_dental_health_history_other($pid);
         $medical_health_history_data = $this->channeling_model->get_medical_health_history($pid);
         $medical_health_history_other_data = $this->channeling_model->get_medical_health_history_other($pid);
-        /*$history_data='';
-        foreach($dental_health_history_data as $key => $history){
-            $history_data .= $this->filter_health_history($key, $history);
-        }
-        echo $history_data;*/
+        $medications_data = $this->channeling_model->get_medications();
+
         $dynamic_data = array(
             'title' => 'Patient Profile',
             'profile_data' => $patient_data,
@@ -69,7 +66,8 @@ class Channeling extends CI_Controller
             'dental_health_history_past_treatments_data' => $dental_health_history_past_treatments_data,
             'dental_health_history_other_data' => $dental_health_history_other_data,
             'medical_health_history_data' => $medical_health_history_data,
-            'medical_health_history_other_data' => $medical_health_history_other_data
+            'medical_health_history_other_data' => $medical_health_history_other_data,
+            'medications_data' => $medications_data
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');

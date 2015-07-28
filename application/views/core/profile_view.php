@@ -53,9 +53,10 @@
                                     </div>
                                     <div class="row-fluid">
                                         <div class="span12 bio">
+                                            <hr>
                                             <h3 class="text-error bold">Visit for
                                                 : <?php echo $channel_data["patient_main_reason"]; ?></h3>
-
+                                            <hr>
                                             <h3 class="text-info bold">Dental Health History</h3>
                                             <?php
                                             if (empty($dental_health_history_data)) {
@@ -79,7 +80,6 @@
                                                 }
                                             }
                                             ?>
-
 
                                             <?php
                                             if (!empty($dental_health_history_habitual_data)) {
@@ -142,11 +142,34 @@
 
                                             <div class="space5"></div>
                                             <div class="text-left">
-                                                <button id="btnEditDentalHealthHistory" class="btn btn-primary"><i
+                                                <a href="#modelEditDentalHealthHistory" id="btnEditDentalHealthHistory"
+                                                   role="button" class="btn btn-primary" data-toggle="modal"
+                                                   data-backdrop="static" data-keyboard="false"><i
                                                         class="icon-pencil icon-white"></i> Change
-                                                </button>
-                                            </div>
+                                                </a>
 
+                                                <div id="modelEditDentalHealthHistory" class="modal hide fade"
+                                                     tabindex="-1" role="dialog"
+                                                     aria-labelledby="modelEditDentalHealthHistory" aria-hidden="true">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-hidden="true">×
+                                                        </button>
+                                                        <h3 id="myModalLabel4">Success Header</h3>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Body goes here...</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn" data-dismiss="modal" aria-hidden="true">
+                                                            Close
+                                                        </button>
+                                                        <button data-dismiss="modal" class="btn btn-success">Success
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
                                             <h3 class="text-info bold">Medical Health History</h3>
 
                                             <?php
@@ -177,10 +200,41 @@
                                                 }
                                             }
                                             ?>
+                                            <div class="space5"></div>
+                                            <div class="text-left">
+                                                <a href="#modelEditMedicalHealthHistory"
+                                                   id="btnEditMedicalHealthHistory" role="button"
+                                                   class="btn btn-primary" data-toggle="modal" data-backdrop="static"
+                                                   data-keyboard="false"><i
+                                                        class="icon-pencil icon-white"></i> Change
+                                                </a>
+
+                                                <div id="modelEditMedicalHealthHistory" class="modal hide fade"
+                                                     tabindex="-1" role="dialog"
+                                                     aria-labelledby="modelEditMedicalHealthHistory" aria-hidden="true">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-hidden="true">×
+                                                        </button>
+                                                        <h3 id="myModalLabel4">Success Header</h3>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Body goes here...</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn" data-dismiss="modal" aria-hidden="true">
+                                                            Close
+                                                        </button>
+                                                        <button data-dismiss="modal" class="btn btn-success">Success
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                             <?php
                                             if ($profile_data['patient_gender'] == 'F') {
                                                 ?>
+                                                <hr>
                                                 <h3 class="text-info bold">Women's Health</h3>
                                                 <div class="span12">
                                                     <?php
@@ -218,10 +272,42 @@
                                                     }
                                                     ?>
                                                 </div>
+                                                <div class="space5"></div>
+                                                <div class="text-left">
+                                                    <a href="#modelEditWomenHealthHistory"
+                                                       id="btnEditWomenHealthHistory" role="button"
+                                                       class="btn btn-primary" data-toggle="modal"
+                                                       data-backdrop="static" data-keyboard="false"><i
+                                                            class="icon-pencil icon-white"></i> Change
+                                                    </a>
+
+                                                    <div id="modelEditWomenHealthHistory" class="modal hide fade"
+                                                         tabindex="-1" role="dialog"
+                                                         aria-labelledby="modelEditWomenHealthHistory"
+                                                         aria-hidden="true">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">×
+                                                            </button>
+                                                            <h3 id="myModalLabel4">Success Header</h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Body goes here...</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn" data-dismiss="modal" aria-hidden="true">
+                                                                Close
+                                                            </button>
+                                                            <button data-dismiss="modal" class="btn btn-success">
+                                                                Success
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <?php
                                             }
                                             ?>
-
+                                            <hr>
                                             <h3 class="text-info bold">Past Treatments</h3>
                                             <?php
                                             if (empty($dental_health_history_past_treatments_data)) {
@@ -247,69 +333,236 @@
 
                                             <div class="space5"></div>
                                             <div class="text-left">
-                                                <button id="btnEditMedicalHealthHistory" class="btn btn-primary"><i
+                                                <a href="#modelEditPastTreatment" id="btnEditPastTreatment"
+                                                   role="button" class="btn btn-primary" data-toggle="modal"
+                                                   data-backdrop="static" data-keyboard="false"><i
                                                         class="icon-pencil icon-white"></i> Change
+                                                </a>
+
+                                                <div id="modelEditPastTreatment" class="modal hide fade" tabindex="-1"
+                                                     role="dialog" aria-labelledby="modelEditPastTreatment"
+                                                     aria-hidden="true">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-hidden="true">×
+                                                        </button>
+                                                        <h3 id="myModalLabel4">Success Header</h3>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Body goes here...</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn" data-dismiss="modal" aria-hidden="true">
+                                                            Close
+                                                        </button>
+                                                        <button data-dismiss="modal" class="btn btn-success">Success
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <h3 class="text-info bold">Profile</h3>
+
+                                            <div class="span12">
+                                                <div class="span6">
+                                                    <h4 class="bold">Name
+                                                        : <?php echo $profile_data["patient_first_name"] . ' ' . $profile_data["patient_last_name"]; ?></h4>
+                                                    <h4 class="bold">Birthday
+                                                        : <?php echo $profile_data["patient_birthday"]; ?></h4>
+                                                    <h4 class="bold">Address
+                                                        : <?php echo $address_data["postal_no"] . ', ' . $address_data["address_line1"] . ', ' . $address_data["address_line2"] . ', ' . $address_data["city"]; ?></h4>
+                                                    <h4 class="bold">Occupation
+                                                        : <?php echo $profile_data["patient_occupation"]; ?></h4>
+                                                </div>
+                                                <div class="span6">
+                                                    <h4 class="bold">Home No
+                                                        : <?php echo $contact_data["home_no"]; ?></h4>
+                                                    <h4 class="bold">Mobile No
+                                                        : <?php echo $contact_data["mobile_no"]; ?></h4>
+                                                    <h4 class="bold">Work No
+                                                        : <?php echo $contact_data["work_no"]; ?></h4>
+                                                </div>
+                                            </div>
+                                            <div class="space5"></div>
+                                            <div class="text-left">
+                                                <form class="form-vertical" method="get" action="#">
+                                                    <a href="#modelEditProfile" id="btnEditProfile" role="button"
+                                                       class="btn btn-primary" data-toggle="modal"
+                                                       data-backdrop="static" data-keyboard="false"><i
+                                                            class="icon-pencil icon-white"></i> Change
+                                                    </a>
+
+                                                    <div id="modelEditProfile" class="modal hide fade" tabindex="-1"
+                                                         role="dialog" aria-labelledby="modelEditProfile"
+                                                         aria-hidden="true">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">×
+                                                            </button>
+                                                            <h3 id="myModalLabel4">Edit Patient Profile</h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">First Name
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_first_name"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Surname : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_last_name"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Occupation
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_occupation"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Email : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_email"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Postal No
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["postal_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Address Line 01
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["address_line1"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Address Line 02
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["address_line2"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">City : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["city"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Home : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["home_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Mobile : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["mobile_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Work : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["work_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn" data-dismiss="modal"
+                                                                    aria-hidden="true"></i>Cancel
+                                                            </button>
+                                                            <button class="btn btn-info" data-dismiss="modal"
+                                                                    aria-hidden="true">Edit
+                                                            </button>
+                                                            <button class="btn btn-success hidden" data-dismiss="modal">
+                                                                Save
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <hr>
+                                            <div class="text-right">
+                                                <button id="btnDiagnose" class="btn btn-success btn-large"><i
+                                                        class="icon-file-text icon-white"></i> Diagnose
                                                 </button>
                                             </div>
-
-                                            <div class="space15"></div>
-                                            <h2>Bio Graph</h2>
-
-                                            <p><label>First Name </label>: Jonathan</p>
-
-                                            <p><label>Last Name </label>: Smith</p>
-
-                                            <p><label>Country </label>: Australia</p>
-
-                                            <p><label>Bithday </label>: 13 July 1983</p>
-
-                                            <p><label>Occupation </label>: Designer</p>
-
-                                            <p><label>Email </label>: <a href="#">smith@vectorlab.net</a></p>
-
-                                            <p><label>Phone </label>: (12) 03 4567890</p>
-
-                                            <p><label>Website Url </label>: <a href="#">http://www.demowebsite.com</a>
-                                            </p>
-
-                                            <div class="space15"></div>
-                                            <hr>
-                                            <div class="space15"></div>
-
-                                            <h2>Project Progress</h2>
-                                            <ul class="unstyled">
-                                                <li>
-                                                    Envato Website <strong class="label"> 48%</strong>
-
-                                                    <div class="space10"></div>
-                                                    <div class="progress">
-                                                        <div class="bar" style="width: 48%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    Themeforest CMS Dashboard <strong class="label label-success">
-                                                        85%</strong>
-
-                                                    <div class="space10"></div>
-                                                    <div class="progress progress-success">
-                                                        <div class="bar" style="width: 85%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    VectorLab Portfolio <strong class="label label-important">
-                                                        65%</strong>
-
-                                                    <div class="space10"></div>
-                                                    <div class="progress progress-danger">
-                                                        <div class="bar" style="width: 65%;"></div>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-                                            <div class="text-center">
-                                                <button class="btn btn-primary ">All Projects</button>
-                                            </div>
-                                            <div class="space20"></div>
+                                            <div class="space5"></div>
 
                                         </div>
 
