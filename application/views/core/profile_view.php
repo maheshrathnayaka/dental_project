@@ -142,32 +142,175 @@
 
                                             <div class="space5"></div>
                                             <div class="text-left">
+                                                <form class="form-vertical" method="get" action="#">
                                                 <a href="#modelEditDentalHealthHistory" id="btnEditDentalHealthHistory"
                                                    role="button" class="btn btn-primary" data-toggle="modal"
                                                    data-backdrop="static" data-keyboard="false"><i
                                                         class="icon-pencil icon-white"></i> Change
                                                 </a>
 
-                                                <div id="modelEditDentalHealthHistory" class="modal hide fade"
-                                                     tabindex="-1" role="dialog"
-                                                     aria-labelledby="modelEditDentalHealthHistory" aria-hidden="true">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-hidden="true">×
-                                                        </button>
-                                                        <h3 id="myModalLabel4">Success Header</h3>
+                                                    <div id="modelEditDentalHealthHistory" class="modal hide fade" tabindex="-1"
+                                                         role="dialog" aria-labelledby="modelEditDentalHealthHistory"
+                                                         aria-hidden="true">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">×
+                                                            </button>
+                                                            <h3 id="myModalLabel4">Edit Dental Health History</h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">First Name
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_first_name"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Surname : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_last_name"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Occupation
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_occupation"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Email : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_email"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Postal No
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["postal_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Address Line 01
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["address_line1"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Address Line 02
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["address_line2"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">City : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["city"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Home : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["home_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Mobile : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["mobile_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Work : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["work_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn" data-dismiss="modal"
+                                                                    aria-hidden="true"></i>Cancel
+                                                            </button>
+                                                            <button class="btn btn-info" data-dismiss="modal"
+                                                                    aria-hidden="true">Edit
+                                                            </button>
+                                                            <button class="btn btn-success hidden" data-dismiss="modal">
+                                                                Save
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <p>Body goes here...</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn" data-dismiss="modal" aria-hidden="true">
-                                                            Close
-                                                        </button>
-                                                        <button data-dismiss="modal" class="btn btn-success">Success
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                                </form>
                                             </div>
                                             <hr>
                                             <h3 class="text-info bold">Medical Health History</h3>
@@ -202,6 +345,7 @@
                                             ?>
                                             <div class="space5"></div>
                                             <div class="text-left">
+                                                <form class="form-vertical" method="get" action="#">
                                                 <a href="#modelEditMedicalHealthHistory"
                                                    id="btnEditMedicalHealthHistory" role="button"
                                                    class="btn btn-primary" data-toggle="modal" data-backdrop="static"
@@ -209,26 +353,172 @@
                                                         class="icon-pencil icon-white"></i> Change
                                                 </a>
 
-                                                <div id="modelEditMedicalHealthHistory" class="modal hide fade"
-                                                     tabindex="-1" role="dialog"
-                                                     aria-labelledby="modelEditMedicalHealthHistory" aria-hidden="true">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-hidden="true">×
-                                                        </button>
-                                                        <h3 id="myModalLabel4">Success Header</h3>
+                                                    <div id="modelEditMedicalHealthHistory" class="modal hide fade" tabindex="-1"
+                                                         role="dialog" aria-labelledby="modelEditMedicalHealthHistory"
+                                                         aria-hidden="true">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">×
+                                                            </button>
+                                                            <h3 id="myModalLabel4">Edit Medical Health History</h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row-fluid">
+                                                                <div class="span4">
+                                                                    <div class="control-group">
+                                                                        <div class="controls controls-row">
+                                                                            <input type="checkbox" class="input-block-level"
+                                                                                   name="" value="<?php echo $medical_health_history_data["Diabetes"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span4">
+                                                                    <div class="control-group">
+                                                                        <div class="controls controls-row">
+                                                                            <input type="checkbox" class="input-block-level"
+                                                                                   name="" value="<?php echo $medical_health_history_data["High cholesterol"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span4">
+                                                                    <div class="control-group">
+                                                                        <div class="controls controls-row">
+                                                                            <input type="checkbox" class="input-block-level"
+                                                                                   name="" value="<?php echo $medical_health_history_data["High blood pressure"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Occupation
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_occupation"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Email : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $profile_data["patient_email"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Postal No
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["postal_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Address Line 01
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["address_line1"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Address Line 02
+                                                                            : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["address_line2"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">City : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $address_data["city"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Home : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["home_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Mobile : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["mobile_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Work : </label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <input type="text" class="input-block-level"
+                                                                                   name="" value="<?php echo $contact_data["work_no"];?>"
+                                                                                   disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn" data-dismiss="modal"
+                                                                    aria-hidden="true"></i>Cancel
+                                                            </button>
+                                                            <button class="btn btn-info" data-dismiss="modal"
+                                                                    aria-hidden="true">Edit
+                                                            </button>
+                                                            <button class="btn btn-success hidden" data-dismiss="modal">
+                                                                Save
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-body">
-                                                        <p>Body goes here...</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn" data-dismiss="modal" aria-hidden="true">
-                                                            Close
-                                                        </button>
-                                                        <button data-dismiss="modal" class="btn btn-success">Success
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                                </form>
                                             </div>
 
                                             <?php
@@ -274,6 +564,7 @@
                                                 </div>
                                                 <div class="space5"></div>
                                                 <div class="text-left">
+                                                    <form class="form-vertical" method="get" action="#">
                                                     <a href="#modelEditWomenHealthHistory"
                                                        id="btnEditWomenHealthHistory" role="button"
                                                        class="btn btn-primary" data-toggle="modal"
@@ -281,28 +572,168 @@
                                                             class="icon-pencil icon-white"></i> Change
                                                     </a>
 
-                                                    <div id="modelEditWomenHealthHistory" class="modal hide fade"
-                                                         tabindex="-1" role="dialog"
-                                                         aria-labelledby="modelEditWomenHealthHistory"
-                                                         aria-hidden="true">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                    aria-hidden="true">×
-                                                            </button>
-                                                            <h3 id="myModalLabel4">Success Header</h3>
+                                                        <div id="modelEditWomenHealthHistory" class="modal hide fade" tabindex="-1"
+                                                             role="dialog" aria-labelledby="modelEditWomenHealthHistory"
+                                                             aria-hidden="true">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-hidden="true">×
+                                                                </button>
+                                                                <h3 id="myModalLabel4">Edit Women's Health History</h3>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row-fluid">
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">First Name
+                                                                                : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $profile_data["patient_first_name"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Surname : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $profile_data["patient_last_name"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-fluid">
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Occupation
+                                                                                : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $profile_data["patient_occupation"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Email : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $profile_data["patient_email"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-fluid">
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Postal No
+                                                                                : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $address_data["postal_no"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Address Line 01
+                                                                                : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $address_data["address_line1"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-fluid">
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Address Line 02
+                                                                                : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $address_data["address_line2"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">City : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $address_data["city"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-fluid">
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Home : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $contact_data["home_no"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Mobile : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $contact_data["mobile_no"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-fluid">
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">Work : </label>
+
+                                                                            <div class="controls controls-row">
+                                                                                <input type="text" class="input-block-level"
+                                                                                       name="" value="<?php echo $contact_data["work_no"];?>"
+                                                                                       disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button class="btn" data-dismiss="modal"
+                                                                        aria-hidden="true"></i>Cancel
+                                                                </button>
+                                                                <button class="btn btn-info" data-dismiss="modal"
+                                                                        aria-hidden="true">Edit
+                                                                </button>
+                                                                <button class="btn btn-success hidden" data-dismiss="modal">
+                                                                    Save
+                                                                </button>
+                                                            </div>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <p>Body goes here...</p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button class="btn" data-dismiss="modal" aria-hidden="true">
-                                                                Close
-                                                            </button>
-                                                            <button data-dismiss="modal" class="btn btn-success">
-                                                                Success
-                                                            </button>
-                                                        </div>
-                                                    </div>
+                                                    </form>
                                                 </div>
                                                 <?php
                                             }
@@ -333,6 +764,7 @@
 
                                             <div class="space5"></div>
                                             <div class="text-left">
+                                                <form class="form-vertical" method="get" action="#">
                                                 <a href="#modelEditPastTreatment" id="btnEditPastTreatment"
                                                    role="button" class="btn btn-primary" data-toggle="modal"
                                                    data-backdrop="static" data-keyboard="false"><i
@@ -346,19 +778,161 @@
                                                         <button type="button" class="close" data-dismiss="modal"
                                                                 aria-hidden="true">×
                                                         </button>
-                                                        <h3 id="myModalLabel4">Success Header</h3>
+                                                        <h3 id="myModalLabel4">Edit Past Treatments</h3>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Body goes here...</p>
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">First Name
+                                                                        : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $profile_data["patient_first_name"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Surname : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $profile_data["patient_last_name"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Occupation
+                                                                        : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $profile_data["patient_occupation"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Email : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $profile_data["patient_email"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Postal No
+                                                                        : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $address_data["postal_no"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Address Line 01
+                                                                        : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $address_data["address_line1"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Address Line 02
+                                                                        : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $address_data["address_line2"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">City : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $address_data["city"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Home : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $contact_data["home_no"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Mobile : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $contact_data["mobile_no"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Work : </label>
+
+                                                                    <div class="controls controls-row">
+                                                                        <input type="text" class="input-block-level"
+                                                                               name="" value="<?php echo $contact_data["work_no"];?>"
+                                                                               disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button class="btn" data-dismiss="modal" aria-hidden="true">
-                                                            Close
+                                                        <button class="btn" data-dismiss="modal"
+                                                                aria-hidden="true"></i>Cancel
                                                         </button>
-                                                        <button data-dismiss="modal" class="btn btn-success">Success
+                                                        <button class="btn btn-info" data-dismiss="modal"
+                                                                aria-hidden="true">Edit
+                                                        </button>
+                                                        <button class="btn btn-success hidden" data-dismiss="modal">
+                                                            Save
                                                         </button>
                                                     </div>
                                                 </div>
+                                                </form>
                                             </div>
                                             <hr>
                                             <h3 class="text-info bold">Profile</h3>

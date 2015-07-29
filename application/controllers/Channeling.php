@@ -52,6 +52,7 @@ class Channeling extends CI_Controller
         $medical_health_history_other_data = $this->channeling_model->get_medical_health_history_other($pid);
         $medications_data = $this->channeling_model->get_medications();
 
+
         $dynamic_data = array(
             'title' => 'Patient Profile',
             'profile_data' => $patient_data,
