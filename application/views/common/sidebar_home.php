@@ -34,6 +34,12 @@
                 </a>
             </li>
             <li class="sub-menu">
+                <a href="<?php echo base_url(); ?>index.php/malocclusion" class="">
+                    <i class="icon-eye-open"></i>
+                    <span>3D-Models</span>
+                </a>
+            </li>
+            <li class="sub-menu">
                 <a href="<?php echo base_url(); ?>index.php/contact" class="">
                     <i class="icon-bullhorn "></i>
                     <span>Contact Us</span>
