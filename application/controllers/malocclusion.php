@@ -32,39 +32,98 @@ class Malocclusion extends CI_Controller {
     }
     
     public function classBmiled(){
-        $this->load->view('3dviews/classBmiled.html');  
+        $dynamic_data = array(
+            'title' => '3D-Models'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classBmiled.html');
+        $this->load->view('common/footer');
+
     }
     
      public function classBmoderate(){
-        $this->load->view('3dviews/classBmoderate.html');  
+         $dynamic_data = array(
+             'title' => '3D-Models'
+         );
+
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classBmoderate.html');
+        $this->load->view('common/footer');
     }
 
     public function classBsevere(){
-        $this->load->view('3dviews/classBsevere.html');  
+        $dynamic_data = array(
+            'title' => '3D-Models'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classBsevere.html');
+        $this->load->view('common/footer');
     }
     
      public function classCmiled(){
-        $this->load->view('3dviews/classcmiled.html');  
+
+         $dynamic_data = array(
+             'title' => '3D-Models'
+         );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classcmiled.html');
+        $this->load->view('common/footer');
     }
     
      public function classCmoderate(){
-        $this->load->view('3dviews/classcmoderate.html');  
-    }
+         $dynamic_data = array(
+             'title' => '3D-Models'
+         );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classcmoderate.html');
+        $this->load->view('common/footer');
+     }
 
     public function classCsevere(){
-        $this->load->view('3dviews/classcsevere.html');  
+        $dynamic_data = array(
+            'title' => '3D-Models'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classcsevere.html');
+        $this->load->view('common/footer');
     }
     
      public function classDmiled(){
-        $this->load->view('3dviews/classDmiled.html');  
+         $dynamic_data = array(
+             'title' => '3D-Models'
+         );
+         $this->load->view('common/header', $dynamic_data);
+         $this->load->view('common/sidebar');
+         $this->load->view('3d_models/3d/classDmiled.html');
+         $this->load->view('common/footer');
+
     }
     
      public function classDmoderate(){
-        $this->load->view('3dviews/classDmoderate.html');  
-    }
+         $dynamic_data = array(
+             'title' => '3D-Models'
+         );
+         $this->load->view('common/header', $dynamic_data);
+         $this->load->view('common/sidebar');
+         $this->load->view('3d_models/3d/classDmoderate.html');
+         $this->load->view('common/footer');
+     }
 
     public function classDsevere(){
-        $this->load->view('3dviews/classDsevere.html');  
+        $dynamic_data = array(
+            'title' => '3D-Models'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('3d_models/3d/classDsevere.html');
+        $this->load->view('common/footer');
+
     }
     
     

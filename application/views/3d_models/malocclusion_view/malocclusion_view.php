@@ -47,13 +47,13 @@
                            </ul>
                        </div>
                        <div class="span4">
-                           <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Mild </button>
+                           <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('1');"><i class=" icon-eye-open"></i> Mild </button>
                            <br/>
                            <br/>
-                           <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Moderate</button>
+                           <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('2');"><i class=" icon-eye-open"></i> Moderate</button>
                            <br/>
                            <br/>
-                           <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Severe</button>
+                           <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('3');"><i class=" icon-eye-open"></i> Severe</button>
                        </div>
                    </div>
                </div>
@@ -90,13 +90,13 @@
                             </ul>
                         </div>
                         <div class="span4">
-                                <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Mild </button>
+                                <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('4');"><i class=" icon-eye-open"></i> Mild </button>
                                 <br/>
                                 <br/>
-                                <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Moderate</button>
+                                <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('5');"><i class=" icon-eye-open"></i> Moderate</button>
                                 <br/>
                                 <br/>
-                                <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Severe</button>
+                                <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('6');"><i class=" icon-eye-open"></i> Severe</button>
                         </div>
                         </div>
                     </div>
@@ -137,13 +137,13 @@
                                 </ul>
                             </div>
                             <div class="span4">
-                                <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Mild </button>
+                                <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('7');"><i class=" icon-eye-open"></i> Mild </button>
                                 <br/>
                                 <br/>
-                                <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Moderate</button>
+                                <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('8');"><i class=" icon-eye-open"></i> Moderate</button>
                                 <br/>
                                 <br/>
-                                <button type="button" class="btn btn-large btn-success btn-block"><i class=" icon-eye-open"></i> Severe</button>
+                                <button type="button" class="btn btn-large btn-success btn-block" onclick="loadModel('9');"><i class=" icon-eye-open"></i> Severe</button>
                             </div>
                         </div>
                     </div>
@@ -160,5 +160,38 @@
 <!-- END PAGE CONTAINER-->
 </div>
 <!-- END PAGE -->
+    <script type="text/javascript">
+        function loadModel(model){
+            var value = model;
+            if(value == 1){
+                window.location.href ='malocclusion/classBmiled';
+            }
+            if(value == 2){
+                window.location.href = 'malocclusion/classBmoderate';
+            }
+            if(value == 3){
+                window.location.href = 'malocclusion/classBsevere';
+            }
+            if(value == 4){
+                window.location.href = 'malocclusion/classCmiled';
+            }
+            if(value == 5){
+                window.location.href = 'malocclusion/classCmoderate';
+            }
+            if(value == 6){
+                window.location.href = 'malocclusion/classCsevere';
+            }
+            if(value == 7){
+                window.location.href = 'malocclusion/classDmiled';
+            }
+            if(value == 8){
+                window.location.href = 'malocclusion/classDmoderate';
+            }
+            if(value == 9){
+                window.location.href = 'malocclusion/classDsevere';
+            }
+        }
+
+    </script>
 </div>
 <!-- END CONTAINER -->
