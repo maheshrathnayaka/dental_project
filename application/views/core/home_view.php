@@ -54,6 +54,12 @@
                         <div class="status"><h3><b>Tele-health</b></h3></div>
                     </a>
                 </div>
+                <div class="metro-nav-block nav-block-orange double">
+                    <a href="<?php echo base_url(); ?>index.php/malocclusion" class="text-center" data-original-title="">
+                        <i class="icon-eye-open"></i>
+                        <div class="status"><h3><b>3D-models</b></h3></div>
+                    </a>
+                </div>
                 <div class="metro-nav-block nav-deep-red double">
                     <a href="<?php echo base_url(); ?>index.php/login" data-original-title="">
                         <i class="icon-unlock-alt"></i>
