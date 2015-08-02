@@ -1,2 +1,2 @@
-## Smart DentAssist - Final Year Project (Ongoing)
+### Smart DentAssist - Final Year Project (Ongoing)
 
