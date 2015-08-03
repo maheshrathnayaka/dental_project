@@ -75,4 +75,30 @@ class Channeling extends CI_Controller
         $this->load->view('core/profile_view');
         $this->load->view('common/footer');
     }
+
+    function profile_save(){
+        $profile_data = $this->input->post('profile_data_array');
+        $status = $this->channeling_model->update_profile($profile_data);
+        return $status;
+//        if($profile_data['identity'] == "ProfileData"){
+//            $profile_data = array(
+//                'p_id' => $this->input->post('txtPID'),
+//                'first_name' => $this->input->post('txtFirstName'),
+//                'last_name' => $this->input->post('txtLastName'),
+//                'occupation' => $this->input->post('txtOccupation'),
+//                'email' => $this->input->post('txtEmail'),
+//                'postal_no' => $this->input->post('txtPostalNo'),
+//                'address1' => $this->input->post('txtAddress01'),
+//                'address2' => $this->input->post('txtAddress02'),
+//                'city' => $this->input->post('txtCity'),
+//                'home_no' => $this->input->post('txtHomeNo'),
+//                'mobile_no' => $this->input->post('txtMobileNo'),
+//                'work_no' => $this->input->post('txtWorkNo'),
+//                'identity' => $this->input->post('txtIdentity'),
+//            );
+//            $status = $this->channeling_model->update_profile($profile_data);
+//            return $status;
+//            echo $this->input->post('txtIdentity');
+//        }
+    }
 }

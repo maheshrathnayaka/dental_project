@@ -145,4 +145,7 @@ class Channeling_model extends CI_Model
         return $query->result_array();
     }
 
+    public function update_profile($profile_data){
+        return $profile_data;
+    }
 }

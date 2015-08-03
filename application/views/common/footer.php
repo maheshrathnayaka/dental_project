@@ -62,6 +62,9 @@
 <script src="<?php echo base_url(); ?>assets/js/gritter.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/pulstate.js" type="text/javascript"></script>
 
+<script src="<?php echo base_url(); ?>assets/js/app.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/app-validation.js" type="text/javascript"></script>
+
 <!-- END JAVASCRIPTS -->
 <script language="javascript" type="text/javascript">
     $(function () {
@@ -69,6 +72,7 @@
     });
 
 </script>
+
 </body>
 <!-- END BODY -->
 </html>
