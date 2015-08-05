@@ -77,9 +77,11 @@ class Channeling extends CI_Controller
     }
 
     function profile_save(){
-        $profile_data = $this->input->post('profile_data_array');
-        $status = $this->channeling_model->update_profile($profile_data);
-        return $status;
+        $profile_data = $this->input->post('profile');
+        $status = $this->channeling_model->profile($profile_data);
+//        return $status;
+//        $name = $this->input->post('fullname');
+        echo $status;
 //        if($profile_data['identity'] == "ProfileData"){
 //            $profile_data = array(
 //                'p_id' => $this->input->post('txtPID'),

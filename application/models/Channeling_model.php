@@ -145,7 +145,49 @@ class Channeling_model extends CI_Model
         return $query->result_array();
     }
 
-    public function update_profile($profile_data){
-        return $profile_data;
+    public function profile($profile){
+        $patient_id = $profile['p_id'];
+        $contact_data = array(
+            'home_no' => $profile['home_no'],
+            'mobile_no' => $profile['mobile_no'],
+            'work_no' => $profile['work_no']
+        );
+        $address_data = array(
+            'postal_no' => $profile['postal_no'],
+            'address_line1' => $profile['address1'],
+            'address_line2' => $profile['address2'],
+            'city' => $profile['city']
+        );
+        $profile_data = array(
+            'patient_first_name' => $profile['first_name'],
+            'patient_last_name' => $profile['last_name'],
+            'patient_occupation' => $profile['occupation'],
+            'patient_email' => $profile['email']
+        );
+        $status_contact = $this->update_contact($contact_data, $patient_id);
+        $status_address = $this->update_address($address_data, $patient_id);
+        $status_profile = $this->update_profile($profile_data, $patient_id);
+        return $status_contact.$status_address.$status_profile;
+    }
+
+    public function update_contact($contact_data, $patient_id){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('patient_id', $patient_id);
+        $status = $General->update('tbl_patient_contacts', $contact_data);
+        return $status;
+    }
+
+    public function update_address($address_data, $patient_id){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('patient_id', $patient_id);
+        $status = $General->update('tbl_patient_address', $address_data);
+        return $status;
+    }
+
+    public function update_profile($profile_data, $patient_id){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('patient_id', $patient_id);
+        $status = $General->update('tbl_patient', $profile_data);
+        return $status;
     }
 }

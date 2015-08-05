@@ -163,150 +163,193 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">First Name
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_first_name"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Surname : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_last_name"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="span12">
+                                                                    <label for="chkDifficultyChewingFood">
+                                                                        <input type="checkbox" id="chkDifficultyChewingFood"
+                                                                               name="chkDifficultyChewingFood"
+                                                                               value="DifficultyChewingFood" tabindex="54" disabled/>
+                                                                        <b> Do you have difficulty in chewing your food?</b>
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Occupation
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_occupation"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Email : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_email"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="span12">
+                                                                    <label for="chkTeethSensitive">
+                                                                        <input type="checkbox" id="chkTeethSensitive" name="chkTeethSensitive"
+                                                                               value="TeethSensitive" tabindex="55" disabled/>
+                                                                        <b> Are your teeth sensitive?</b>
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Postal No
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["postal_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Address Line 01
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["address_line1"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="span12">
+                                                                    <label for="chkChewOneSide">
+                                                                        <input type="checkbox" id="chkChewOneSide" name="chkChewOneSide"
+                                                                               value="ChewOneSide" tabindex="56" disabled/>
+                                                                        <b> Do you chew on only one side of your mouth?</b>
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Address Line 02
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["address_line2"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">City : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["city"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="span12">
+                                                                    <label for="chkHurtWhenBite">
+                                                                        <input type="checkbox" id="chkHurtWhenBite" name="chkHurtWhenBite"
+                                                                               value="HurtWhenBite" tabindex="57" disabled/>
+                                                                        <b> Does it hurt when you chew or open wide to take a bite?</b>
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Home : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["home_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Mobile : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["mobile_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="span12">
+                                                                    <label for="chkAvoidBrishingPain">
+                                                                        <input type="checkbox" id="chkAvoidBrishingPain"
+                                                                               name="chkAvoidBrishingPain"
+                                                                               value="AvoidBrishingPain" tabindex="58" disabled/>
+                                                                        <b> Do you avoid brushing any part of your mouth because of pain?</b>
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <label for="chkSlowHealing">
+                                                                        <input type="checkbox" id="chkSlowHealing" name="chkSlowHealing"
+                                                                               value="SlowHealing" tabindex="59" disabled/>
+                                                                        <b> Have you ever noticed slow-healing sores in or about your mouth?</b>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <label for="chkGumsBleed">
+                                                                        <input type="checkbox" id="chkGumsBleed"
+                                                                               name="chkGumsBleed" value="GumsBleed" tabindex="60" disabled/>
+                                                                        <b> Do your gums bleed when you floss?</b>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <label for="chkHadTrauma">
+                                                                        <input type="checkbox" id="chkHadTrauma" name="chkHadTrauma"
+                                                                               value="HadTrauma" tabindex="61" disabled/>
+                                                                        <b> Have you had a blow to the jaw (trauma)?</b>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <label for="chkGumsSwollenTender">
+                                                                        <input type="checkbox" id="chkGumsSwollenTender"
+                                                                               name="chkGumsSwollenTender" value="GumsSwollenTender"
+                                                                               tabindex="62" disabled/>
+                                                                        <b> Do your gums feel swollen or tender?</b>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <label for="chkPainInFCJJTT">
+                                                                        <input type="checkbox" id="chkPainInFCJJTT"
+                                                                               name="chkPainInFCJJTT" value="PainInFCJJTT" tabindex="63" disabled/>
+                                                                        <b> Do you have pain in the face, cheeks, jaws, joints, throat, or
+                                                                            temples?</b>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row-fluid">
+                                                                <h4><b>Are you a habitual</b></h4>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkGumChewer">
+                                                                            <input type="checkbox" id="chkGumChewer" name="chkGumChewer"
+                                                                                   value="GumChewer" tabindex="64" disabled/>
+                                                                            <b> Gum chewer?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkBetelChewer">
+                                                                            <input type="checkbox" id="chkBetelChewer" name="chkBetelChewer"
+                                                                                   value="BetelChewer" tabindex="65" disabled/>
+                                                                            <b> Betel chewer?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkPipeSmoker">
+                                                                            <input type="checkbox" id="chkPipeSmoker" name="chkPipeSmoker"
+                                                                                   value="PipeSmoker" tabindex="66" disabled/>
+                                                                            <b> Pipe smoker?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkCigarette">
+                                                                            <input type="checkbox" id="chkCigarette" name="chkCigarette"
+                                                                                   value="Cigarette" tabindex="67" disabled/>
+                                                                            <b> Cigarette smoker?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row-fluid">
+                                                                <h4><b>Do you feel twinges of pain when your teeth come in contact with</b></h4>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkHotFood">
+                                                                            <input type="checkbox" id="chkHotFood" name="chkHotFood"
+                                                                                   value="HotFood" tabindex="68" disabled/>
+                                                                            <b> Hot foods or liquids?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkColdFood">
+                                                                            <input type="checkbox" id="chkColdFood" name="chkColdFood"
+                                                                                   value="ColdFood" tabindex="69" disabled/>
+                                                                            <b> Cold foods or liquids?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkSours">
+                                                                            <input type="checkbox" id="chkSours" name="chkSours"
+                                                                                   value="Sours" tabindex="70" disabled/>
+                                                                            <b> Sours?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkSweets">
+                                                                            <input type="checkbox" id="chkSweets" name="chkSweets"
+                                                                                   value="Sweets" tabindex="71" disabled/>
+                                                                            <b> Sweets?</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row-fluid">
                                                                 <div class="span6">
                                                                     <div class="control-group">
-                                                                        <label class="control-label">Work : </label>
+                                                                        <label class="control-label" for="txtAreaReasonForVisit"><b>Known Allergies</b></label>
 
                                                                         <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["work_no"]; ?>"
-                                                                                   disabled>
+                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaReasonForVisit" name="txtAreaReasonForVisit" placeholder="known allergies here..." tabindex="15" disabled></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="span6">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label" for="txtAreaReasonForVisit"><b>Other</b></label>
+
+                                                                        <div class="controls controls-row">
+                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaReasonForVisit" name="txtAreaReasonForVisit" placeholder="other information here..." tabindex="15"  disabled></textarea>
+                                                                            <input id="txtIdentityDentalHealth" name="txtIdentity"
+                                                                                   value="DentalHealthData" hidden>
+                                                                            <input id="txtPID" name="txtPID"
+                                                                                   value="<?php echo $profile_data["patient_id"]; ?>"
+                                                                                   hidden>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -314,7 +357,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button class="btn" data-dismiss="modal"
-                                                                    aria-hidden="true"></i>Cancel
+                                                                    aria-hidden="true"></i>Close
                                                             </button>
                                                             <button class="btn btn-info" data-dismiss="modal"
                                                                     aria-hidden="true">Edit
@@ -381,167 +424,308 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row-fluid">
-                                                                <div class="span4">
-                                                                    <div class="control-group">
-                                                                        <div class="controls controls-row">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkDiabetes">
+                                                                            <input type="checkbox" id="chkDiabetes"
+                                                                                   name="chkDiabetes"
+                                                                                   value="Diabetes" tabindex="25" disabled/>
+                                                                            <b> Diabetes</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkShortness">
+                                                                            <input type="checkbox" id="chkShortness"
+                                                                                   name="chkShortness"
+                                                                                   value="Shortness" tabindex="26" disabled/>
+                                                                            <b> Shortness of breath</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkAngina">
+                                                                            <input type="checkbox" id="chkAngina"
+                                                                                   name="chkAngina" value="Angina"
+                                                                                   tabindex="27" disabled/>
+                                                                            <b> Heart disease/Murmur/Angina</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkDepression">
+                                                                            <input type="checkbox" id="chkDepression"
+                                                                                   name="chkDepression"
+                                                                                   value="Depression" tabindex="28" disabled/>
+                                                                            <b> Depression/Anxiety</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkHighCholesterol">
                                                                             <input type="checkbox"
-                                                                                   class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $medical_health_history_data["Diabetes"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                                   id="chkHighCholesterol"
+                                                                                   name="chkHighCholesterol"
+                                                                                   value="HighCholesterol"
+                                                                                   tabindex="29" disabled/>
+                                                                            <b> High cholesterol</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkTonsillitis">
+                                                                            <input type="checkbox" id="chkTonsillitis"
+                                                                                   name="chkTonsillitis"
+                                                                                   value="Tonsillitis" tabindex="30" disabled/>
+                                                                            <b> Tonsillitis</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="span4">
-                                                                    <div class="control-group">
-                                                                        <div class="controls controls-row">
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkKidney">
+                                                                            <input type="checkbox" id="chkKidney"
+                                                                                   name="chkKidney" value="Kidney"
+                                                                                   tabindex="31" disabled/>
+                                                                            <b> Kidney/Bladder problems</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkThyroid">
+                                                                            <input type="checkbox" id="chkThyroid"
+                                                                                   name="chkThyroid"
+                                                                                   value="Thyroid" tabindex="32" disabled/>
+                                                                            <b> Thyroid problems</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkHighBloodPressure">
                                                                             <input type="checkbox"
-                                                                                   class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $medical_health_history_data["High cholesterol"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                                   id="chkHighBloodPressure"
+                                                                                   name="chkHighBloodPressure"
+                                                                                   value="HighBloodPressure"
+                                                                                   tabindex="33" disabled/>
+                                                                            <b> High blood pressure</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkAsthma">
+                                                                            <input type="checkbox" id="chkAsthma"
+                                                                                   name="chkAsthma" value="Asthma"
+                                                                                   tabindex="34" disabled/>
+                                                                            <b> Asthma</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="span4">
-                                                                    <div class="control-group">
-                                                                        <div class="controls controls-row">
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkLung">
+                                                                            <input type="checkbox" id="chkLung"
+                                                                                   name="chkLung" value="Lung"
+                                                                                   tabindex="35" disabled/>
+                                                                            <b> Lung problems/cough</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkUlcers">
+                                                                            <input type="checkbox" id="chkUlcers"
+                                                                                   name="chkUlcers" value="Ulcers"
+                                                                                   tabindex="36" disabled/>
+                                                                            <b> Ulcers/colitis</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkLowBloodPressure">
                                                                             <input type="checkbox"
-                                                                                   class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $medical_health_history_data["High blood pressure"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                                   id="chkLowBloodPressure"
+                                                                                   name="chkLowBloodPressure"
+                                                                                   value="LowBloodPressure"
+                                                                                   tabindex="37" disabled/>
+                                                                            <b> Low blood pressure</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkStroke">
+                                                                            <input type="checkbox" id="chkStroke"
+                                                                                   name="chkStroke" value="Stroke"
+                                                                                   tabindex="38" disabled/>
+                                                                            <b> Stroke</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Occupation
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_occupation"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkLiver">
+                                                                            <input type="checkbox" id="chkLiver"
+                                                                                   name="chkLiver" value="Liver"
+                                                                                   tabindex="39" disabled/>
+                                                                            <b> Liver problems/Hepatitis</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Email : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_email"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkGastric">
+                                                                            <input type="checkbox" id="chkGastric"
+                                                                                   name="chkGastric"
+                                                                                   value="Gastric" tabindex="40" disabled/>
+                                                                            <b> Gastric irritation</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Postal No
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["postal_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkHeartburn">
+                                                                            <input type="checkbox" id="chkHeartburn"
+                                                                                   name="chkHeartburn"
+                                                                                   value="Heartburn" tabindex="41" disabled/>
+                                                                            <b> Heartburn(reflux)</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Address Line 01
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["address_line1"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkSinusProblems">
+                                                                            <input type="checkbox" id="chkSinusProblems"
+                                                                                   name="chkSinusProblems"
+                                                                                   value="SinusProblems" tabindex="42" disabled/>
+                                                                            <b> Sinus problems</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Address Line 02
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["address_line2"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkHeadaches">
+                                                                            <input type="checkbox" id="chkHeadaches"
+                                                                                   name="chkHeadaches"
+                                                                                   value="Headaches" tabindex="43" disabled/>
+                                                                            <b> Headaches/Migraines</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">City : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["city"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkEarProblems">
+                                                                            <input type="checkbox" id="chkEarProblems"
+                                                                                   name="chkEarProblems"
+                                                                                   value="EarProblems" tabindex="44" disabled/>
+                                                                            <b> Ear problems</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Home : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["home_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkAnemia">
+                                                                            <input type="checkbox" id="chkAnemia"
+                                                                                   name="chkAnemia" value="Anemia"
+                                                                                   tabindex="45" disabled/>
+                                                                            <b> Anemia/blood problems</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Mobile : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["mobile_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkArthritis">
+                                                                            <input type="checkbox" id="chkArthritis"
+                                                                                   name="chkArthritis"
+                                                                                   value="Arthritis" tabindex="46" disabled/>
+                                                                            <b> Arthritis</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Work : </label>
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkNeurological">
+                                                                            <input type="checkbox" id="chkNeurological"
+                                                                                   name="chkNeurological"
+                                                                                   value="Neurological" tabindex="47" disabled/>
+                                                                            <b> Neurological problems</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkSeasonalAllergies">
+                                                                            <input type="checkbox"
+                                                                                   id="chkSeasonalAllergies"
+                                                                                   name="chkSeasonalAllergies"
+                                                                                   value="SeasonalAllergies"
+                                                                                   tabindex="48" disabled/>
+                                                                            <b> Seasonal allergies</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkSwollen">
+                                                                            <input type="checkbox" id="chkSwollen"
+                                                                                   name="chkSwollen"
+                                                                                   value="Swollen" tabindex="49" disabled/>
+                                                                            <b> Swollen ankles</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <label for="chkCancer">
+                                                                            <input type="checkbox" id="chkCancer"
+                                                                                   name="chkCancer" value="Cancer"
+                                                                                   tabindex="50" disabled/>
+                                                                            <b> Cancer</b>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <div class="span6">
+                                                                        <label for="chkEyeDisorder">
+                                                                            <input type="checkbox" id="chkEyeDisorder"
+                                                                                   name="chkEyeDisorder"
+                                                                                   value="EyeDisorder" tabindex="51" disabled/>
+                                                                            <b> Eye disorder/Glaucoma</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span6">
+                                                                        <div class="control-group">
+                                                                            <label for="chkOther">
+                                                                                <input type="checkbox" id="chkOther"
+                                                                                       name="chkOther" value="Other"
+                                                                                       tabindex="52" disabled/>
+                                                                                <b> Other</b>
+                                                                            </label>
 
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["work_no"]; ?>"
-                                                                                   disabled>
+                                                                            <div class="controls controls-row">
+                                                                                <textarea style="resize: none;" class="input-block-level" id="txtAreaOther" name="txtAreaOther" placeholder="other..." tabindex="53" disabled></textarea>
+                                                                                <input id="txtIdentityMedicalHealth" name="txtIdentity"
+                                                                                       value="MedicalHealthData" hidden>
+                                                                                <input id="txtPID" name="txtPID"
+                                                                                       value="<?php echo $profile_data["patient_id"]; ?>"
+                                                                                       hidden>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button class="btn" data-dismiss="modal"
-                                                                    aria-hidden="true"></i>Cancel
+                                                                    aria-hidden="true"></i>Close
                                                             </button>
                                                             <button class="btn btn-info" data-dismiss="modal"
                                                                     aria-hidden="true">Edit
@@ -618,164 +802,78 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div class="row-fluid">
-                                                                    <div class="span6">
+                                                                    <div class="span12">
+                                                                        <label for="chkPregnant">
+                                                                            <input type="checkbox" id="chkPregnant" name="chkPregnant"
+                                                                                   value="Pregnant" tabindex="17" disabled/>
+                                                                            <b> Are you pregnant?</b>
+                                                                        </label>
                                                                         <div class="control-group">
-                                                                            <label class="control-label">First Name
-                                                                                : </label>
+                                                                            <label class="control-label" for="txtNumberOfWeeks"><b> Number of weeks</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input type="text"
+                                                                                <input id="txtNumberOfWeeks" name="txtNumberOfWeeks" type="text"
                                                                                        class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $profile_data["patient_first_name"]; ?>"
-                                                                                       disabled>
+                                                                                       placeholder="number of weeks here..." tabindex="18" disabled>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="span6">
                                                                         <div class="control-group">
-                                                                            <label class="control-label">Surname
-                                                                                : </label>
+                                                                            <label class="control-label" for="txtNumberOfPregnancies"><b> Total number of pregnancies</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input type="text"
+                                                                                <input id="txtNumberOfPregnancies" name="txtNumberOfPregnancies" type="text"
                                                                                        class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $profile_data["patient_last_name"]; ?>"
-                                                                                       disabled>
+                                                                                       placeholder="number of pregnancies here..." tabindex="19" disabled>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row-fluid">
-                                                                    <div class="span6">
                                                                         <div class="control-group">
-                                                                            <label class="control-label">Occupation
-                                                                                : </label>
+                                                                            <label class="control-label" for="txtNumberOfBirths"><b> Number of births</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input type="text"
+                                                                                <input id="txtNumberOfBirths" name="txtNumberOfBirths" type="text"
                                                                                        class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $profile_data["patient_occupation"]; ?>"
-                                                                                       disabled>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="span6">
-                                                                        <div class="control-group">
-                                                                            <label class="control-label">Email
-                                                                                : </label>
-
-                                                                            <div class="controls controls-row">
-                                                                                <input type="text"
-                                                                                       class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $profile_data["patient_email"]; ?>"
-                                                                                       disabled>
+                                                                                       placeholder="number of births here..." tabindex="20" disabled>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row-fluid">
-                                                                    <div class="span6">
+                                                                    <div class="span12">
+                                                                        <label for="chkNursing">
+                                                                            <input type="checkbox" id="chkNursing" name="chkNursing"
+                                                                                   value="Nursing" tabindex="21" disabled/>
+                                                                            <b> Nursing?</b>
+                                                                        </label>
                                                                         <div class="control-group">
-                                                                            <label class="control-label">Postal No
-                                                                                : </label>
+                                                                            <label class="control-label" for="txtMenstruating"><b> Date of last menstrual period if you are still menstruating</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input type="text"
-                                                                                       class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $address_data["postal_no"]; ?>"
-                                                                                       disabled>
+                                                                                <input id="dp2" name="txtMenstruating" type="text"
+                                                                                       placeholder="date of last menstrual period here..." size="16"
+                                                                                       class="m-ctrl-medium span12" tabindex="22" disabled>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="span6">
                                                                         <div class="control-group">
-                                                                            <label class="control-label">Address Line 01
-                                                                                : </label>
+                                                                            <label class="control-label" for="txtBeginningPeriods"><b> Age at beginning of periods (menstruation)</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input type="text"
+                                                                                <input id="txtBeginningPeriods" name="txtBeginningPeriods" type="text"
                                                                                        class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $address_data["address_line1"]; ?>"
-                                                                                       disabled>
+                                                                                       placeholder="beginning periods here..." tabindex="23" disabled>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row-fluid">
-                                                                    <div class="span6">
                                                                         <div class="control-group">
-                                                                            <label class="control-label">Address Line 02
-                                                                                : </label>
+                                                                            <label class="control-label" for="txtEndPeriods"><b> Age at end of periods (menopause)</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input type="text"
+                                                                                <input id="txtEndPeriods" name="txtEndPeriods" type="text"
                                                                                        class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $address_data["address_line2"]; ?>"
-                                                                                       disabled>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="span6">
-                                                                        <div class="control-group">
-                                                                            <label class="control-label">City : </label>
-
-                                                                            <div class="controls controls-row">
-                                                                                <input type="text"
-                                                                                       class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $address_data["city"]; ?>"
-                                                                                       disabled>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row-fluid">
-                                                                    <div class="span6">
-                                                                        <div class="control-group">
-                                                                            <label class="control-label">Home : </label>
-
-                                                                            <div class="controls controls-row">
-                                                                                <input type="text"
-                                                                                       class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $contact_data["home_no"]; ?>"
-                                                                                       disabled>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="span6">
-                                                                        <div class="control-group">
-                                                                            <label class="control-label">Mobile
-                                                                                : </label>
-
-                                                                            <div class="controls controls-row">
-                                                                                <input type="text"
-                                                                                       class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $contact_data["mobile_no"]; ?>"
-                                                                                       disabled>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row-fluid">
-                                                                    <div class="span6">
-                                                                        <div class="control-group">
-                                                                            <label class="control-label">Work : </label>
-
-                                                                            <div class="controls controls-row">
-                                                                                <input type="text"
-                                                                                       class="input-block-level"
-                                                                                       name=""
-                                                                                       value="<?php echo $contact_data["work_no"]; ?>"
-                                                                                       disabled>
+                                                                                       placeholder="end periods here..." tabindex="24" disabled>
+                                                                                <input id="txtIdentityWomenHealth" name="txtIdentity"
+                                                                                       value="WomenHealthData" hidden>
+                                                                                <input id="txtPID" name="txtPID"
+                                                                                       value="<?php echo $profile_data["patient_id"]; ?>"
+                                                                                       hidden>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -783,7 +881,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button class="btn" data-dismiss="modal"
-                                                                        aria-hidden="true"></i>Cancel
+                                                                        aria-hidden="true"></i>Close
                                                                 </button>
                                                                 <button class="btn btn-info" data-dismiss="modal"
                                                                         aria-hidden="true">Edit
@@ -845,158 +943,120 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">First Name
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_first_name"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span4">
+                                                                        <label for="chkRemoval">
+                                                                            <input type="checkbox" id="chkRemoval"
+                                                                                   name="chkRemoval"
+                                                                                   value="Removal" tabindex="73" disabled/>
+                                                                            <b> Removal</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Surname : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_last_name"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkWoundTreatment">
+                                                                            <input type="checkbox"
+                                                                                   id="chkWoundTreatment"
+                                                                                   name="chkWoundTreatment"
+                                                                                   value="WoundTreatment"
+                                                                                   tabindex="74" disabled/>
+                                                                            <b> Wound Treatment</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Occupation
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_occupation"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Email : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $profile_data["patient_email"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkFilling">
+                                                                            <input type="checkbox" id="chkFilling"
+                                                                                   name="chkFilling"
+                                                                                   value="Filling" tabindex="75" disabled/>
+                                                                            <b> Filling</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Postal No
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["postal_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span4">
+                                                                        <label for="chkSealants">
+                                                                            <input type="checkbox" id="chkSealants"
+                                                                                   name="chkSealants"
+                                                                                   value="Sealants" tabindex="76" disabled/>
+                                                                            <b> Sealants</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Address Line 01
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["address_line1"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkRetainers">
+                                                                            <input type="checkbox" id="chkRetainers"
+                                                                                   name="chkRetainers"
+                                                                                   value="Retainers" tabindex="77" disabled/>
+                                                                            <b> Retainers</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Address Line 02
-                                                                            : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["address_line2"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">City : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $address_data["city"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkBraces">
+                                                                            <input type="checkbox" id="chkBraces"
+                                                                                   name="chkBraces"
+                                                                                   value="Braces" tabindex="78" disabled/>
+                                                                            <b> Braces</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Home : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["home_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span4">
+                                                                        <label for="chkCleaning">
+                                                                            <input type="checkbox" id="chkCleaning"
+                                                                                   name="chkCleaning"
+                                                                                   value="Cleaning" tabindex="79" disabled/>
+                                                                            <b> Cleaning</b>
+                                                                        </label>
                                                                     </div>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Mobile : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["mobile_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkPolishing">
+                                                                            <input type="checkbox" id="chkPolishing"
+                                                                                   name="chkPolishing"
+                                                                                   value="Polishing" tabindex="80" disabled/>
+                                                                            <b> Polishing</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkBridges">
+                                                                            <input type="checkbox" id="chkBridges"
+                                                                                   name="chkBridges"
+                                                                                   value="Bridges" tabindex="81" disabled/>
+                                                                            <b> Bridges</b>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
-                                                                <div class="span6">
-                                                                    <div class="control-group">
-                                                                        <label class="control-label">Work : </label>
-
-                                                                        <div class="controls controls-row">
-                                                                            <input type="text" class="input-block-level"
-                                                                                   name=""
-                                                                                   value="<?php echo $contact_data["work_no"]; ?>"
-                                                                                   disabled>
-                                                                        </div>
+                                                                <div class="span12">
+                                                                    <div class="span4">
+                                                                        <label for="chkDentures">
+                                                                            <input type="checkbox" id="chkDentures"
+                                                                                   name="chkDentures"
+                                                                                   value="Dentures" tabindex="82" disabled/>
+                                                                            <b> Dentures</b>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="span4">
+                                                                        <label for="chkImplants">
+                                                                            <input type="checkbox" id="chkImplants"
+                                                                                   name="chkImplants"
+                                                                                   value="Implants" tabindex="83" disabled/>
+                                                                            <b> Implants</b>
+                                                                        </label>
+                                                                        <input id="txtIdentityTreatment" name="txtIdentity"
+                                                                               value="TreatmentData" hidden>
+                                                                        <input id="txtPID" name="txtPID"
+                                                                               value="<?php echo $profile_data["patient_id"]; ?>"
+                                                                               hidden>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button class="btn" data-dismiss="modal"
-                                                                    aria-hidden="true"></i>Cancel
+                                                                    aria-hidden="true"></i>Close
                                                             </button>
                                                             <button class="btn btn-info" data-dismiss="modal"
                                                                     aria-hidden="true">Edit
@@ -1011,27 +1071,29 @@
                                             <hr>
                                             <h3 class="text-info bold">Profile</h3>
 
-                                            <div class="span12">
-                                                <div class="span6">
-                                                    <h4 class="bold">Name
-                                                        : <?php echo $profile_data["patient_first_name"] . ' ' . $profile_data["patient_last_name"]; ?></h4>
-                                                    <h4 class="bold">Birthday
-                                                        : <?php echo $profile_data["patient_birthday"]; ?></h4>
-                                                    <h4 class="bold">Address
-                                                        : <?php echo $address_data["postal_no"] . ', ' . $address_data["address_line1"] . ', ' . $address_data["address_line2"] . ', ' . $address_data["city"]; ?></h4>
-                                                    <h4 class="bold">Occupation
-                                                        : <?php echo $profile_data["patient_occupation"]; ?></h4>
-                                                </div>
+                                            <div id="divProfileData-wrapper">
+                                                <div class="span12" id="divProfileData">
+                                                    <div class="span6">
+                                                        <h4 class="bold">Name
+                                                            : <?php echo $profile_data["patient_first_name"] . ' ' . $profile_data["patient_last_name"]; ?></h4>
+                                                        <h4 class="bold">Birthday
+                                                            : <?php echo $profile_data["patient_birthday"]; ?></h4>
+                                                        <h4 class="bold">Address
+                                                            : <?php echo $address_data["postal_no"] . ', ' . $address_data["address_line1"] . ', ' . $address_data["address_line2"] . ', ' . $address_data["city"]; ?></h4>
+                                                        <h4 class="bold">Occupation
+                                                            : <?php echo $profile_data["patient_occupation"]; ?></h4>
+                                                    </div>
 
-                                                <div class="span6">
-                                                    <h4 class="bold">Home No
-                                                        : <?php echo $contact_data["home_no"]; ?></h4>
-                                                    <h4 class="bold">Mobile No
-                                                        : <?php echo $contact_data["mobile_no"]; ?></h4>
-                                                    <h4 class="bold">Work No
-                                                        : <?php echo $contact_data["work_no"]; ?></h4>
-                                                    <h4 class="bold">Email
-                                                        : <?php echo $profile_data["patient_email"]; ?></h4>
+                                                    <div class="span6">
+                                                        <h4 class="bold">Home No
+                                                            : <?php echo $contact_data["home_no"]; ?></h4>
+                                                        <h4 class="bold">Mobile No
+                                                            : <?php echo $contact_data["mobile_no"]; ?></h4>
+                                                        <h4 class="bold">Work No
+                                                            : <?php echo $contact_data["work_no"]; ?></h4>
+                                                        <h4 class="bold">Email
+                                                            : <?php echo $profile_data["patient_email"]; ?></h4>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="space5"></div>
@@ -1056,24 +1118,35 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="row-fluid">
-                                                            <div class="alert alert-block alert-success fade in" id="successProfileEdit">
+                                                            <div class="alert alert-block alert-success fade in"
+                                                                 id="successProfileEdit">
                                                                 <button data-dismiss="alert" class="close"
                                                                         type="button">×
                                                                 </button>
                                                                 <h4 class="alert-heading text-center">Success! Profile
                                                                     has been updated</h4>
                                                             </div>
-                                                            <div class="alert alert-block alert-error fade in" id="errorProfileEdit">
+                                                            <div class="alert alert-block alert-error fade in"
+                                                                 id="errorProfileEdit">
+                                                                <button data-dismiss="alert" class="close"
+                                                                        type="button">×
+                                                                </button>
+                                                                <h4 class="alert-heading text-center">Error! Something
+                                                                    went wrong</h4>
+                                                            </div>
+                                                            <div class="alert alert-block alert-error fade in"
+                                                                 id="errorProfileEditFields">
                                                                 <button data-dismiss="alert" class="close"
                                                                         type="button">×
                                                                 </button>
                                                                 <h4 class="alert-heading text-center">Error! Following
                                                                     fields cannot be empty</h4>
+
                                                                 <p>
-<!--                                                                <ul>-->
-<!--                                                                    <li>first name</li>-->
-<!--                                                                    <li>last name</li>-->
-<!--                                                                </ul>-->
+                                                                    <!--                                                                <ul>-->
+                                                                    <!--                                                                    <li>first name</li>-->
+                                                                    <!--                                                                    <li>last name</li>-->
+                                                                    <!--                                                                </ul>-->
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1087,7 +1160,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtFirstName" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtFirstName"
                                                                                value="<?php echo $profile_data["patient_first_name"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1100,7 +1173,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtLastName" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtLastName"
                                                                                value="<?php echo $profile_data["patient_last_name"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1116,7 +1189,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtOccupation" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtOccupation"
                                                                                value="<?php echo $profile_data["patient_occupation"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1127,9 +1200,9 @@
                                                                     <label class="control-label">Email : </label>
 
                                                                     <div class="controls controls-row">
-                                                                        <input id="txtEmail" type="text"
+                                                                        <input id="txtEmail" type="email"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtEmail"
                                                                                value="<?php echo $profile_data["patient_email"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1145,7 +1218,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtPostalNo" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtPostalNo"
                                                                                value="<?php echo $address_data["postal_no"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1159,7 +1232,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtAddress01" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtAddress01"
                                                                                value="<?php echo $address_data["address_line1"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1175,7 +1248,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtAddress02" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtAddress02"
                                                                                value="<?php echo $address_data["address_line2"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1188,7 +1261,7 @@
                                                                     <div class="controls controls-row">
                                                                         <input id="txtCity" type="text"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtCity"
                                                                                value="<?php echo $address_data["city"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1201,9 +1274,9 @@
                                                                     <label class="control-label">Home : </label>
 
                                                                     <div class="controls controls-row">
-                                                                        <input id="txtHomeNo" type="text"
+                                                                        <input id="txtHomeNo" type="tel"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtHomeNo"
                                                                                value="<?php echo $contact_data["home_no"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1214,9 +1287,9 @@
                                                                     <label class="control-label">Mobile : </label>
 
                                                                     <div class="controls controls-row">
-                                                                        <input id="txtMobileNo" type="text"
+                                                                        <input id="txtMobileNo" type="tel"
                                                                                class="input-block-level"
-                                                                               name=""
+                                                                               name="txtMobileNo"
                                                                                value="<?php echo $contact_data["mobile_no"]; ?>"
                                                                                disabled>
                                                                     </div>
@@ -1229,15 +1302,16 @@
                                                                     <label class="control-label">Work : </label>
 
                                                                     <div class="controls controls-row">
-                                                                        <input id="txtWorkNo" type="text"
+                                                                        <input id="txtWorkNo" type="tel"
                                                                                class="input-block-level"
                                                                                name="txtWorkNo"
                                                                                value="<?php echo $contact_data["work_no"]; ?>"
                                                                                disabled>
-                                                                        <input id="txtIdentity" name="txtIdentity"
+                                                                        <input id="txtIdentityProfile" name="txtIdentity"
                                                                                value="ProfileData" hidden>
                                                                         <input id="txtPID" name="txtPID"
-                                                                               value="<?php echo $profile_data["patient_id"]; ?>" hidden>
+                                                                               value="<?php echo $profile_data["patient_id"]; ?>"
+                                                                               hidden>
                                                                     </div>
                                                                     <div id="tst"></div>
                                                                 </div>
@@ -1246,7 +1320,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button class="btn" data-dismiss="modal"
-                                                                aria-hidden="true" id="btnProfileCancel"></i>Cancel
+                                                                aria-hidden="true" id="btnProfileClose"></i>Close
                                                         </button>
                                                         <button class="btn btn-info" data-dismiss=""
                                                                 aria-hidden="true" id="btnProfileEdit"
