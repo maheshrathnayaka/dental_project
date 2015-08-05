@@ -11,6 +11,8 @@
 <script src="<?php echo base_url(); ?>assets/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/assets/ckeditor/ckeditor.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/assets/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.blockui.js"></script>
 <script src="<?php echo base_url(); ?>assets/assets/bootstrap/js/bootstrap-fileupload.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.blockui.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -19,6 +21,8 @@
 
 
 <script src="<?php echo base_url(); ?>assets/assets/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.min.js" type="text/javascript"></script>
 <script type="text/javascript"
         src="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/uniform/jquery.uniform.min.js"></script>
@@ -31,11 +35,9 @@
         src="<?php echo base_url(); ?>assets/assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
 <script type="text/javascript"
         src="<?php echo base_url(); ?>assets/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/date.js"></script>
-<script type="text/javascript"
-        src="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script type="text/javascript"
-        src="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/date.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js" type="text/javascript"></script>
 <script type="text/javascript"
         src="<?php echo base_url(); ?>assets/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 <script type="text/javascript"
@@ -57,6 +59,7 @@
 <script src="<?php echo base_url(); ?>assets/js/common-scripts.js"></script>
 <!--script for this page-->
 <script src="<?php echo base_url(); ?>assets/js/form-component.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/form-validation-script.js"></script>
 
 <script src="<?php echo base_url(); ?>assets/js/sliders.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/gritter.js" type="text/javascript"></script>

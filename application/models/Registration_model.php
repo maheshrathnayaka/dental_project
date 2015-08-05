@@ -32,4 +32,12 @@ class Registration_model extends CI_Model {
         return $query->row_array();
     }
 
+    public function find_barcode($barcode){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select('patient_barcode');
+        $General->where('patient_barcode', $barcode);
+        $query = $General->get('tbl_patient');
+        return $query->row_array();
+    }
+
 }
