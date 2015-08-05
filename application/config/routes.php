@@ -52,3 +52,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['404_override'] = 'error/error_404';
 $route['translate_uri_dashes'] = FALSE;
+// 'BASE_URL + registration/register' get as 'BASE_URL + /reg'
+$route['reg'] = '/registration/register';
