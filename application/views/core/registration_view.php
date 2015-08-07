@@ -22,6 +22,16 @@
                     <div class="widget-body">
                         <!-- BEGIN FORM-->
                         <form class="form-vertical" id="formRegistration" method="post" action="<?php echo base_url(); ?>index.php/reg">
+                            <?php
+                            if($patient == "registered"){
+                                ?>
+                                <div class="alert alert-block alert-success fade in" id="divSuccessArea">
+                                    <button data-dismiss="alert" class="close" type="button">x</button>
+                                    <h4 class="alert-heading text-center">Success! Patient has been registered to the system</h4>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         <div class="widget">
                             <div class="widget-body">
                                     <ul class="breadcrumb">
@@ -79,8 +89,8 @@
                                     <div class="row-fluid">
                                         <div class="span4" id="sandbox-container">
                                             <div class="control-group">
-                                                <label class="control-label" for="dp1"><b>Birthday</b></label>
-                                                <input id="dp1" name="txtBirthday" type="text"
+                                                <label class="control-label" for="txtBirthday"><b>Birthday</b></label>
+                                                <input id="txtBirthday" name="txtBirthday" type="date"
                                                        placeholder="birthday here..." size="16"
                                                        class="m-ctrl-medium span12" tabindex="5">
                                             </div>
@@ -239,7 +249,7 @@
                                                 <label class="control-label" for="txtNumberOfWeeks"><b> Number of weeks</b></label>
 
                                                 <div class="controls controls-row">
-                                                    <input id="txtNumberOfWeeks" name="txtNumberOfWeeks" type="text"
+                                                    <input id="txtNumberOfWeeks" name="txtNumberOfWeeks" type="number"
                                                            class="input-block-level"
                                                            placeholder="number of weeks here..." tabindex="18" disabled>
                                                 </div>
@@ -248,7 +258,7 @@
                                                 <label class="control-label" for="txtNumberOfPregnancies"><b> Total number of pregnancies</b></label>
 
                                                 <div class="controls controls-row">
-                                                    <input id="txtNumberOfPregnancies" name="txtNumberOfPregnancies" type="text"
+                                                    <input id="txtNumberOfPregnancies" name="txtNumberOfPregnancies" type="number"
                                                            class="input-block-level"
                                                            placeholder="number of pregnancies here..." tabindex="19" disabled>
                                                 </div>
@@ -257,7 +267,7 @@
                                                 <label class="control-label" for="txtNumberOfBirths"><b> Number of births</b></label>
 
                                                 <div class="controls controls-row">
-                                                    <input id="txtNumberOfBirths" name="txtNumberOfBirths" type="text"
+                                                    <input id="txtNumberOfBirths" name="txtNumberOfBirths" type="number"
                                                            class="input-block-level"
                                                            placeholder="number of births here..." tabindex="20" disabled>
                                                 </div>
@@ -273,7 +283,7 @@
                                                 <label class="control-label" for="txtMenstruating"><b> Date of last menstrual period if you are still menstruating</b></label>
 
                                                 <div class="controls controls-row">
-                                                    <input id="dp2" name="txtMenstruating" type="text"
+                                                    <input id="txtMenstruating" name="txtMenstruating" type="date"
                                                            placeholder="date of last menstrual period here..." size="16"
                                                            class="m-ctrl-medium span12" tabindex="22" disabled>
                                                 </div>
@@ -282,7 +292,7 @@
                                                 <label class="control-label" for="txtBeginningPeriods"><b> Age at beginning of periods (menstruation)</b></label>
 
                                                 <div class="controls controls-row">
-                                                    <input id="txtBeginningPeriods" name="txtBeginningPeriods" type="text"
+                                                    <input id="txtBeginningPeriods" name="txtBeginningPeriods" type="number"
                                                            class="input-block-level"
                                                            placeholder="beginning periods here..." tabindex="23" disabled>
                                                 </div>
@@ -291,7 +301,7 @@
                                                 <label class="control-label" for="txtEndPeriods"><b> Age at end of periods (menopause)</b></label>
 
                                                 <div class="controls controls-row">
-                                                    <input id="txtEndPeriods" name="txtEndPeriods" type="text"
+                                                    <input id="txtEndPeriods" name="txtEndPeriods" type="number"
                                                            class="input-block-level"
                                                            placeholder="end periods here..." tabindex="24" disabled>
                                                 </div>

@@ -55,7 +55,7 @@
                                         <div class="span12 bio">
                                             <hr>
                                             <h3 class="text-error bold">Visit for
-                                                : <?php echo $channel_data["patient_main_reason"]; ?></h3>
+                                                : <?php echo $channel_data["Main_reason"]; ?></h3>
                                             <hr>
                                             <h3 class="text-info bold">Dental Health History</h3>
                                             <?php

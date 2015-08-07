@@ -42,16 +42,22 @@ $(document).ready(function () {
     });
     $('#chkNursing').click(function () {
         if ($('#chkNursing').prop('checked')) {
-            FieldEnable("dp2");
+            FieldEnable("txtMenstruating");
             FieldEnable("txtBeginningPeriods");
             FieldEnable("txtEndPeriods");
-            $('#dp2').focus();
+            $('#txtMenstruating').focus();
         } else {
-            FieldDisable("dp2");
+            FieldDisable("txtMenstruating");
             FieldDisable("txtBeginningPeriods");
             FieldDisable("txtEndPeriods");
         }
     });
+    /**
+     * Show success div for a 3 seconds and hide
+     */
+    setTimeout(function() {
+        $('#divSuccessArea').hide();
+    }, 3000);
 });
 $(document).ready(function () {
     $('#btnPatientSave').click(function(){

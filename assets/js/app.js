@@ -11,6 +11,12 @@ $(document).ready(function () {
             time: 3000
         });
     });
+    $('#dp1').datepicker({
+        format: "yyyy-mm-dd",
+        todayBtn: "linked",
+        autoclose: true,
+        todayHighlight: true
+    });
 });
 var FieldEnable = function (id) {
     var concatID = "#" + id;

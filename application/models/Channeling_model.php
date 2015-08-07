@@ -18,7 +18,7 @@ class Channeling_model extends CI_Model
     public function get_channel_queue()
     {
         $General = $this->load->database('group_gen', TRUE);
-        $query = $General->query("SELECT p.patient_id, p.patient_first_name, p.patient_last_name, p.patient_email, p.patient_gender, p.patient_occupation, p.patient_allergies, p.patient_barcode, p.patient_birthday, q.patient_main_reason, q.check_status, q.channel_number FROM tbl_patient p, tbl_patients_queue q WHERE p.patient_id = q.P_ID AND q.check_status = 1 AND q.channel_number!=0 ORDER BY q.channel_number ASC;");
+        $query = $General->query("SELECT p.patient_id, p.patient_first_name, p.patient_last_name, p.patient_email, p.patient_gender, p.patient_occupation, p.patient_allergies, p.patient_barcode, p.patient_birthday, q.Main_reason, q.check_status, q.channel_number FROM tbl_patient p, tbl_patients_queue q WHERE p.patient_id = q.P_ID AND q.check_status = 1 AND q.channel_number!=0 ORDER BY q.channel_number ASC;");
         return $query->result_array();
     }
 
@@ -52,7 +52,7 @@ class Channeling_model extends CI_Model
     public function get_channel_info($pid)
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('P_ID, patient_main_reason, channel_number, check_status');
+        $General->select('P_ID, Main_reason, channel_number, check_status');
         $General->where('P_ID', $pid);
         $query = $General->get('tbl_patients_queue');
         return $query->row_array();
