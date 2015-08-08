@@ -12,37 +12,10 @@
         <div class="row-fluid">
             <div class="span12">
 
-                <!-- BEGIN PAGE TITLE & BREADCRUMB-->
-                <h3 class="page-title">
-                    Search Patients
-                </h3>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">Home</a>
-                        <span class="divider">/</span>
-                    </li>
-                    <li>
-                        <a href="#">Existing Patient</a>
-                        <span class="divider">/</span>
-                    </li>
-                    <li class="active">
-                        Search Result
-                    </li>
-                    <li class="pull-right search-wrap">
-                        <form action="search_result.html" class="hidden-phone">
-                            <div class="input-append search-input-area">
-                                <input class="" id="appendedInputButton" type="text">
-                                <button class="btn" type="button"><i class="icon-search"></i> </button>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
-                <!-- END PAGE TITLE & BREADCRUMB-->
-
                 <!-- BEGIN BLANK PAGE PORTLET-->
                 <div class="widget green">
                     <div class="widget-title">
-                        <h4><i class="icon-edit"></i> Patient Regisration</h4>
+                        <h4><i class="icon-edit"></i> Patient Search </h4>
                                     <span class="tools">
                                         <a href="javascript:;" class="icon-chevron-down"></a>
                                     </span>
@@ -51,153 +24,52 @@
                         <div class="widget">
                             <div class="widget-body">
 
-                                    <form class="form-horizontal search-result">
+                                    <form class="form-horizontal search-result" method="post" action="<?php echo base_url(); ?>index.php/Search/Results">
                                         <div class="control-group">
-                                            <label class="control-label">Search</label>
+                                            <label class="control-label">Enter Patient Name </label>
                                             <div class="controls">
-                                                <input type="text" class="input-xxlarge" >
+                                                <input type="text" name="txtSearch" id="txtSearch" class="input-xxlarge" >
 
                                             </div>
-                                            <button type="submit" class="btn ">SEARCH</button>
+                                            <button type="submit" class="btn" name="submit">SEARCH</button>
                                         </div>
                                     </form>
                                     <div class="space20"></div>
                                     <!--BEGIN PRODUCT SEARCH-->
-                                    <div class="row-fluid product-search">
-                                        <div class="span4 product-text">
-                                            <img alt="" src="img/product1.jpg">
-                                            <div class="portfolio-text-info">
-                                                <h4>iMac Slim</h4>
-                                                <p>21 inch Display, 1.8 GHz Processor, 8 GB Memory</p>
+                                    <?php
+                                        if (isset($search_data))
+                                        {
+                                    ?>
+                                            <table class="table table-striped table-bordered" id="sample_1">
+                                                <thead>
+                                                <tr>
+                                                    <th class="hidden-phone">Patient Name</th>
+                                                    <th class="hidden-phone">Gender</th>
+                                                    <th class="hidden-phone">Age</th>
+                                                    <th class="hidden-phone">Last Visited</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                            <?php foreach ($search_data as $item){ ?>
+                                                <tr class="odd gradeX">
+                                                    <td class="hidden-phone"><a href="#"><?php echo $item['patient_first_name'];?> <?php echo $item['patient_last_name']; ?></a></td>
+                                                    <td class="hidden-phone"><?php echo $item['patient_gender'];?></td>
+                                                    <td class="center hidden-phone"><?php echo $item['patient_age'];?></td>
+                                                    <td class="center hidden-phone"><?php echo $item['patient_first_name'];?></td>
+                                                </tr>
+                                            <?php } ?>
+                                                </tbody>
+                                            </table>
+                                    <?php
+                                        }else {
+                                    ?>
+                                            <div class="alert alert-block alert-info fade in text-center">
+                                                <button data-dismiss="alert" class="close" type="button">x</button>
+                                                <h4 class="alert-heading">Oops! Currently patient queue is empty</h4>
                                             </div>
-                                        </div>
-                                        <div class="span8">
-                                            <div class="product-info">
-                                                Today Sold
-                                                <span>190</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Today's Earning
-                                                <span>1,970</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Sold
-                                                <span>$12.300</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Earnings
-                                                <span>$12.300</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-fluid product-search">
-                                        <div class="span4 product-text">
-                                            <img alt="" src="img/product2.png">
-                                            <div class="portfolio-text-info">
-                                                <h4>iMac Slim</h4>
-                                                <p>21 inch Display, 1.8 GHz Processor, 8 GB Memory</p>
-                                            </div>
-                                        </div>
-                                        <div class="span8">
-                                            <div class="product-info">
-                                                Today Sold
-                                                <span>190</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Today's Earning
-                                                <span>1,970</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Sold
-                                                <span>$12.300</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Earnings
-                                                <span>$12.300</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-fluid product-search">
-                                        <div class="span4 product-text">
-                                            <img alt="" src="img/product3.png">
-                                            <div class="portfolio-text-info">
-                                                <h4>iMac Slim</h4>
-                                                <p>21 inch Display, 1.8 GHz Processor, 8 GB Memory</p>
-                                            </div>
-                                        </div>
-                                        <div class="span8">
-                                            <div class="product-info">
-                                                Today Sold
-                                                <span>190</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Today's Earning
-                                                <span>1,970</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Sold
-                                                <span>$12.300</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Earnings
-                                                <span>$12.300</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-fluid product-search">
-                                        <div class="span4 product-text">
-                                            <img alt="" src="img/product4.png">
-                                            <div class="portfolio-text-info">
-                                                <h4>iMac Slim</h4>
-                                                <p>21 inch Display, 1.8 GHz Processor, 8 GB Memory</p>
-                                            </div>
-                                        </div>
-                                        <div class="span8">
-                                            <div class="product-info">
-                                                Today Sold
-                                                <span>190</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Today's Earning
-                                                <span>1,970</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Sold
-                                                <span>$12.300</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Earnings
-                                                <span>$12.300</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row-fluid product-search">
-                                        <div class="span4 product-text">
-                                            <img alt="" src="img/product5.png">
-                                            <div class="portfolio-text-info">
-                                                <h4>iMac Slim</h4>
-                                                <p>21 inch Display, 1.8 GHz Processor, 8 GB Memory</p>
-                                            </div>
-                                        </div>
-                                        <div class="span8">
-                                            <div class="product-info">
-                                                Today Sold
-                                                <span>190</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Today's Earning
-                                                <span>1,970</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Sold
-                                                <span>$12.300</span>
-                                            </div>
-                                            <div class="product-info">
-                                                Total Earnings
-                                                <span>$12.300</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php
+                                        }
+                                    ?>
                                     <!--END PRODUCT SEARCH-->
                                     <div class="space20"></div>
 
