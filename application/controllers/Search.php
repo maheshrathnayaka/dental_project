@@ -20,8 +20,11 @@ class Search extends CI_Controller
 
     public function index()
     {
+        $search_data=$this->Search_model->get_all_patients();
+
         $dynamic_data = array(
-            'title' => 'Search for Patient'
+            'title' => 'Search for Patient',
+            'search_data' => $search_data
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');

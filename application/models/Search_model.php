@@ -13,18 +13,20 @@ class Search_model extends CI_Model
     public function get_existing_patients($pname)
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('patient_id, patient_first_name, patient_last_name, patient_gender, TIMESTAMPDIFF(YEAR, patient_birthday, CURDATE()) AS patient_age, patient_barcode');
+        $General->select('patient_id, patient_first_name, patient_last_name, patient_gender, TIMESTAMPDIFF(YEAR, patient_birthday, CURDATE()) AS patient_age, date_time');
+        $General->join('tbl_channel_history', 'tbl_channel_history.P_ID = tbl_patient.patient_id','left');
         $General->like('patient_first_name', $pname);
         $query = $General->get('tbl_patient');
         return $query->result_array();
     }
 
-    public function get_medical_health_history_other($pid)
+    public function get_all_patients()
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select("P_ID, other");
-        $General->where('P_ID', $pid);
-        $query = $General->get('tbl_patient_health');
-        return $query->row_array();
+        $General->select('patient_id, patient_first_name, patient_last_name, patient_gender, TIMESTAMPDIFF(YEAR, patient_birthday, CURDATE()) AS patient_age, date_time');
+        $General->join('tbl_channel_history', 'tbl_channel_history.P_ID = tbl_patient.patient_id','left');
+        $General->order_by("patient_first_name", "asc");
+        $query = $General->get('tbl_patient');
+        return $query->result_array();
     }
 }
