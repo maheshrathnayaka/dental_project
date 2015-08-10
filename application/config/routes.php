@@ -54,3 +54,6 @@ $route['404_override'] = 'error/error_404';
 $route['translate_uri_dashes'] = FALSE;
 // 'BASE_URL + registration/register' get as 'BASE_URL + /reg'
 $route['reg'] = '/registration/register';
+$route['web'] = '/knowledge/web_application';
+$route['desk'] = '/knowledge/desktop_application';
+$route['skip'] = '/knowledge/skip_photo';

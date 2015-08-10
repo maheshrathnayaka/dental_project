@@ -21,6 +21,36 @@ class Knowledge extends CI_Controller
         $this->load->view('common/footer');
     }
 
+    public function web_application(){
+        $dynamic_data = array(
+            'title' => 'Knowledge Base - Web Application'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('knowledge/web_view');
+        $this->load->view('common/footer');
+    }
+
+    public function desktop_application(){
+        $dynamic_data = array(
+            'title' => 'Knowledge Base - Desktop Application'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('knowledge/desktop_view');
+        $this->load->view('common/footer');
+    }
+
+    public function skip_photo(){
+        $dynamic_data = array(
+            'title' => 'Knowledge Base - Desktop Application'
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('knowledge/doctor_view');
+        $this->load->view('common/footer');
+    }
+
     public function image_population()
     {
 

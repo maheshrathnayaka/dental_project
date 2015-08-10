@@ -44,6 +44,7 @@
         src="<?php echo base_url(); ?>assets/assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.pack.js"></script>
 <script src="<?php echo base_url(); ?>assets/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.blockui.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.scrollTo.min.js"></script>
 
 <!-- ie8 fixes -->
@@ -54,12 +55,16 @@
 
 <script src="<?php echo base_url(); ?>assets/assets/gritter/js/jquery.gritter.js" type="text/javascript" ></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.pulsate.min.js" type="text/javascript" ></script>
-
+<script src="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.pack.js"></script>
+<!-- MEGAFOLIO PRO GALLERY JS FILES  -->
+<script src="<?php echo base_url(); ?>assets/assets/metr-folio/js/jquery.metro-gal.plugins.min.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>assets/assets/metr-folio/js/jquery.metro-gal.megafoliopro.js" type="text/javascript" ></script>
 <!--common script for all pages-->
 <script src="<?php echo base_url(); ?>assets/js/common-scripts.js"></script>
 <!--script for this page-->
 <script src="<?php echo base_url(); ?>assets/js/form-component.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/form-validation-script.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/form-wizard.js"></script>
 
 <script src="<?php echo base_url(); ?>assets/js/sliders.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/gritter.js" type="text/javascript"></script>
