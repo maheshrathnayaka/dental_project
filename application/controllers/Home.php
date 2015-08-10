@@ -13,7 +13,7 @@ class Home extends CI_Controller
     public function index()
     {
         $dynamic_data = array(
-            'title' => 'DentAssist - Home'
+            'title' => 'Smart DentAssist (&beta;Version-1.0) - Home'
         );
         $this->load->view('common/header_home', $dynamic_data);
         $this->load->view('common/sidebar_home');

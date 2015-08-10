@@ -1,6 +1,6 @@
 <!-- BEGIN FOOTER -->
 <div id="footer">
-    2015 &copy; Smart DentAssist - Final Year Project - SLIIT
+    2015 &copy; Smart DentAssist (&beta;version-1.0) - Final Year Project - SLIIT
 </div>
 <!-- END FOOTER -->
 
