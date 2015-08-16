@@ -190,4 +190,129 @@ class Channeling_model extends CI_Model
         $status = $General->update('tbl_patient', $profile_data);
         return $status;
     }
+
+    public function updateDentalHealth($dentalHealth_data){
+        $dentalHealth_dataarray = array(
+            'difficulty_in_chewing_your_food' => $dentalHealth_data['chkDifficultyChewingFood'],
+            'your_teeth_sensitive' => $dentalHealth_data['chkTeethSensitive'],
+            'chew_on_only_one_side_of_your_mouth' => $dentalHealth_data['chkChewOneSide'],
+            'hurt_when_you_chew_or_open_wide_to_take_a_bite' => $dentalHealth_data['chkHurtWhenBite'],
+            'avoid_brushing_any_part_of_your_mouth_because_of_pain' => $dentalHealth_data['chkAvoidBrishingPain'],
+            'ever_noticed_slow_healing_sores_in_or_about_your_mouth' => $dentalHealth_data['chkSlowHealing'],
+            'gums_bleed_when_you_floss' => $dentalHealth_data['chkGumsBleed'],
+            'Have_you_had_a_blow_to_the_jaw' => $dentalHealth_data['chkHadTrauma'],
+            'gums_feel_swollen_or_tender' => $dentalHealth_data['chkGumsSwollenTender'],
+            'have_pain_in_the_f_j_j_t_t' => $dentalHealth_data['chkPainInFCJJTT'],
+            'Gum_chewer' => $dentalHealth_data['chkGumChewer'],
+            'Betel_chewer' => $dentalHealth_data['chkBetelChewer'],
+            'Pipe_smoker' => $dentalHealth_data['chkPipeSmoker'],
+            'Cigarette_smoker' => $dentalHealth_data['chkCigarette'],
+            'Hot_foods_or_liquids' => $dentalHealth_data['chkCchkHotFood'],
+            'Cold_foods_or_liquids' => $dentalHealth_data['chkColdFood'],
+            'Sours' => $dentalHealth_data['chkSours'],
+            'Sweets' => $dentalHealth_data['chkSweets'],
+//            'home_no' => $dentalHealth_data['dhknownAllergies'],
+            'health_history_other' => $dentalHealth_data['dhother']
+        );
+
+        $p_id = $dentalHealth_data['p_id'];
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('p_id', $p_id);
+        $status = $General->update('tbl_patient_dental_history', $dentalHealth_dataarray);
+        return $status;
+
+
+    }
+
+    public function medecalHealthHostory($medicalHealth_data){
+
+        $medicalHealth_dataarray = array(
+            'diabetes' => $medicalHealth_data['chkDiabetes'],
+            'shortness_of_breath' => $medicalHealth_data['chkShortness'],
+            'heart_disease_murmur_angine' => $medicalHealth_data['chkAngina'],
+            'depression_anxiety' => $medicalHealth_data['chkDepression'],
+            'high_cholesterol' => $medicalHealth_data['chkHighCholesterol'],
+            'tonsilitis' => $medicalHealth_data['chkTonsillitis'],
+            'kidney_bladder_problems' => $medicalHealth_data['chkKidney'],
+            'tyroid_problems' => $medicalHealth_data['chkThyroid'],
+            'high_bood_pressure' => $medicalHealth_data['chkHighBloodPressure'],
+            'asthma' => $medicalHealth_data['chkAsthma'],
+            'lung_problems_cough' => $medicalHealth_data['chkLung'],
+            'ulcers__colities' => $medicalHealth_data['chkUlcers'],
+            'low_bood_pressure' => $medicalHealth_data['chkLowBloodPressure'],
+            'stroke' => $medicalHealth_data['chkStroke'],
+            'liver_problems_hepatitis' => $medicalHealth_data['chkLiver'],
+            'gastric_irritation' => $medicalHealth_data['chkGastric'],
+            'heartburn' => $medicalHealth_data['chkHeartburn'],
+            'sinus_problems' => $medicalHealth_data['chkSinusProblems'],
+
+            'headaches_migrains' => $medicalHealth_data['chkHeadaches'],
+            'ear_problems' => $medicalHealth_data['chkEarProblems'],
+            'anemia_bood_problems' => $medicalHealth_data['chkAnemia'],
+            'arthiritis' => $medicalHealth_data['chkArthritis'],
+            'neurological_problems' => $medicalHealth_data['chkNeurological'],
+            'seasonal_allergies' => $medicalHealth_data['chkSeasonalAllergies'],
+            'swollen_ankies' => $medicalHealth_data['chkSwollen'],
+            'cancer' => $medicalHealth_data['chkCancer'],
+            'eye_disorder_glaucoma' => $medicalHealth_data['chkEyeDisorder'],
+            'other' => $medicalHealth_data['txtAreaOther']
+
+        );
+
+        $p_id = $medicalHealth_data['p_id'];
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('P_ID', $p_id);
+        $status = $General->update('tbl_patient_health', $medicalHealth_dataarray);
+
+        return $status;
+
+
+    }
+
+    public function pastTreatment($pastTreatment){
+
+
+        $pastTreatment_dataarray = array(
+            'Removal' => $pastTreatment['chkRemoval'],
+            'Wound_treatment' => $pastTreatment['chkWoundTreatment'],
+            'Fillings' => $pastTreatment['chkFilling'],
+            'Sealants' => $pastTreatment['chkSealants'],
+            'Retainers' => $pastTreatment['chkRetainers'],
+            'Braces' => $pastTreatment['chkBraces'],
+            'Cleaning' => $pastTreatment['chkCleaning'],
+            'Polishing' => $pastTreatment['chkPolishing'],
+            'Bridges' => $pastTreatment['chkBridges'],
+            'Dentures' => $pastTreatment['chkDentures'],
+            'Implants' => $pastTreatment['chkImplants']
+
+        );
+
+        $p_id = $pastTreatment['p_id'];
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('p_id', $p_id);
+        $status = $General->update('tbl_patient_dental_history', $pastTreatment_dataarray);
+
+        return $status;
+
+    }
+
+    public function womenHealth($womenHealth){
+        $womenHealth_dataarray = array(
+            'Are_you_pregnant' => $womenHealth['chkPregnant'],
+            'Number_of_weeks' => $womenHealth['num_of_weeks'],
+            'Total_number_of_pregnancies' => $womenHealth['total_no_pregna'],
+            'Number_of_births' => $womenHealth['total_no_birth'],
+            'Nursing' => $womenHealth['chkNursing'],
+            'if_you_are_still_menstruating' => $womenHealth['stillMenstruating'],
+            'Age_at_beginning_of_periods' => $womenHealth['txtBeginningPeriods'],
+            'Age_at_end_of_periods' => $womenHealth['txtEndPeriods']
+        );
+
+        $p_id = $womenHealth['p_id'];
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('p_id', $p_id);
+        $status = $General->update('tbl_patient_dental_history', $womenHealth_dataarray);
+
+        return $status;
+    }
 }
