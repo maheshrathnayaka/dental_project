@@ -45,6 +45,7 @@
     <script type="text/javascript">
         var BASE_URL = "<?php echo base_url();?>";
         var SITE_URL = "<?php echo site_url();?>";
+
     </script>
 </head>
 <!-- END HEAD -->

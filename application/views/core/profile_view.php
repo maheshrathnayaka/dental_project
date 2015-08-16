@@ -89,6 +89,7 @@
                                                     foreach ($dental_health_history_habitual_data as $key => $value) {
                                                         if ($value == 1) {
                                                             ?>
+
                                                             <span class="label gray"
                                                                   style="margin-right: 2px; margin-top: 5px;"><?php echo $key; ?></span>
                                                             <?php
@@ -142,13 +143,13 @@
 
                                             <div class="space5"></div>
                                             <div class="text-left">
-                                                <form class="form-vertical" method="get" action="#">
+                                                <form class="form-vertical" method="post" action="#">
                                                     <a href="#modelEditDentalHealthHistory"
                                                        id="btnEditDentalHealthHistory"
                                                        role="button" class="btn btn-primary" data-toggle="modal"
                                                        data-backdrop="static" data-keyboard="false"><i
                                                             class="icon-pencil icon-white"
-                                                            onclick="ButtonSettings();"></i> Change
+                                                            onclick="ButtonSettingsDentalHealth();"></i> Change
                                                     </a>
 
                                                     <div id="modelEditDentalHealthHistory" class="modal hide fade"
@@ -162,21 +163,62 @@
                                                             <h3 id="myModalLabel4">Edit Dental Health History</h3>
                                                         </div>
                                                         <div class="modal-body">
+                                                            <div class="alert alert-block alert-success fade in"
+                                                                 id="successProfileEditDH">
+                                                                <button data-dismiss="alert" class="close"
+                                                                    type="button">×
+                                                                </button>
+                                                                <h4 class="alert-heading text-center">Successfully ! Profile
+                                                                has been updated</h4>
+                                                            </div>
+                                                            <div class="alert alert-block alert-error fade in"
+                                                                 id="errorProfileEditDH">
+                                                                <button data-dismiss="alert" class="close"
+                                                                        type="button">×
+                                                                </button>
+                                                                <h4 class="alert-heading text-center">error! Profile
+                                                                    has not been updated</h4>
+                                                            </div>
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkDifficultyChewingFood">
-                                                                        <input type="checkbox" id="chkDifficultyChewingFood"
-                                                                               name="chkDifficultyChewingFood"
-                                                                               value="DifficultyChewingFood" tabindex="54" disabled/>
-                                                                        <b> Do you have difficulty in chewing your food?</b>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Difficulty in chewing food'] == '1'){
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkDifficultyChewingFood"
+                                                                                   name="chkDifficultyChewingFood"
+                                                                                   value="DifficultyChewingFood" tabindex="54" checked="true" disabled="true"/>
+                                                                            <b> Do you have difficulty in chewing your food?</b>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkDifficultyChewingFood"
+                                                                                   name="chkDifficultyChewingFood"
+                                                                                   value="DifficultyChewingFood" tabindex="54" disabled/>
+                                                                            <b> Do you have difficulty in chewing your food?</b>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
                                                                     </label>
                                                                 </div>
                                                             </div>
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkTeethSensitive">
-                                                                        <input type="checkbox" id="chkTeethSensitive" name="chkTeethSensitive"
+                                                                        <?php
+                                                                        if($dental_health_history_data['Teeth sensitive'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkTeethSensitive" name="chkTeethSensitive"
+                                                                               value="TeethSensitive" tabindex="55" disabled checked/>
+
+                                                                            <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkTeethSensitive" name="chkTeethSensitive"
                                                                                value="TeethSensitive" tabindex="55" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
                                                                         <b> Are your teeth sensitive?</b>
                                                                     </label>
                                                                 </div>
@@ -184,8 +226,20 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkChewOneSide">
-                                                                        <input type="checkbox" id="chkChewOneSide" name="chkChewOneSide"
-                                                                               value="ChewOneSide" tabindex="56" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Chew on only one side of mouth'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkChewOneSide" name="chkChewOneSide"
+                                                                                   value="ChewOneSide" tabindex="56" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkChewOneSide" name="chkChewOneSide"
+                                                                                   value="ChewOneSide" tabindex="56" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
                                                                         <b> Do you chew on only one side of your mouth?</b>
                                                                     </label>
                                                                 </div>
@@ -193,8 +247,21 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkHurtWhenBite">
-                                                                        <input type="checkbox" id="chkHurtWhenBite" name="chkHurtWhenBite"
-                                                                               value="HurtWhenBite" tabindex="57" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Hurt when chew or open wide to take a bite'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkHurtWhenBite" name="chkHurtWhenBite"
+                                                                                   value="HurtWhenBite" tabindex="57" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkHurtWhenBite" name="chkHurtWhenBite"
+                                                                                   value="HurtWhenBite" tabindex="57" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
+
                                                                         <b> Does it hurt when you chew or open wide to take a bite?</b>
                                                                     </label>
                                                                 </div>
@@ -202,9 +269,22 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkAvoidBrishingPain">
-                                                                        <input type="checkbox" id="chkAvoidBrishingPain"
-                                                                               name="chkAvoidBrishingPain"
-                                                                               value="AvoidBrishingPain" tabindex="58" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Avoid brushing part of mouth because of pain'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkAvoidBrishingPain"
+                                                                                   name="chkAvoidBrishingPain"
+                                                                                   value="AvoidBrishingPain" tabindex="58" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkAvoidBrishingPain"
+                                                                                   name="chkAvoidBrishingPain"
+                                                                                   value="AvoidBrishingPain" tabindex="58" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
                                                                         <b> Do you avoid brushing any part of your mouth because of pain?</b>
                                                                     </label>
                                                                 </div>
@@ -212,8 +292,20 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkSlowHealing">
-                                                                        <input type="checkbox" id="chkSlowHealing" name="chkSlowHealing"
-                                                                               value="SlowHealing" tabindex="59" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Ever noticed slow healing sores in or about mouth'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkSlowHealing" name="chkSlowHealing"
+                                                                                   value="SlowHealing" tabindex="59" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkSlowHealing" name="chkSlowHealing"
+                                                                                   value="SlowHealing" tabindex="59" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
                                                                         <b> Have you ever noticed slow-healing sores in or about your mouth?</b>
                                                                     </label>
                                                                 </div>
@@ -221,8 +313,20 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkGumsBleed">
-                                                                        <input type="checkbox" id="chkGumsBleed"
-                                                                               name="chkGumsBleed" value="GumsBleed" tabindex="60" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Gums bleed when flossing'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkGumsBleed"
+                                                                                   name="chkGumsBleed" value="GumsBleed" tabindex="60" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkGumsBleed"
+                                                                                   name="chkGumsBleed" value="GumsBleed" tabindex="60" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
                                                                         <b> Do your gums bleed when you floss?</b>
                                                                     </label>
                                                                 </div>
@@ -230,8 +334,20 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkHadTrauma">
-                                                                        <input type="checkbox" id="chkHadTrauma" name="chkHadTrauma"
-                                                                               value="HadTrauma" tabindex="61" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Had a blow to the jaw (Trauma)'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkHadTrauma" name="chkHadTrauma"
+                                                                                   value="HadTrauma" tabindex="61" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkHadTrauma" name="chkHadTrauma"
+                                                                                   value="HadTrauma" tabindex="61" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
                                                                         <b> Have you had a blow to the jaw (trauma)?</b>
                                                                     </label>
                                                                 </div>
@@ -239,9 +355,22 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkGumsSwollenTender">
-                                                                        <input type="checkbox" id="chkGumsSwollenTender"
-                                                                               name="chkGumsSwollenTender" value="GumsSwollenTender"
-                                                                               tabindex="62" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Gums feel swollen or tender'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkGumsSwollenTender"
+                                                                                   name="chkGumsSwollenTender" value="GumsSwollenTender"
+                                                                                   tabindex="62" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkGumsSwollenTender"
+                                                                                   name="chkGumsSwollenTender" value="GumsSwollenTender"
+                                                                                   tabindex="62" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
                                                                         <b> Do your gums feel swollen or tender?</b>
                                                                     </label>
                                                                 </div>
@@ -249,8 +378,21 @@
                                                             <div class="row-fluid">
                                                                 <div class="span12">
                                                                     <label for="chkPainInFCJJTT">
-                                                                        <input type="checkbox" id="chkPainInFCJJTT"
-                                                                               name="chkPainInFCJJTT" value="PainInFCJJTT" tabindex="63" disabled/>
+                                                                        <?php
+                                                                        if($dental_health_history_data['Pain in the face cheeks jaws joints throat or temples'] == '1') {
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkPainInFCJJTT"
+                                                                                   name="chkPainInFCJJTT" value="PainInFCJJTT" tabindex="63" disabled checked/>
+                                                                        <?php
+                                                                        }else{
+                                                                            ?>
+                                                                            <input type="checkbox" id="chkPainInFCJJTT"
+                                                                                   name="chkPainInFCJJTT" value="PainInFCJJTT" tabindex="63" disabled/>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+
+
                                                                         <b> Do you have pain in the face, cheeks, jaws, joints, throat, or
                                                                             temples?</b>
                                                                     </label>
@@ -262,15 +404,40 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkGumChewer">
-                                                                            <input type="checkbox" id="chkGumChewer" name="chkGumChewer"
-                                                                                   value="GumChewer" tabindex="64" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_habitual_data['Gum chewer'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkGumChewer" name="chkGumChewer"
+                                                                                       value="GumChewer" tabindex="64" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkGumChewer" name="chkGumChewer"
+                                                                                       value="GumChewer" tabindex="64" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Gum chewer?</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkBetelChewer">
-                                                                            <input type="checkbox" id="chkBetelChewer" name="chkBetelChewer"
-                                                                                   value="BetelChewer" tabindex="65" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_habitual_data['Betel chewer'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkBetelChewer" name="chkBetelChewer"
+                                                                                       value="BetelChewer" tabindex="65" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkBetelChewer" name="chkBetelChewer"
+                                                                                       value="BetelChewer" tabindex="65" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Betel chewer?</b>
                                                                         </label>
                                                                     </div>
@@ -278,15 +445,39 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkPipeSmoker">
-                                                                            <input type="checkbox" id="chkPipeSmoker" name="chkPipeSmoker"
-                                                                                   value="PipeSmoker" tabindex="66" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_habitual_data['Pipe smoker'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkPipeSmoker" name="chkPipeSmoker"
+                                                                                        value="PipeSmoker" tabindex="66" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkPipeSmoker" name="chkPipeSmoker"
+                                                                                       value="PipeSmoker" tabindex="66" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Pipe smoker?</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkCigarette">
-                                                                            <input type="checkbox" id="chkCigarette" name="chkCigarette"
-                                                                                   value="Cigarette" tabindex="67" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_habitual_data['Cigarette smoker'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkCigarette" name="chkCigarette"
+                                                                                       value="Cigarette" tabindex="67" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkCigarette" name="chkCigarette"
+                                                                                       value="Cigarette" tabindex="67" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Cigarette smoker?</b>
                                                                         </label>
                                                                     </div>
@@ -298,15 +489,40 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkHotFood">
-                                                                            <input type="checkbox" id="chkHotFood" name="chkHotFood"
-                                                                                   value="HotFood" tabindex="68" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_feel_twinges_data['Hot foods or liquids'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkHotFood" name="chkHotFood"
+                                                                                       value="HotFood" tabindex="68" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkHotFood" name="chkHotFood"
+                                                                                       value="HotFood" tabindex="68" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Hot foods or liquids?</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkColdFood">
-                                                                            <input type="checkbox" id="chkColdFood" name="chkColdFood"
-                                                                                   value="ColdFood" tabindex="69" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_feel_twinges_data['Cold foods or liquids'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkColdFood" name="chkColdFood"
+                                                                                       value="ColdFood" tabindex="69" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkColdFood" name="chkColdFood"
+                                                                                       value="ColdFood" tabindex="69" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Cold foods or liquids?</b>
                                                                         </label>
                                                                     </div>
@@ -314,28 +530,55 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkSours">
-                                                                            <input type="checkbox" id="chkSours" name="chkSours"
-                                                                                   value="Sours" tabindex="70" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_feel_twinges_data['Sours'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSours" name="chkSours"
+                                                                                       value="Sours" tabindex="70" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSours" name="chkSours"
+                                                                                       value="Sours" tabindex="70" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Sours?</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkSweets">
-                                                                            <input type="checkbox" id="chkSweets" name="chkSweets"
-                                                                                   value="Sweets" tabindex="71" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_feel_twinges_data['Sweets'] == '1') {
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSweets" name="chkSweets"
+                                                                                       value="Sweets" tabindex="71" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSweets" name="chkSweets"
+                                                                                       value="Sweets" tabindex="71" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Sweets?</b>
                                                                         </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <hr>
+
                                                             <div class="row-fluid">
                                                                 <div class="span6">
                                                                     <div class="control-group">
                                                                         <label class="control-label" for="txtAreaReasonForVisit"><b>Known Allergies</b></label>
 
                                                                         <div class="controls controls-row">
-                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaReasonForVisit" name="txtAreaReasonForVisit" placeholder="known allergies here..." tabindex="15" disabled></textarea>
+                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaDHKnownAllergies" name="txtAreaReasonForVisit"
+                                                                                      placeholder="known allergies here..." tabindex="15" disabled>
+                                                                                <?php if ($profile_data["patient_allergies"] != null || $profile_data["patient_allergies"] != '') { ?> <?php echo $profile_data["patient_allergies"]; ?> <?php } ?></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -344,7 +587,9 @@
                                                                         <label class="control-label" for="txtAreaReasonForVisit"><b>Other</b></label>
 
                                                                         <div class="controls controls-row">
-                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaReasonForVisit" name="txtAreaReasonForVisit" placeholder="other information here..." tabindex="15"  disabled></textarea>
+                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaDHOther" name="txtAreaReasonForVisit"
+                                                                                      placeholder="other information here..." tabindex="15"  disabled> <?php if ($dental_health_history_other_data["health_history_other"] != null || $dental_health_history_other_data["health_history_other"] != ''){ ?>
+                                                                                         <?php echo $dental_health_history_other_data["health_history_other"]; ?> <?php } ?>  </textarea>
                                                                             <input id="txtIdentityDentalHealth" name="txtIdentity"
                                                                                    value="DentalHealthData" hidden>
                                                                             <input id="txtPID" name="txtPID"
@@ -359,10 +604,10 @@
                                                             <button class="btn" data-dismiss="modal"
                                                                     aria-hidden="true"></i>Close
                                                             </button>
-                                                            <button class="btn btn-info" data-dismiss="modal"
-                                                                    aria-hidden="true">Edit
+                                                            <button class="btn btn-info" type="button"  id="btnDentalHealthEdit"
+                                                                     onclick="DentalHealthEditButtonAction();">Edit
                                                             </button>
-                                                            <button class="btn btn-success hidden" data-dismiss="modal">
+                                                            <button class="btn btn-success" type="button" id="btnDentalHealthSave" onclick="DentalHealthSaveButtonAction();">
                                                                 Save
                                                             </button>
                                                         </div>
@@ -403,12 +648,12 @@
                                             <div class="space5"></div>
                                             <div class="text-left">
                                                 <form class="form-vertical" method="post"
-                                                      action="<?php echo base_url(); ?>index.php/channeling/profile_save">
+                                                      action="#">
                                                     <a href="#modelEditMedicalHealthHistory"
                                                        id="btnEditMedicalHealthHistory" role="button"
                                                        class="btn btn-primary" data-toggle="modal"
                                                        data-backdrop="static"
-                                                       data-keyboard="false" onclick="ButtonSettings();"><i
+                                                       data-keyboard="false" onclick="ButtonSettingsMedicalHealthHistory();"><i
                                                             class="icon-pencil icon-white"></i> Change
                                                     </a>
 
@@ -424,20 +669,61 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row-fluid">
+                                                                <div class="alert alert-block alert-success fade in"
+                                                                     id="successMedicalHealthEdit">
+                                                                    <button data-dismiss="alert" class="close"
+                                                                            type="button">×
+                                                                    </button>
+                                                                    <h4 class="alert-heading text-center">Success! Profile
+                                                                        has been updated</h4>
+                                                                </div>
+                                                                <div class="alert alert-block alert-error fade in"
+                                                                     id="errorMedicalHealthEdit">
+                                                                    <button data-dismiss="alert" class="close"
+                                                                            type="button">×
+                                                                    </button>
+                                                                    <h4 class="alert-heading text-center">Error! Something
+                                                                        went wrong</h4>
+                                                                </div>
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkDiabetes">
-                                                                            <input type="checkbox" id="chkDiabetes"
-                                                                                   name="chkDiabetes"
-                                                                                   value="Diabetes" tabindex="25" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Diabetes'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkDiabetes"
+                                                                                       name="chkDiabetes"
+                                                                                       value="Diabetes" tabindex="25" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkDiabetes"
+                                                                                       name="chkDiabetes"
+                                                                                       value="Diabetes" tabindex="25" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
                                                                             <b> Diabetes</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkShortness">
-                                                                            <input type="checkbox" id="chkShortness"
-                                                                                   name="chkShortness"
-                                                                                   value="Shortness" tabindex="26" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Shortness of breath'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkShortness"
+                                                                                       name="chkShortness"
+                                                                                       value="Shortness" tabindex="26" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkShortness"
+                                                                                       name="chkShortness"
+                                                                                       value="Shortness" tabindex="26" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Shortness of breath</b>
                                                                         </label>
                                                                     </div>
@@ -447,17 +733,44 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkAngina">
-                                                                            <input type="checkbox" id="chkAngina"
-                                                                                   name="chkAngina" value="Angina"
-                                                                                   tabindex="27" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Heart disease/Murmur/Angina'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkAngina"
+                                                                                       name="chkAngina" value="Angina"
+                                                                                       tabindex="27" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkAngina"
+                                                                                       name="chkAngina" value="Angina"
+                                                                                       tabindex="27" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Heart disease/Murmur/Angina</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkDepression">
-                                                                            <input type="checkbox" id="chkDepression"
-                                                                                   name="chkDepression"
-                                                                                   value="Depression" tabindex="28" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Depression/Anxiety'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkDepression"
+                                                                                       name="chkDepression"
+                                                                                       value="Depression" tabindex="28" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkDepression"
+                                                                                       name="chkDepression"
+                                                                                       value="Depression" tabindex="28" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Depression/Anxiety</b>
                                                                         </label>
                                                                     </div>
@@ -467,19 +780,47 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkHighCholesterol">
-                                                                            <input type="checkbox"
-                                                                                   id="chkHighCholesterol"
-                                                                                   name="chkHighCholesterol"
-                                                                                   value="HighCholesterol"
-                                                                                   tabindex="29" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['High cholesterol'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkHighCholesterol"
+                                                                                       name="chkHighCholesterol"
+                                                                                       value="HighCholesterol"
+                                                                                       tabindex="29" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkHighCholesterol"
+                                                                                       name="chkHighCholesterol"
+                                                                                       value="HighCholesterol"
+                                                                                       tabindex="29" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> High cholesterol</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkTonsillitis">
-                                                                            <input type="checkbox" id="chkTonsillitis"
-                                                                                   name="chkTonsillitis"
-                                                                                   value="Tonsillitis" tabindex="30" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Tonsillitis'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkTonsillitis"
+                                                                                       name="chkTonsillitis"
+                                                                                       value="Tonsillitis" tabindex="30" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkTonsillitis"
+                                                                                       name="chkTonsillitis"
+                                                                                       value="Tonsillitis" tabindex="30" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Tonsillitis</b>
                                                                         </label>
                                                                     </div>
@@ -489,17 +830,44 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkKidney">
-                                                                            <input type="checkbox" id="chkKidney"
-                                                                                   name="chkKidney" value="Kidney"
-                                                                                   tabindex="31" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Kidney/Bladder problems'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkKidney"
+                                                                                       name="chkKidney" value="Kidney"
+                                                                                       tabindex="31" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkKidney"
+                                                                                       name="chkKidney" value="Kidney"
+                                                                                       tabindex="31" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Kidney/Bladder problems</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkThyroid">
-                                                                            <input type="checkbox" id="chkThyroid"
-                                                                                   name="chkThyroid"
-                                                                                   value="Thyroid" tabindex="32" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Thyroid problems'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkThyroid"
+                                                                                       name="chkThyroid"
+                                                                                       value="Thyroid" tabindex="32" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkThyroid"
+                                                                                       name="chkThyroid"
+                                                                                       value="Thyroid" tabindex="32" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Thyroid problems</b>
                                                                         </label>
                                                                     </div>
@@ -509,19 +877,47 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkHighBloodPressure">
-                                                                            <input type="checkbox"
-                                                                                   id="chkHighBloodPressure"
-                                                                                   name="chkHighBloodPressure"
-                                                                                   value="HighBloodPressure"
-                                                                                   tabindex="33" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['High blood pressure'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                        id="chkHighBloodPressure"
+                                                                                        name="chkHighBloodPressure"
+                                                                                        value="HighBloodPressure"
+                                                                                        tabindex="33" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkHighBloodPressure"
+                                                                                       name="chkHighBloodPressure"
+                                                                                       value="HighBloodPressure"
+                                                                                       tabindex="33" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> High blood pressure</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkAsthma">
-                                                                            <input type="checkbox" id="chkAsthma"
-                                                                                   name="chkAsthma" value="Asthma"
-                                                                                   tabindex="34" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Asthma'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkAsthma"
+                                                                                       name="chkAsthma" value="Asthma"
+                                                                                       tabindex="34" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkAsthma"
+                                                                                       name="chkAsthma" value="Asthma"
+                                                                                       tabindex="34" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Asthma</b>
                                                                         </label>
                                                                     </div>
@@ -531,17 +927,43 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkLung">
-                                                                            <input type="checkbox" id="chkLung"
-                                                                                   name="chkLung" value="Lung"
-                                                                                   tabindex="35" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Lung problems/cough'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkLung"
+                                                                                       name="chkLung" value="Lung"
+                                                                                       tabindex="35" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkLung"
+                                                                                       name="chkLung" value="Lung"
+                                                                                       tabindex="35" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Lung problems/cough</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkUlcers">
-                                                                            <input type="checkbox" id="chkUlcers"
-                                                                                   name="chkUlcers" value="Ulcers"
-                                                                                   tabindex="36" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Ulcers/colitis'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkUlcers"
+                                                                                       name="chkUlcers" value="Ulcers"
+                                                                                       tabindex="36" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkUlcers"
+                                                                                       name="chkUlcers" value="Ulcers"
+                                                                                       tabindex="36" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Ulcers/colitis</b>
                                                                         </label>
                                                                     </div>
@@ -551,19 +973,47 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkLowBloodPressure">
-                                                                            <input type="checkbox"
-                                                                                   id="chkLowBloodPressure"
-                                                                                   name="chkLowBloodPressure"
-                                                                                   value="LowBloodPressure"
-                                                                                   tabindex="37" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Low blood pressure'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkLowBloodPressure"
+                                                                                       name="chkLowBloodPressure"
+                                                                                       value="LowBloodPressure"
+                                                                                       tabindex="37" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkLowBloodPressure"
+                                                                                       name="chkLowBloodPressure"
+                                                                                       value="LowBloodPressure"
+                                                                                       tabindex="37" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Low blood pressure</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkStroke">
-                                                                            <input type="checkbox" id="chkStroke"
-                                                                                   name="chkStroke" value="Stroke"
-                                                                                   tabindex="38" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Stroke'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkStroke"
+                                                                                       name="chkStroke" value="Stroke"
+                                                                                       tabindex="38" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkStroke"
+                                                                                       name="chkStroke" value="Stroke"
+                                                                                       tabindex="38" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Stroke</b>
                                                                         </label>
                                                                     </div>
@@ -573,17 +1023,43 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkLiver">
-                                                                            <input type="checkbox" id="chkLiver"
-                                                                                   name="chkLiver" value="Liver"
-                                                                                   tabindex="39" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Liver problems/Hepatitis'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkLiver"
+                                                                                       name="chkLiver" value="Liver"
+                                                                                       tabindex="39" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkLiver"
+                                                                                       name="chkLiver" value="Liver"
+                                                                                       tabindex="39" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Liver problems/Hepatitis</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkGastric">
-                                                                            <input type="checkbox" id="chkGastric"
-                                                                                   name="chkGastric"
-                                                                                   value="Gastric" tabindex="40" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Gastric irritation'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkGastric"
+                                                                                       name="chkGastric"
+                                                                                       value="Gastric" tabindex="40" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkGastric"
+                                                                                       name="chkGastric"
+                                                                                       value="Gastric" tabindex="40" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Gastric irritation</b>
                                                                         </label>
                                                                     </div>
@@ -593,17 +1069,45 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkHeartburn">
-                                                                            <input type="checkbox" id="chkHeartburn"
-                                                                                   name="chkHeartburn"
-                                                                                   value="Heartburn" tabindex="41" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Heartburn(reflux)'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkHeartburn"
+                                                                                       name="chkHeartburn"
+                                                                                       value="Heartburn" tabindex="41" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkHeartburn"
+                                                                                       name="chkHeartburn"
+                                                                                       value="Heartburn" tabindex="41" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Heartburn(reflux)</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkSinusProblems">
-                                                                            <input type="checkbox" id="chkSinusProblems"
-                                                                                   name="chkSinusProblems"
-                                                                                   value="SinusProblems" tabindex="42" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Sinus problems'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSinusProblems"
+                                                                                       name="chkSinusProblems"
+                                                                                       value="SinusProblems" tabindex="42" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSinusProblems"
+                                                                                       name="chkSinusProblems"
+                                                                                       value="SinusProblems" tabindex="42" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Sinus problems</b>
                                                                         </label>
                                                                     </div>
@@ -613,17 +1117,43 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkHeadaches">
-                                                                            <input type="checkbox" id="chkHeadaches"
-                                                                                   name="chkHeadaches"
-                                                                                   value="Headaches" tabindex="43" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Headaches/Migraines'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkHeadaches"
+                                                                                       name="chkHeadaches"
+                                                                                       value="Headaches" tabindex="43" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkHeadaches"
+                                                                                       name="chkHeadaches"
+                                                                                       value="Headaches" tabindex="43" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Headaches/Migraines</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkEarProblems">
-                                                                            <input type="checkbox" id="chkEarProblems"
-                                                                                   name="chkEarProblems"
-                                                                                   value="EarProblems" tabindex="44" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Ear problems'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkEarProblems"
+                                                                                       name="chkEarProblems"
+                                                                                       value="EarProblems" tabindex="44" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkEarProblems"
+                                                                                       name="chkEarProblems"
+                                                                                       value="EarProblems" tabindex="44" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Ear problems</b>
                                                                         </label>
                                                                     </div>
@@ -633,17 +1163,43 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkAnemia">
-                                                                            <input type="checkbox" id="chkAnemia"
-                                                                                   name="chkAnemia" value="Anemia"
-                                                                                   tabindex="45" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Anemia/blood problems'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkAnemia"
+                                                                                       name="chkAnemia" value="Anemia"
+                                                                                       tabindex="45" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkAnemia"
+                                                                                       name="chkAnemia" value="Anemia"
+                                                                                       tabindex="45" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Anemia/blood problems</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkArthritis">
-                                                                            <input type="checkbox" id="chkArthritis"
-                                                                                   name="chkArthritis"
-                                                                                   value="Arthritis" tabindex="46" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Arthritis'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkArthritis"
+                                                                                       name="chkArthritis"
+                                                                                       value="Arthritis" tabindex="46" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkArthritis"
+                                                                                       name="chkArthritis"
+                                                                                       value="Arthritis" tabindex="46" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Arthritis</b>
                                                                         </label>
                                                                     </div>
@@ -653,19 +1209,47 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkNeurological">
-                                                                            <input type="checkbox" id="chkNeurological"
-                                                                                   name="chkNeurological"
-                                                                                   value="Neurological" tabindex="47" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Neurological problems'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkNeurological"
+                                                                                       name="chkNeurological"
+                                                                                       value="Neurological" tabindex="47" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkNeurological"
+                                                                                       name="chkNeurological"
+                                                                                       value="Neurological" tabindex="47" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Neurological problems</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkSeasonalAllergies">
-                                                                            <input type="checkbox"
-                                                                                   id="chkSeasonalAllergies"
-                                                                                   name="chkSeasonalAllergies"
-                                                                                   value="SeasonalAllergies"
-                                                                                   tabindex="48" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Seasonal allergies'] == '1'){
+                                                                            ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkSeasonalAllergies"
+                                                                                       name="chkSeasonalAllergies"
+                                                                                       value="SeasonalAllergies"
+                                                                                       tabindex="48" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkSeasonalAllergies"
+                                                                                       name="chkSeasonalAllergies"
+                                                                                       value="SeasonalAllergies"
+                                                                                       tabindex="48" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Seasonal allergies</b>
                                                                         </label>
                                                                     </div>
@@ -675,17 +1259,43 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkSwollen">
-                                                                            <input type="checkbox" id="chkSwollen"
-                                                                                   name="chkSwollen"
-                                                                                   value="Swollen" tabindex="49" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Swollen ankles'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSwollen"
+                                                                                       name="chkSwollen"
+                                                                                       value="Swollen" tabindex="49" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSwollen"
+                                                                                       name="chkSwollen"
+                                                                                       value="Swollen" tabindex="49" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Swollen ankles</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <label for="chkCancer">
-                                                                            <input type="checkbox" id="chkCancer"
-                                                                                   name="chkCancer" value="Cancer"
-                                                                                   tabindex="50" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Cancer'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkCancer"
+                                                                                       name="chkCancer" value="Cancer"
+                                                                                       tabindex="50" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkCancer"
+                                                                                       name="chkCancer" value="Cancer"
+                                                                                       tabindex="50" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Cancer</b>
                                                                         </label>
                                                                     </div>
@@ -695,18 +1305,45 @@
                                                                 <div class="span12">
                                                                     <div class="span6">
                                                                         <label for="chkEyeDisorder">
-                                                                            <input type="checkbox" id="chkEyeDisorder"
-                                                                                   name="chkEyeDisorder"
-                                                                                   value="EyeDisorder" tabindex="51" disabled/>
+                                                                            <?php
+                                                                            if($medical_health_history_data['Eye disorder/Glaucoma'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkEyeDisorder"
+                                                                                       name="chkEyeDisorder"
+                                                                                       value="EyeDisorder" tabindex="51" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkEyeDisorder"
+                                                                                       name="chkEyeDisorder"
+                                                                                       value="EyeDisorder" tabindex="51" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Eye disorder/Glaucoma</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span6">
                                                                         <div class="control-group">
                                                                             <label for="chkOther">
+                                                                            <?php
+                                                                            if($medical_health_history_other_data['other'] == '1'){
+                                                                                ?>
                                                                                 <input type="checkbox" id="chkOther"
                                                                                        name="chkOther" value="Other"
-                                                                                       tabindex="52" disabled/>
+                                                                                       tabindex="52" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkOther"
+                                                                                       name="chkOther" value="Other"
+                                                                                       tabindex="52" disabled checked/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                                 <b> Other</b>
                                                                             </label>
 
@@ -727,10 +1364,10 @@
                                                             <button class="btn" data-dismiss="modal"
                                                                     aria-hidden="true"></i>Close
                                                             </button>
-                                                            <button class="btn btn-info" data-dismiss="modal"
-                                                                    aria-hidden="true">Edit
+                                                            <button class="btn btn-info" type="button" data-dismiss=""
+                                                                    aria-hidden="true" id="btnMedicalHealthHistoryEdit" name="btnMedicalHealthHistoryEdit" onclick="MedicalHealthHistoryEditAction();">Edit
                                                             </button>
-                                                            <button class="btn btn-success hidden" data-dismiss="modal">
+                                                            <button type="button" class="btn btn-success" data-dismiss="" id="btnMedicalHealthHistorySave" name="btnMedicalHealthHistorySave" onclick="MedicalHealthHistorySaveAction()">
                                                                 Save
                                                             </button>
                                                         </div>
@@ -786,7 +1423,7 @@
                                                            id="btnEditWomenHealthHistory" role="button"
                                                            class="btn btn-primary" data-toggle="modal"
                                                            data-backdrop="static" data-keyboard="false"
-                                                           onclick="ButtonSettings();"><i
+                                                           onclick="womenHealthButtonSettings();"><i
                                                                 class="icon-pencil icon-white"></i> Change
                                                         </a>
 
@@ -802,10 +1439,38 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div class="row-fluid">
+                                                                    <div class="alert alert-block alert-success fade in"
+                                                                         id="successWomenhealth">
+                                                                        <button data-dismiss="alert" class="close"
+                                                                                type="button">×
+                                                                        </button>
+                                                                        <h4 class="alert-heading text-center">Success! Profile
+                                                                            has been updated</h4>
+                                                                    </div>
+                                                                    <div class="alert alert-block alert-error fade in"
+                                                                         id="errorWomenhealth">
+                                                                        <button data-dismiss="alert" class="close"
+                                                                                type="button">×
+                                                                        </button>
+                                                                        <h4 class="alert-heading text-center">Error! Something
+                                                                            went wrong</h4>
+                                                                    </div>
                                                                     <div class="span12">
                                                                         <label for="chkPregnant">
-                                                                            <input type="checkbox" id="chkPregnant" name="chkPregnant"
-                                                                                   value="Pregnant" tabindex="17" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_womens_health_data['Are_you_pregnant'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkPregnant" name="chkPregnant"
+                                                                                       value="Pregnant" tabindex="17" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkPregnant" name="chkPregnant"
+                                                                                       value="Pregnant" tabindex="17" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Are you pregnant?</b>
                                                                         </label>
                                                                         <div class="control-group">
@@ -814,7 +1479,7 @@
                                                                             <div class="controls controls-row">
                                                                                 <input id="txtNumberOfWeeks" name="txtNumberOfWeeks" type="text"
                                                                                        class="input-block-level"
-                                                                                       placeholder="number of weeks here..." tabindex="18" disabled>
+                                                                                       placeholder="number of weeks here..." tabindex="18" value=" <?php echo $dental_health_history_womens_health_data["Number_of_weeks"]; ?>" disabled>
                                                                             </div>
                                                                         </div>
                                                                         <div class="control-group">
@@ -823,7 +1488,7 @@
                                                                             <div class="controls controls-row">
                                                                                 <input id="txtNumberOfPregnancies" name="txtNumberOfPregnancies" type="text"
                                                                                        class="input-block-level"
-                                                                                       placeholder="number of pregnancies here..." tabindex="19" disabled>
+                                                                                       placeholder="number of pregnancies here..." tabindex="19" value="<?php echo $dental_health_history_womens_health_data["Total_number_of_pregnancies"]; ?>" disabled>
                                                                             </div>
                                                                         </div>
                                                                         <div class="control-group">
@@ -832,7 +1497,7 @@
                                                                             <div class="controls controls-row">
                                                                                 <input id="txtNumberOfBirths" name="txtNumberOfBirths" type="text"
                                                                                        class="input-block-level"
-                                                                                       placeholder="number of births here..." tabindex="20" disabled>
+                                                                                       placeholder="number of births here..." tabindex="20" value="<?php echo $dental_health_history_womens_health_data["Number_of_births"]; ?>" disabled>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -840,17 +1505,29 @@
                                                                 <div class="row-fluid">
                                                                     <div class="span12">
                                                                         <label for="chkNursing">
-                                                                            <input type="checkbox" id="chkNursing" name="chkNursing"
-                                                                                   value="Nursing" tabindex="21" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_womens_health_data['Nursing'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkNursing" name="chkNursing"
+                                                                                       value="Nursing" tabindex="21" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkNursing" name="chkNursing"
+                                                                                       value="Nursing" tabindex="21" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Nursing?</b>
                                                                         </label>
                                                                         <div class="control-group">
                                                                             <label class="control-label" for="txtMenstruating"><b> Date of last menstrual period if you are still menstruating</b></label>
 
                                                                             <div class="controls controls-row">
-                                                                                <input id="dp2" name="txtMenstruating" type="text"
+                                                                                <input id="txtMenstruating" name="txtMenstruating" type="text"
                                                                                        placeholder="date of last menstrual period here..." size="16"
-                                                                                       class="m-ctrl-medium span12" tabindex="22" disabled>
+                                                                                       class="m-ctrl-medium span12" tabindex="22" value="<?php echo $dental_health_history_womens_health_data["if_you_are_still_menstruating"]; ?>" disabled>
                                                                             </div>
                                                                         </div>
                                                                         <div class="control-group">
@@ -859,7 +1536,7 @@
                                                                             <div class="controls controls-row">
                                                                                 <input id="txtBeginningPeriods" name="txtBeginningPeriods" type="text"
                                                                                        class="input-block-level"
-                                                                                       placeholder="beginning periods here..." tabindex="23" disabled>
+                                                                                       placeholder="beginning periods here..." tabindex="23" value="<?php echo $dental_health_history_womens_health_data["Age_at_beginning_of_periods"]; ?>" disabled>
                                                                             </div>
                                                                         </div>
                                                                         <div class="control-group">
@@ -868,7 +1545,7 @@
                                                                             <div class="controls controls-row">
                                                                                 <input id="txtEndPeriods" name="txtEndPeriods" type="text"
                                                                                        class="input-block-level"
-                                                                                       placeholder="end periods here..." tabindex="24" disabled>
+                                                                                       placeholder="end periods here..." tabindex="24" value="<?php echo $dental_health_history_womens_health_data["Age_at_end_of_periods"]; ?>" disabled>
                                                                                 <input id="txtIdentityWomenHealth" name="txtIdentity"
                                                                                        value="WomenHealthData" hidden>
                                                                                 <input id="txtPID" name="txtPID"
@@ -883,11 +1560,11 @@
                                                                 <button class="btn" data-dismiss="modal"
                                                                         aria-hidden="true"></i>Close
                                                                 </button>
-                                                                <button class="btn btn-info" data-dismiss="modal"
+                                                                <button class="btn btn-info" type="button" id="btnwomenHealthEdit" name="btnwomenHealthEdit" onclick="btnwomenHealthEditAction();"
                                                                         aria-hidden="true">Edit
                                                                 </button>
-                                                                <button class="btn btn-success hidden"
-                                                                        data-dismiss="modal">
+                                                                <button class="btn btn-success" type="button" id="btnwomenHealthSave" name="btnwomenHealthSave" onclick="btnwomenHealthSaveAction();"
+                                                                        >
                                                                     Save
                                                                 </button>
                                                             </div>
@@ -927,7 +1604,7 @@
                                                     <a href="#modelEditPastTreatment" id="btnEditPastTreatment"
                                                        role="button" class="btn btn-primary" data-toggle="modal"
                                                        data-backdrop="static" data-keyboard="false"
-                                                       onclick="ButtonSettings();"><i
+                                                       onclick="PastTreatmentButtonSettings();"><i
                                                             class="icon-pencil icon-white"></i> Change
                                                     </a>
 
@@ -943,30 +1620,88 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row-fluid">
+                                                                <div class="alert alert-block alert-success fade in"
+                                                                     id="successPastTreatment">
+                                                                    <button data-dismiss="alert" class="close"
+                                                                            type="button">×
+                                                                    </button>
+                                                                    <h4 class="alert-heading text-center">Success! Profile
+                                                                        has been updated</h4>
+                                                                </div>
+                                                                <div class="alert alert-block alert-error fade in"
+                                                                     id="errorPastTreatment">
+                                                                    <button data-dismiss="alert" class="close"
+                                                                            type="button">×
+                                                                    </button>
+                                                                    <h4 class="alert-heading text-center">Error! Something
+                                                                        went wrong</h4>
+                                                                </div>
                                                                 <div class="span12">
                                                                     <div class="span4">
                                                                         <label for="chkRemoval">
-                                                                            <input type="checkbox" id="chkRemoval"
-                                                                                   name="chkRemoval"
-                                                                                   value="Removal" tabindex="73" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Removal'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkRemoval"
+                                                                                       name="chkRemoval"
+                                                                                       value="Removal" tabindex="73" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkRemoval"
+                                                                                       name="chkRemoval"
+                                                                                       value="Removal" tabindex="73" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Removal</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkWoundTreatment">
-                                                                            <input type="checkbox"
-                                                                                   id="chkWoundTreatment"
-                                                                                   name="chkWoundTreatment"
-                                                                                   value="WoundTreatment"
-                                                                                   tabindex="74" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Wound treatment'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkWoundTreatment"
+                                                                                       name="chkWoundTreatment"
+                                                                                       value="WoundTreatment"
+                                                                                       tabindex="74" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox"
+                                                                                       id="chkWoundTreatment"
+                                                                                       name="chkWoundTreatment"
+                                                                                       value="WoundTreatment"
+                                                                                       tabindex="74" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Wound Treatment</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkFilling">
-                                                                            <input type="checkbox" id="chkFilling"
-                                                                                   name="chkFilling"
-                                                                                   value="Filling" tabindex="75" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Fillings'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkFilling"
+                                                                                       name="chkFilling"
+                                                                                       value="Filling" tabindex="75" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkFilling"
+                                                                                       name="chkFilling"
+                                                                                       value="Filling" tabindex="75" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Filling</b>
                                                                         </label>
                                                                     </div>
@@ -976,25 +1711,64 @@
                                                                 <div class="span12">
                                                                     <div class="span4">
                                                                         <label for="chkSealants">
-                                                                            <input type="checkbox" id="chkSealants"
-                                                                                   name="chkSealants"
-                                                                                   value="Sealants" tabindex="76" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Sealants'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSealants"
+                                                                                       name="chkSealants"
+                                                                                       value="Sealants" tabindex="76" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkSealants"
+                                                                                       name="chkSealants"
+                                                                                       value="Sealants" tabindex="76" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Sealants</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkRetainers">
-                                                                            <input type="checkbox" id="chkRetainers"
-                                                                                   name="chkRetainers"
-                                                                                   value="Retainers" tabindex="77" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Retainers'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkRetainers"
+                                                                                       name="chkRetainers"
+                                                                                       value="Retainers" tabindex="77" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkRetainers"
+                                                                                       name="chkRetainers"
+                                                                                       value="Retainers" tabindex="77" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Retainers</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkBraces">
-                                                                            <input type="checkbox" id="chkBraces"
-                                                                                   name="chkBraces"
-                                                                                   value="Braces" tabindex="78" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Braces'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkBraces"
+                                                                                       name="chkBraces"
+                                                                                       value="Braces" tabindex="78" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkBraces"
+                                                                                       name="chkBraces"
+                                                                                       value="Braces" tabindex="78" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Braces</b>
                                                                         </label>
                                                                     </div>
@@ -1004,25 +1778,64 @@
                                                                 <div class="span12">
                                                                     <div class="span4">
                                                                         <label for="chkCleaning">
-                                                                            <input type="checkbox" id="chkCleaning"
-                                                                                   name="chkCleaning"
-                                                                                   value="Cleaning" tabindex="79" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Cleaning'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkCleaning"
+                                                                                       name="chkCleaning"
+                                                                                       value="Cleaning" tabindex="79" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkCleaning"
+                                                                                       name="chkCleaning"
+                                                                                       value="Cleaning" tabindex="79" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Cleaning</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkPolishing">
-                                                                            <input type="checkbox" id="chkPolishing"
-                                                                                   name="chkPolishing"
-                                                                                   value="Polishing" tabindex="80" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Polishing'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkPolishing"
+                                                                                       name="chkPolishing"
+                                                                                       value="Polishing" tabindex="80" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkPolishing"
+                                                                                       name="chkPolishing"
+                                                                                       value="Polishing" tabindex="80" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Polishing</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkBridges">
-                                                                            <input type="checkbox" id="chkBridges"
-                                                                                   name="chkBridges"
-                                                                                   value="Bridges" tabindex="81" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Bridges'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkBridges"
+                                                                                       name="chkBridges"
+                                                                                       value="Bridges" tabindex="81" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkBridges"
+                                                                                       name="chkBridges"
+                                                                                       value="Bridges" tabindex="81" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Bridges</b>
                                                                         </label>
                                                                     </div>
@@ -1032,17 +1845,44 @@
                                                                 <div class="span12">
                                                                     <div class="span4">
                                                                         <label for="chkDentures">
-                                                                            <input type="checkbox" id="chkDentures"
-                                                                                   name="chkDentures"
-                                                                                   value="Dentures" tabindex="82" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Dentures'] == '1'){
+                                                                            ?>
+                                                                                <input type="checkbox" id="chkDentures"
+                                                                                       name="chkDentures"
+                                                                                       value="Dentures" tabindex="82" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkDentures"
+                                                                                       name="chkDentures"
+                                                                                       value="Dentures" tabindex="82" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
+
                                                                             <b> Dentures</b>
                                                                         </label>
                                                                     </div>
                                                                     <div class="span4">
                                                                         <label for="chkImplants">
-                                                                            <input type="checkbox" id="chkImplants"
-                                                                                   name="chkImplants"
-                                                                                   value="Implants" tabindex="83" disabled/>
+                                                                            <?php
+                                                                            if($dental_health_history_past_treatments_data['Implants'] == '1'){
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkImplants"
+                                                                                       name="chkImplants"
+                                                                                       value="Implants" tabindex="83" disabled checked/>
+                                                                            <?php
+                                                                            }else{
+                                                                                ?>
+                                                                                <input type="checkbox" id="chkImplants"
+                                                                                       name="chkImplants"
+                                                                                       value="Implants" tabindex="83" disabled/>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
+
                                                                             <b> Implants</b>
                                                                         </label>
                                                                         <input id="txtIdentityTreatment" name="txtIdentity"
@@ -1058,10 +1898,10 @@
                                                             <button class="btn" data-dismiss="modal"
                                                                     aria-hidden="true"></i>Close
                                                             </button>
-                                                            <button class="btn btn-info" data-dismiss="modal"
-                                                                    aria-hidden="true">Edit
+                                                            <button class="btn btn-info" type="button" id="pastTreatmentEdit" name="pastTreatmentEdit"
+                                                            onclick="pastTreatmentEditAction();" aria-hidden="true">Edit
                                                             </button>
-                                                            <button class="btn btn-success hidden" data-dismiss="modal">
+                                                            <button class="btn btn-success" type="button" id="pastTreatmentSave" name="pastTreatmentSave" onclick="pastTreatmentSaveAction();">
                                                                 Save
                                                             </button>
                                                         </div>

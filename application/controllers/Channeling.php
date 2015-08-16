@@ -103,4 +103,36 @@ class Channeling extends CI_Controller
 //            echo $this->input->post('txtIdentity');
 //        }
     }
+
+    function dentalHistory_save()
+    {
+        $dentalHealth_data = $this->input->post('dentalHealth');
+        $status = $this->channeling_model->updateDentalHealth($dentalHealth_data);
+
+        echo $status;
+    }
+
+    function medicalHistory_save()
+    {
+        $medicalHealth_data = $this->input->post('medicalHealth');
+        $status = $this->channeling_model->medecalHealthHostory($medicalHealth_data);
+
+        echo $status;
+    }
+
+    function pastTreatment_save()
+    {
+        $pastTreatment_data = $this->input->post('pastTreatment');
+        $status = $this->channeling_model->pastTreatment($pastTreatment_data);
+
+        echo $status;
+    }
+
+    function womenHealth_save(){
+        $womenHealth_data = $this->input->post('womenHealth');
+        $status = $this->channeling_model->womenHealth($womenHealth_data);
+
+        echo $status;
+
+    }
 }
