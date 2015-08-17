@@ -70,6 +70,9 @@
 <script src="<?php echo base_url(); ?>assets/js/gritter.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/pulstate.js" type="text/javascript"></script>
 
+<!-- Image Picker -->
+<script src="<?php echo base_url(); ?>assets/assets/image-picker/image-picker.js" type="text/javascript"></script>
+
 <script src="<?php echo base_url(); ?>assets/js/app.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/profile_update.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/app-validation.js" type="text/javascript"></script>

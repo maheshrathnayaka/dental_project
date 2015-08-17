@@ -43,6 +43,7 @@
     <link href="<?php echo base_url(); ?>assets/assets/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"
           type="text/css"/>
     <link href="<?php echo base_url(); ?>assets/assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>assets/assets/image-picker/image-picker.css" rel="stylesheet"/>
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
     <script type="text/javascript">
         var BASE_URL = "<?php echo base_url();?>";
