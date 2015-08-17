@@ -29,4 +29,16 @@ class Search_model extends CI_Model
         $query = $General->get('tbl_patient');
         return $query->result_array();
     }
+
+    public function save_to_queue($queue_data){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->insert('tbl_patients_queue', $queue_data);
+        return $General->insert_id();
+    }
+
+    public function insert_channel_history($history_data){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->insert('tbl_channel_history', $history_data);
+        return $General->insert_id();
+    }
 }
