@@ -12,9 +12,9 @@
         <div class="row-fluid">
             <div class="span12">
                 <!-- BEGIN SAMPLE FORMPORTLET-->
-                <div class="widget green">
+                <div class="widget purple">
                     <div class="widget-title">
-                        <h4><i class="icon-camera"></i> Gallery</h4>
+                        <h4><i class="icon-link"></i> Select Images using Web Application </h4>
                             <span class="tools">
                             <a href="javascript:;" class="icon-chevron-down"></a>
                             <a href="javascript:;" class="icon-remove"></a>

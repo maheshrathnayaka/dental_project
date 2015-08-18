@@ -13,7 +13,7 @@
             <div class="span12">
                 <div class="widget purple">
                     <div class="widget-title">
-                        <h4><i class="icon-edit"></i> Knowledge Base</h4>
+                        <h4><i class="icon-link"></i> Knowledge Base</h4>
                            <span class="tools">
                                <a href="javascript:;" class="icon-chevron-down"></a>
                            </span>

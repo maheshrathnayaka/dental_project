@@ -33,7 +33,7 @@ class Knowledge extends CI_Controller
 
     public function desktop_application(){
         $dynamic_data = array(
-            'title' => 'Knowledge Base - Desktop Application'
+            'title' => 'Knowledge Base - Desktop Application',
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');
