@@ -62,15 +62,27 @@ class Knowledge extends CI_Controller
         if(!empty($DesktopImages)) {
             $N = count($DesktopImages);
         }
+        $user_id = $_SESSION['user_id'];
+        if (!file_exists('path/to/directory')) {
+            mkdir(FCPATH . 'uploads/' . $user_id, 0777, true);
+        }
         foreach($DesktopImages as $key => $value){
-//            $newfile = explode('/', $value);
+            $newfile = explode('/', $value);
 //            write_file(base_url().'uploads/'.$newfile[count($newfile)-1] , $value, 'r+');
-//            copy($value, base_url().'uploads/'.$newfile[count($newfile)-1]);
+            $sour = FCPATH.'tempImg/'.$newfile[count($newfile)-1];
+            $dest = FCPATH.'uploads/'.$user_id.'/'.$newfile[count($newfile)-1];
+            copy($sour, $dest);
+//            move_uploaded_file($sour, $dest);
+//            write_file($sour, $dest, 'r+');
+//            copy(FCPATH.'tempImg/'.$newfile[count($newfile)-1], FCPATH.'uploads/'.$newfile[count($newfile)-1]);
         }
         $dynamic_data = array(
             'title' => 'Knowledge Base - Add Comments',
             'imgs' => $DesktopImages,
-            'img_count' => $N
+            'img_count' => $N,
+            'cpath' => FCPATH,
+            'sour' => $sour,
+            'dest' => $dest
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');

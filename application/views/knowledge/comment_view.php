@@ -28,7 +28,7 @@
                                     <!-- The GRID System -->
                                     <div class="metro-gal-container noborder norounded dark-bg-entries">
                                         <?php
-                                        $imgdir = 'tempImg/'; //Pick your folder
+                                        $imgdir = 'uploads/'.$_SESSION['user_id'].'/'; //Pick your folder
                                         $allowed_types = array('png', 'jpg', 'jpeg', 'bmp'); //Allowed types of files
                                         $dimg = opendir($imgdir);//Open directory
                                         while ($imgfile = readdir($dimg)) {
@@ -42,6 +42,9 @@
                                         //Echo out the images and their paths incased in an li.
                                         for ($x = 0; $x < $totimg; $x++) {
                                             ?>
+<!--                                            <h1>--><?php //echo $cpath; ?><!--</h1>-->
+<!--                                            <h1>--><?php //echo $sour; ?><!--</h1>-->
+<!--                                            <h1>--><?php //echo $dest; ?><!--</h1>-->
                                             <div class="row-fluid">
                                                 <div class="span12">
                                                     <div class="row-fluid about-us">
