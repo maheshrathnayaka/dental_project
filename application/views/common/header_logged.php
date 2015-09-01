@@ -8,7 +8,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8"/>
-    <title><?php echo $title ?></title>
+    <title><?php echo $title; ?></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
@@ -67,6 +67,25 @@
                 <span class="icon-bar"></span>
                 <span class="arrow"></span>
             </a>
+            <div class="top-nav ">
+                <ul class="nav pull-right top-menu" >
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="<?php echo base_url(); ?>assets/img/avatar1_small.jpg" alt="">
+                            <span class="username"><?php echo $doc_name; ?></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> My Settings</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/home/logout"><i class="icon-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
         </div>
     </div>
     <!-- END TOP NAVIGATION BAR -->

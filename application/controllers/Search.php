@@ -70,8 +70,8 @@ class Search extends CI_Controller
         $success_queue = $this->Search_model->save_to_queue($queue_data);
         $success_history = $this->Search_model->insert_channel_history($history_data);
 
-        var_dump($success_queue);
-        var_dump($success_history);
+        //var_dump($success_queue);
+        //var_dump($success_history);
 
         if($success_queue == 0 && $success_history > 0){
             $search_data=$this->Search_model->get_all_patients();

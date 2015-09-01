@@ -13,4 +13,11 @@ class Telehealth_model extends CI_Model {
         parent::__construct();
 
     }
+
+    public function get_online_doc_list()
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $query = $General->query("SELECT doc_id, doc_name, doc_status FROM tbl_doctor WHERE doc_status = 1  ORDER BY doc_name ASC;");
+        return $query->result_array();
+    }
 }
