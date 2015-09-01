@@ -11,6 +11,7 @@ class Knowledge_model extends CI_Model {
 
     public function __construct(){
         parent::__construct();
+        $this->load->helper('date');
 
     }
 
@@ -32,4 +33,24 @@ class Knowledge_model extends CI_Model {
         return $query->row_array();
     }
 
+    public function save_patient_images($image_data){
+        $Knowledge = $this->load->database('group_knwbase', TRUE);
+        $Knowledge->insert('knwbase_img', $image_data);
+        return $Knowledge->insert_id();
+    }
+
+    public function get_patient_images($pid){
+        $Knowledge = $this->load->database('group_knwbase', TRUE);
+        $Knowledge->select('image_path, image_id, image_name, comment, date_added');
+        $Knowledge->where('patient_id', $pid);
+        $query = $Knowledge->get('knwbase_img');
+        return $query->result_array();
+    }
+
+    public function get_medications(){
+        $Knowledge = $this->load->database('group_knwbase', TRUE);
+        $Knowledge->select('medication_id, medication_name, description');
+        $query = $Knowledge->get('medication');
+        return $query->result_array();
+    }
 }

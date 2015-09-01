@@ -59,7 +59,8 @@
                                                                             <b style="color: black">Comment</b>
                                                                         </label>
                                                                         <div class="controls controls-row">
-                                                    <textarea class="input-block-level" style="resize: none;" id="txtAreaComment" name="txtAreaComment[]" placeholder="comment here..."></textarea>
+                                                                            <input type="hidden" value="<?php echo base_url() . $imgdir . $a_img[$x]; ?>" id="txtCommentImg" name="txtCommentImg[]">
+                                                                            <textarea class="input-block-level" style="resize: none;" id="txtAreaComment" name="txtAreaComment[]" placeholder="comment here..."></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -82,6 +83,8 @@
                                 </button>
                                 <a href="<?php echo base_url(); ?>index.php/knowledge"
                                    class="btn btn-large btn-success"><i class=" icon-arrow-left"></i> Back</a>
+                                <input type="hidden" name="flagImages" id="flagImages" value="comment">
+                                <input type="hidden" name="userId" id="userId" value="<?php echo $_SESSION['user_id']; ?>">
                             </div>
                     </div>
                     </form>

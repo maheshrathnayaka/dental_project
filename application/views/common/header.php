@@ -23,7 +23,6 @@
     <link href="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
     <link href="<?php echo base_url(); ?>assets/assets/metr-folio/css/metro-gallery.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/assets/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url(); ?>assets/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>assets/assets/uniform/css/uniform.default.css"/>
     <link href="<?php echo base_url(); ?>assets/assets/chosen-bootstrap/chosen/chosen.css" rel="stylesheet"
           type="text/css"/>

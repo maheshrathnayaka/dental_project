@@ -27,7 +27,7 @@
                                          <span class="bold">
                                              <h4>
                                                  <b>
-                                                     Please select images that are wish to save on patient's profile
+                                                     Please select images that you wish to save on patient's profile
                                                  </b>
                                              </h4>
                                          </span>

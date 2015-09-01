@@ -13,6 +13,8 @@ class Knowledge extends CI_Controller
         parent::__construct();
         $this->load->helper('url');
         $this->load->helper('file');
+        $this->load->helper('date');
+        $this->load->model('knowledge_model');
     }
 
     public function index()
@@ -48,8 +50,41 @@ class Knowledge extends CI_Controller
     }
 
     public function skip_photo(){
+        $status = 'no';
+        if(isset($_POST['flagImages'])){
+            if($_POST['flagImages'] == "comment") {
+                $image_path = $_POST['txtCommentImg'];
+                $image_comment = $_POST['txtAreaComment'];
+                $patient_id = $_SESSION['user_id'];
+                $datetime = unix_to_human(time(), TRUE, 'us');
+                $N = count($image_path);
+                $status = 'yes';
+                for($i=0; $i < $N; $i++) {
+//                    echo($image_path[$i] . " ");
+//                    echo($image_comment[$i] . " ");
+//                    echo($patient_id);
+//                    $now = time();
+//                    echo 'Time : '.unix_to_human($now, TRUE, 'us').' ';
+                    $image_name = explode('/', $image_path[$i]);
+//                    echo $image_name[count($image_name)-1].'';
+                    $image_data = array(
+                        'image_name' => $image_name[count($image_name)-1],
+                        'image_path' => $image_path[$i],
+                        'date_added' => $datetime,
+                        'comment' => $image_comment[$i],
+                        'patient_id' => $patient_id
+                    );
+                    $this->knowledge_model->save_patient_images($image_data);
+                }
+            }
+        }
+        $images_fetch = $this->knowledge_model->get_patient_images($_SESSION['user_id']);
+        $medications = $this->knowledge_model->get_medications();
         $dynamic_data = array(
-            'title' => 'Knowledge Base - Desktop Application'
+            'title' => 'Knowledge Base - Medications',
+            'images_status' => $status,
+            'images' => $images_fetch,
+            'medications' => $medications
         );
         $this->load->view('common/header', $dynamic_data);
         $this->load->view('common/sidebar');
@@ -63,7 +98,7 @@ class Knowledge extends CI_Controller
             $N = count($DesktopImages);
         }
         $user_id = $_SESSION['user_id'];
-        if (!file_exists('path/to/directory')) {
+        if (!file_exists(FCPATH . 'uploads/' . $user_id)) {
             mkdir(FCPATH . 'uploads/' . $user_id, 0777, true);
         }
         foreach($DesktopImages as $key => $value){
@@ -76,6 +111,7 @@ class Knowledge extends CI_Controller
 //            write_file($sour, $dest, 'r+');
 //            copy(FCPATH.'tempImg/'.$newfile[count($newfile)-1], FCPATH.'uploads/'.$newfile[count($newfile)-1]);
         }
+        delete_files(FCPATH.'tempImg/');
         $dynamic_data = array(
             'title' => 'Knowledge Base - Add Comments',
             'imgs' => $DesktopImages,
@@ -88,20 +124,5 @@ class Knowledge extends CI_Controller
         $this->load->view('common/sidebar');
         $this->load->view('knowledge/comment_view');
         $this->load->view('common/footer');
-    }
-
-    public function image_population()
-    {
-
-    }
-
-    public function image_comparison()
-    {
-
-    }
-
-    public function comment_image()
-    {
-
     }
 }
