@@ -1,5 +1,5 @@
 /**
- * Created by Daminda on 8/9/2015.
+ * Created by Mahesh Rathnayaka on 8/3/2015.
  */
 
 
@@ -9,13 +9,13 @@ $(document).ready(function () {
     $('#successProfileEditDH').hide();
 
 
-    $('#btnDiagnose').click(function () {
-        $.gritter.add({
-            title: 'Success!',
-            text: 'Profile has been updated',
-            time: 3000
-        });
-    });
+    //$('#btnDiagnose').click(function () {
+    //    $.gritter.add({
+    //        title: 'Success!',
+    //        text: 'Profile has been updated',
+    //        time: 3000
+    //    });
+    //});
     $('#dp1').datepicker({
         format: "yyyy-mm-dd",
         todayBtn: "linked",

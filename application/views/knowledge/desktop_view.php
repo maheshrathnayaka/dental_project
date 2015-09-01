@@ -20,6 +20,7 @@
                             </span>
                     </div>
                     <div class="widget-body">
+                        <form class="form-vertical" id="formDesktopView" method="post" action="<?php echo base_url(); ?>index.php/cmnt">
                         <div class="megaexamples">
                             <!--  FILTER STYLED  -->
                             <span class="label label-important bold"> NOTE : THIS CANNOT BE UNDO! </span>
@@ -53,7 +54,7 @@
                                             <div class="mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-red">
                                             </div>
                                             <div class="pull-right">
-                                                <input id="chkDesktopImages" name="chkDesktopImages" value="<?php echo base_url().$imgdir . $a_img[$x]; ?>" type="checkbox" style="width:50px; height:50px;">
+                                                <input id="chkDesktopImages" name="chkDesktopImages[]" value="<?php echo base_url().$imgdir . $a_img[$x]; ?>" type="checkbox" style="width:50px; height:50px;">
                                             </div>
                                             <!-- The Link Buttons -->
                                             <div class="mega-coverbuttons">
@@ -66,12 +67,13 @@
                                 </div>
                             </div>
                             <div class="form-actions text-right">
-                                <button id="btnDesktopImageSelectProceed" name="btnDesktopImageSelectProceed" type="button" class="btn btn-large btn-success">
+                                <button id="btnDesktopImageSelectProceed" name="btnDesktopImageSelectProceed" type="submit" class="btn btn-large btn-success">
                                     <i class="icon-ok"></i> Proceed
                                 </button>
                                 <a href="<?php echo base_url(); ?>index.php/knowledge" class="btn btn-large btn-success"><i class=" icon-arrow-left"></i> Back</a>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
                 <!-- END SAMPLE FORM PORTLET-->

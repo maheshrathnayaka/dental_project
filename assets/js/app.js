@@ -30,4 +30,9 @@ jQuery(document).ready(function() {
 });
 // END - GALLERY
 
-$("select").imagepicker()
+$("select").imagepicker();
+
+//$('#btnDiagnose').click(function () {
+//
+//});
+
