@@ -69,10 +69,10 @@
                                     <select id="dpTreatment" name="dpTreatment" data-placeholder="treatments here..."
                                             class="chzn-select span12">
                                         <option value="no">-- Please Select --</option>
-                                        <option value="urgent">Urgent Treatment </option>
-                                        <option value="restorative">Restorative Care </option>
-                                        <option value="preventive">Preventive Care </option>
-                                        <option value="other">Other </option>
+                                        <option value="urgent">Urgent Treatment</option>
+                                        <option value="restorative">Restorative Care</option>
+                                        <option value="preventive">Preventive Care</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -104,31 +104,63 @@
                                     <select id="dpDisease" name="dpDisease" data-placeholder="disease here..."
                                             class="chzn-select span12">
                                         <option value="no">-- Please Select --</option>
-                                        <option value="caries">Caries </option>
+                                        <option value="caries">Caries</option>
+                                        <option value="initial">Initial</option>
+                                        <option value="dentine">Dentine</option>
+                                        <option value="pulp">Pulp exposed</option>
                                         <option value="periodontal">Periodontal diseases</option>
-                                        <option value="lesions">Lesions </option>
-                                        <option value="malocclusion">Malocclusion </option>
-                                        <option value="fluorosis">Fluorosis </option>
-                                        <option value="sensitivity">Sensitivity </option>
-                                        <option value="oropharyngeal">Oropharyngeal Cancer </option>
-                                        <option value="missing">Missing Teeth </option>
-                                        <option value="dry">Dry Mouth </option>
-                                        <option value="extra">Extra Oral </option>
-                                        <option value="other">Other </option>
+                                        <option value="gingivitis">Gingivitis</option>
+                                        <option value="periodontitis">Periodontitis</option>
+                                        <option value="lesions">Lesions</option>
+                                        <option value="premalignant">Premalignant</option>
+                                        <option value="cancerous">Cancerous</option>
+                                        <option value="nonCancerous">Non Cancerous</option>
+                                        <option value="malocclusion">Malocclusion</option>
+                                        <option value="cls2d1">Class 2 Division 1</option>
+                                        <option value="cls2d1">Class 2 Division 2</option>
+                                        <option value="cls2d1">Class 3</option>
+                                        <option value="fluorosis">Fluorosis</option>
+                                        <option value="sensitivity">Sensitivity</option>
+                                        <option value="toothDecay">Tooth decay</option>
+                                        <option value="fractured">Fractured teeth</option>
+                                        <option value="wornFilling">Worn fillings</option>
+                                        <option value="gumDisease">Gum disease</option>
+                                        <option value="wornTooth">Worn tooth enamel</option>
+                                        <option value="exposedTooth">Exposed tooth root</option>
+                                        <option value="oropharyngeal">Oropharyngeal Cancer</option>
+                                        <option value="sores">Sores that bleed easily or do not heal</option>
+                                        <option value="thick">Thick or hard spot or lump</option>
+                                        <option value="roughened">Roughened or crusted area</option>
+                                        <option value="numbness">Numbness, pain or tenderness</option>
+                                        <option value="change">Change in the way your teeth fit together when you bite
+                                            down
+                                        </option>
+                                        <option value="missing">Missing Teeth</option>
+                                        <option value="dry">Dry Mouth</option>
+                                        <option value="extra">Extra Oral</option>
+                                        <option value="facial">Facial issues</option>
+                                        <option value="swellings">Swellings</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="row-fluid">
-                            <div class="control-group">
-                                <label for="dpCategory" class="control-label"><b>Category </b></label>
-                                <div class="controls">
-                                    <select id="dpCategory" name="dpCategory" data-placeholder="category here..."
-                                            class="chzn-select span12">
-                                        <option value="no">-- Please Select --</option>
-                                    </select>
-                                </div>
-                            </div>
+                        <!--                        <div class="row-fluid">-->
+                        <!--                            <div class="control-group">-->
+                        <!--                                <label for="dpCategory" class="control-label"><b>Category </b></label>-->
+                        <!--                                <div class="controls">-->
+                        <!--                                    <select id="dpCategory" name="dpCategory" data-placeholder="category here..."-->
+                        <!--                                            class="chzn-select span12">-->
+                        <!--                                        <option value="no">-- Please Select --</option>-->
+                        <!--                                    </select>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <div class="form-actions text-right">
+                            <button id="btnPatientSave" name="btnPatientSave" type="submit" class="btn btn-large btn-success" tabindex="85"><i
+                                    class="icon-ok"></i> Print Receipt
+                            </button>
+                            <a href="<?php echo base_url(); ?>" class="btn btn-large btn-success"><i class=" icon-remove"></i> Channelling Queue</a>
                         </div>
                     </form>
                 </div>

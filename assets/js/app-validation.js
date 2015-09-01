@@ -62,93 +62,95 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    $('#dpDisease').change(function(){
-        if($('#dpDisease').val() == "no"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>'
-            );
-        }else if($('#dpDisease').val() == "caries"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="initial">Initial </option>' +
-                '<option value="dentine">Dentine </option>' +
-                '<option value="pulp">Pulp exposed </option>'
-            );
-        }else if($('#dpDisease').val() == "periodontal"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="gingivitis">Gingivitis </option>' +
-                '<option value="periodontitis">Periodontitis </option>'
-            );
-        }else if($('#dpDisease').val() == "lesions"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="premalignant">Premalignant </option>' +
-                '<option value="cancerous">Cancerous </option>' +
-                '<option value="nonCancerous">Non Cancerous </option>'
-            );
-        }else if($('#dpDisease').val() == "malocclusion"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="cls2d1">Class 2 Division 1 </option>' +
-                '<option value="cls2d2">Class 2 Division 2 </option>' +
-                '<option value="cls3">Class 3 </option>'
-            );
-        }else if($('#dpDisease').val() == "fluorosis"){
-            $('#dpCategory').prop('disabled', true);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- No Category --</option>'
-            );
-        }else if($('#dpDisease').val() == "sensitivity"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="toothDecay">Tooth decay </option>' +
-                '<option value="fractured">Fractured teeth </option>' +
-                '<option value="wornFilling">Worn fillings </option>' +
-                '<option value="gumDisease">Gum disease </option>' +
-                '<option value="wornTooth">Worn tooth enamel </option>' +
-                '<option value="exposedTooth">Exposed tooth root </option>'
-            );
-        }else if($('#dpDisease').val() == "oropharyngeal"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="sores">Sores that bleed easily or do not heal</option>' +
-                '<option value="thick">Thick or hard spot or lump</option>' +
-                '<option value="roughened">Roughened or crusted area</option>' +
-                '<option value="numbness">Numbness, pain or tenderness</option>' +
-                '<option value="change">Change in the way your teeth fit together when you bite down</option>'
-            );
-        }else if($('#dpDisease').val() == "missing"){
-            $('#dpCategory').prop('disabled', true);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- No Category --</option>'
-            );
-        }else if($('#dpDisease').val() == "dry"){
-            $('#dpCategory').prop('disabled', true);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- No Category --</option>'
-            );
-        }else if($('#dpDisease').val() == "extra"){
-            $('#dpCategory').prop('disabled', false);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- Please Select --</option>' +
-                '<option value="facial">Facial issues </option>' +
-                '<option value="swellings">Swellings </option>'
-            );
-        }else if($('#dpDisease').val() == "other"){
-            $('#dpCategory').prop('disabled', true);
-            $('#dpCategory').empty().append(
-                '<option value="no">-- No Category --</option>'
-            );
-        }
-    });
+    //$('#dpDisease').change(function(){
+    //    var val = $(this).val();
+    //    if(val == "no"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>'
+    //        );
+    //    }else if(val == "caries"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $("#dpCategory").html("<option value='test'>item1: test 1</option><option value='test2'>item1: test 2</option>");
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="initial">Initial </option>' +
+    //            '<option value="dentine">Dentine </option>' +
+    //            '<option value="pulp">Pulp exposed </option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "periodontal"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="gingivitis">Gingivitis </option>' +
+    //            '<option value="periodontitis">Periodontitis </option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "lesions"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="premalignant">Premalignant </option>' +
+    //            '<option value="cancerous">Cancerous </option>' +
+    //            '<option value="nonCancerous">Non Cancerous </option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "malocclusion"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="cls2d1">Class 2 Division 1 </option>' +
+    //            '<option value="cls2d2">Class 2 Division 2 </option>' +
+    //            '<option value="cls3">Class 3 </option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "fluorosis"){
+    //        $('#dpCategory').prop('disabled', true);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- No Category --</option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "sensitivity"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="toothDecay">Tooth decay </option>' +
+    //            '<option value="fractured">Fractured teeth </option>' +
+    //            '<option value="wornFilling">Worn fillings </option>' +
+    //            '<option value="gumDisease">Gum disease </option>' +
+    //            '<option value="wornTooth">Worn tooth enamel </option>' +
+    //            '<option value="exposedTooth">Exposed tooth root </option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "oropharyngeal"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="sores">Sores that bleed easily or do not heal</option>' +
+    //            '<option value="thick">Thick or hard spot or lump</option>' +
+    //            '<option value="roughened">Roughened or crusted area</option>' +
+    //            '<option value="numbness">Numbness, pain or tenderness</option>' +
+    //            '<option value="change">Change in the way your teeth fit together when you bite down</option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "missing"){
+    //        $('#dpCategory').prop('disabled', true);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- No Category --</option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "dry"){
+    //        $('#dpCategory').prop('disabled', true);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- No Category --</option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "extra"){
+    //        $('#dpCategory').prop('disabled', false);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- Please Select --</option>' +
+    //            '<option value="facial">Facial issues </option>' +
+    //            '<option value="swellings">Swellings </option>'
+    //        );
+    //    }else if($('#dpDisease').val() == "other"){
+    //        $('#dpCategory').prop('disabled', true);
+    //        $('#dpCategory').empty().append(
+    //            '<option value="no">-- No Category --</option>'
+    //        );
+    //    }
+    //});
     $('#btnPatientSave').click(function(){
         if(validation.valid()){
             $('#divErrorArea').show();
