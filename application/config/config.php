@@ -305,7 +305,7 @@ $config['cache_query_string'] = FALSE;
 | http://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '1234asdfgh56789qwert';
 
 /*
 |--------------------------------------------------------------------------
@@ -362,7 +362,8 @@ $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
-
+$config['sess_use_database'] = TRUE;
+$config['sess_table_name'] = 'tbl_ci_sessions';
 /*
 |--------------------------------------------------------------------------
 | Cookie Related Variables

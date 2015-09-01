@@ -23,8 +23,15 @@ class Search_model extends CI_Model
     public function get_all_patients()
     {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('patient_id, patient_first_name, patient_last_name, patient_gender, TIMESTAMPDIFF(YEAR, patient_birthday, CURDATE()) AS patient_age, date_time');
-        $General->join('tbl_channel_history', 'tbl_channel_history.P_ID = tbl_patient.patient_id','left');
+        $General->select('P_ID');
+        $qry = $General->get('tbl_patients_queue');
+        $pid_list=array();
+        foreach ($qry->result_array() as $row)
+        {
+            array_push($pid_list, $row['P_ID']);
+        }
+        $General->select('patient_id, patient_first_name, patient_last_name, patient_gender, TIMESTAMPDIFF(YEAR, patient_birthday, CURDATE()) AS patient_age');
+        $General->where_not_in('tbl_patient.patient_id',$pid_list);
         $General->order_by("patient_first_name", "asc");
         $query = $General->get('tbl_patient');
         return $query->result_array();
