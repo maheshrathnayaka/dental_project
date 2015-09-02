@@ -21,7 +21,7 @@
                 </div>
                 <div class="widget-body">
                     <form class="form-vertical" id="formTreatmentMedication" method="post"
-                          action="<?php echo base_url(); ?>index.php/reg">
+                          action="<?php echo base_url(); ?>index.php/chnl">
                         <div class="row-fluid">
                             <div class="control-group">
                                 <?php
@@ -157,10 +157,10 @@
                         <!--                            </div>-->
                         <!--                        </div>-->
                         <div class="form-actions text-right">
-                            <button id="btnPatientSave" name="btnPatientSave" type="submit" class="btn btn-large btn-success" tabindex="85"><i
-                                    class="icon-ok"></i> Print Receipt
+                            <button id="btnPatientDetails" name="btnPatientDetails" type="submit" class="btn btn-large btn-success"><i
+                                    class="icon-ok"></i> Channelling Queue
                             </button>
-                            <a href="<?php echo base_url(); ?>" class="btn btn-large btn-success"><i class=" icon-remove"></i> Channelling Queue</a>
+                            <a class="btn btn-success btn-large hidden-print" onclick="javascript:window.print();">Print Receipt <i class="icon-print icon-big"></i></a>
                         </div>
                     </form>
                 </div>

@@ -58,3 +58,4 @@ $route['web'] = '/knowledge/web_application';
 $route['desk'] = '/knowledge/desktop_application';
 $route['skip'] = '/knowledge/skip_photo';
 $route['cmnt'] = '/knowledge/add_comments';
+$route['chnl'] = '/knowledge/channel_done';

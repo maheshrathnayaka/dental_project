@@ -125,4 +125,8 @@ class Knowledge extends CI_Controller
         $this->load->view('knowledge/comment_view');
         $this->load->view('common/footer');
     }
+
+    public function channel_done(){
+
+    }
 }
