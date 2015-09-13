@@ -53,4 +53,11 @@ class Knowledge_model extends CI_Model {
         $query = $Knowledge->get('medication');
         return $query->result_array();
     }
+
+    public function unlink_channel_queue($pid, $channel_data){
+        $General = $this->load->database('group_gen', TRUE);
+        $General->where('P_ID', $pid);
+        $status = $General->update('tbl_patients_queue', $channel_data);
+        return $status;
+    }
 }

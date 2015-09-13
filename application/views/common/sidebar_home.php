@@ -40,6 +40,12 @@
                 </a>
             </li>
             <li class="sub-menu">
+                <a href="<?php echo base_url(); ?>index.php/simulation" class="">
+                    <i class="icon-eye-open"></i>
+                    <span>3D-Simulation</span>
+                </a>
+            </li>
+            <li class="sub-menu">
                 <a href="<?php echo base_url(); ?>index.php/contact" class="">
                     <i class="icon-bullhorn "></i>
                     <span>Contact Us</span>

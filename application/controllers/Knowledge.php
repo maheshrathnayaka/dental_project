@@ -14,6 +14,7 @@ class Knowledge extends CI_Controller
         $this->load->helper('url');
         $this->load->helper('file');
         $this->load->helper('date');
+        $this->load->model('channeling_model');
         $this->load->model('knowledge_model');
     }
 
@@ -60,13 +61,7 @@ class Knowledge extends CI_Controller
                 $N = count($image_path);
                 $status = 'yes';
                 for($i=0; $i < $N; $i++) {
-//                    echo($image_path[$i] . " ");
-//                    echo($image_comment[$i] . " ");
-//                    echo($patient_id);
-//                    $now = time();
-//                    echo 'Time : '.unix_to_human($now, TRUE, 'us').' ';
                     $image_name = explode('/', $image_path[$i]);
-//                    echo $image_name[count($image_name)-1].'';
                     $image_data = array(
                         'image_name' => $image_name[count($image_name)-1],
                         'image_path' => $image_path[$i],
@@ -103,13 +98,9 @@ class Knowledge extends CI_Controller
         }
         foreach($DesktopImages as $key => $value){
             $newfile = explode('/', $value);
-//            write_file(base_url().'uploads/'.$newfile[count($newfile)-1] , $value, 'r+');
             $sour = FCPATH.'tempImg/'.$newfile[count($newfile)-1];
             $dest = FCPATH.'uploads/'.$user_id.'/'.$newfile[count($newfile)-1];
             copy($sour, $dest);
-//            move_uploaded_file($sour, $dest);
-//            write_file($sour, $dest, 'r+');
-//            copy(FCPATH.'tempImg/'.$newfile[count($newfile)-1], FCPATH.'uploads/'.$newfile[count($newfile)-1]);
         }
         delete_files(FCPATH.'tempImg/');
         $dynamic_data = array(
@@ -126,7 +117,24 @@ class Knowledge extends CI_Controller
         $this->load->view('common/footer');
     }
 
-    public function channel_done(){
+    public function get_numbering(){
+        return $this->channeling_model->get_channel_queue();
+    }
 
+    public function channel_done(){
+        $channel_data = array(
+            'check_status' => 0,
+            'channel_number' => 0
+        );
+        $unlink_queue = $this->knowledge_model->unlink_channel_queue($_SESSION['user_id'], $channel_data);
+        $data = $this->get_numbering();
+        $dynamic_data = array(
+            'title' => 'Channeling Queue',
+            'channeling_data' => $data
+        );
+        $this->load->view('common/header', $dynamic_data);
+        $this->load->view('common/sidebar');
+        $this->load->view('core/channeling_view');
+        $this->load->view('common/footer');
     }
 }

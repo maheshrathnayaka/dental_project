@@ -32,7 +32,7 @@
            <div class="row-fluid">
                <div class="span12">
                    <div class="span6">
-
+                       <img src="../assets/simulation/cbsevere/3.JPG" alt="" height="400" width="600">
                    </div>
                    <div class="span6">
                        <div class="span8">
@@ -74,7 +74,7 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <div class="span6">
-
+                            <img src="../assets/simulation/ccsevere/1.JPG" alt="" height="400" width="600">
                         </div>
                         <div class="span6">
                         <div class="span8">
@@ -117,7 +117,7 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <div class="span6">
-
+                            <img src="../assets/simulation/cdsevere/1.JPG" alt="" height="400" width="600">
                         </div>
                         <div class="span6">
                             <div class="span8">
