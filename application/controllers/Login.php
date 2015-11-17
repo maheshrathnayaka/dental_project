@@ -52,7 +52,8 @@ class Login extends CI_Controller
             $sess_array = array();
             foreach ($result as $row) {
                 $sess_array = array(
-                    'userid' => $row->doc_username,
+                    'username' => $row->doc_username,
+                    'userid' => $row->doc_id,
                     'doc_name' => $row->doc_name,
                     'logged_in' => true
                 );
@@ -60,7 +61,7 @@ class Login extends CI_Controller
             }
             return TRUE;
         } else {
-            $this->form_validation->set_message('check_database', 'Invalid email or password');
+            $this->form_validation->set_message('check_database', 'Invalid username or password');
             return false;
         }
     }

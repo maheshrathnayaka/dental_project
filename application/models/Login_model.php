@@ -15,7 +15,7 @@ class Login_model extends CI_Model {
 
     function login($username, $password) {
         $General = $this->load->database('group_gen', TRUE);
-        $General->select('doc_username, doc_password, doc_name');
+        $General->select('doc_id, doc_username, doc_password, doc_name');
         $General->from('tbl_doctor');
         $General->where('doc_username', $username);
         $General->where('doc_password', $password);
