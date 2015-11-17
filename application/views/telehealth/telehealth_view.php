@@ -20,51 +20,113 @@
                                     </span>
                     </div>
                     <div class="widget-body">
-                        <ul class="breadcrumb">
-                            <li style="font-size: 125%;">
-                                <b>Online Doctors</b>
-                            </li>
-                        </ul>
-                        <?php if (empty($online_list)) {
+                        <?php
+                        if($this->session->flashdata('message') == "success"){
                             ?>
-                            <div class="alert alert-block alert-info fade in text-center">
+                            <div class="alert alert-block alert-success fade in" id="divSuccessArea">
                                 <button data-dismiss="alert" class="close" type="button">x</button>
-                                <h4 class="alert-heading">Oops! Currently There are no Online Doctors Available</h4>
+                                <h4 class="alert-heading text-center">Success! Request has been sent to the consultant.</h4>
                             </div>
                             <?php
-                        } else { ?>
-
-                            <!--BEGIN METRO STATES-->
-                            <div class="row-fluid">
-                                <!--BEGIN METRO STATES-->
-                                <div class="metro-nav metro-fix-view">
-                                    <?php
-                                    foreach ($online_list as $element) {
-                                        ?>
-                                        <div class="metro-nav-block nav-light-blue double">
-                                            <a href="<?php echo base_url(); ?>index.php/channeling/profile/<?php echo $element["doc_id"]; ?>"
-                                               data-original-title="">
-                                                <div class="text-center">
-                                                    <h3>
-                                                        <b><?php echo $element["doc_name"]; ?></b>
-                                                    </h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <?php
-                                    }
-                                    ?>
-                                </div>
-                                <!--END METRO STATES-->
+                        }else if($this->session->flashdata('message') == "removed"){
+                            ?>
+                            <div class="alert alert-block alert-success fade in" id="divSuccessArea">
+                                <button data-dismiss="alert" class="close" type="button">x</button>
+                                <h4 class="alert-heading text-center">Successfully removed from the list.</h4>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-success"><i class="icon-ok"></i> Save</button>
-                            <button type="button" class="btn btn-success"><i class=" icon-remove"></i> Cancel</button>
+                        <div class="widget">
+                            <div class="widget-body">
+                                <ul class="breadcrumb">
+                                    <li style="font-size: 125%;">
+                                        <b>Pending Requests for Consultation</b>
+                                    </li>
+                                </ul>
+                                <?php if (empty($pending_list)) {
+                                    ?>
+                                    <div class="alert alert-block alert-info fade in text-center">
+                                        <button data-dismiss="alert" class="close" type="button">x</button>
+                                        <h4 class="alert-heading">Oops! Currently There are no pending requests.</h4>
+                                    </div>
+                                    <?php
+                                } else { ?>
+
+                                    <!--BEGIN METRO STATES-->
+                                    <div class="row-fluid">
+                                        <!--BEGIN METRO STATES-->
+                                        <div class="metro-nav metro-fix-view">
+                                            <h3>Click on a request to view video online.</h3>
+                                            <?php
+                                            foreach ($pending_list as $element) {
+                                                ?>
+                                                <div class="metro-nav-block nav-block-red double">
+                                                    <a href="<?php echo base_url(); ?>index.php/telehealth/video_live/<?php echo $element["doc_id"]; ?>"
+                                                       data-original-title="">
+                                                        <div class="text-center">
+                                                            <h3>
+                                                                <b><?php echo $element["doc_name"]; ?></b>
+                                                            </h3>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <!--END METRO STATES-->
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                            </div>
                         </div>
-                        </form>
+                        <div class="widget">
+                            <div class="widget-body">
+                                <ul class="breadcrumb">
+                                    <li style="font-size: 125%;">
+                                        <b>Online Doctors</b>
+                                    </li>
+                                </ul>
+                                <?php if (empty($online_list)) {
+                                    ?>
+                                    <div class="alert alert-block alert-info fade in text-center">
+                                        <button data-dismiss="alert" class="close" type="button">x</button>
+                                        <h4 class="alert-heading">Oops! Currently There are no Online Doctors Available</h4>
+                                    </div>
+                                    <?php
+                                } else { ?>
+
+                                    <!--BEGIN METRO STATES-->
+                                    <div class="row-fluid">
+                                        <!--BEGIN METRO STATES-->
+                                        <div class="metro-nav metro-fix-view">
+                                            <h3>Click on a doctor to send a consultation request.</h3>
+                                            <?php
+                                            foreach ($online_list as $element) {
+                                                ?>
+                                                <div class="metro-nav-block nav-light-blue double">
+                                                    <a href="<?php echo base_url(); ?>index.php/telehealth/request_online/<?php echo $element["doc_id"]; ?>"
+                                                       data-original-title="">
+                                                        <div class="text-center">
+                                                            <h3>
+                                                                <b><?php echo $element["doc_name"]; ?></b>
+                                                            </h3>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <!--END METRO STATES-->
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
                         <!-- END FORM-->
                     </div>
                 </div>

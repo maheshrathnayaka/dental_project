@@ -49,14 +49,14 @@
         <div class="metro single-size terques login">
             <input type="submit" class="btn login-btn" value="Login">
         </div>
-        <div class="login-footer">
+        <!--div class="login-footer">
             <div class="remember-hint pull-left">
                 <input type="checkbox" id=""> Remember Me
             </div>
             <div class="forgot-hint pull-right">
                 <a id="forget-password" class="" href="javascript:;">Forgot Password?</a>
             </div>
-        </div>
+        </div-->
     </div>
 </form>
 </body>
