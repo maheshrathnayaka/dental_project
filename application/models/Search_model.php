@@ -19,6 +19,25 @@ class Search_model extends CI_Model
         $query = $General->get('tbl_patient');
         return $query->result_array();
     }
+    public function get_patients_count()
+    {
+        $General = $this->load->database('group_gen', TRUE);
+        $General->select('P_ID');
+        $qry = $General->get('tbl_patients_queue');
+        $pid_list=array();
+        foreach ($qry->result_array() as $row)
+        {
+            array_push($pid_list, $row['P_ID']);
+        }
+        $General->select('count(patient_id) as idcount');
+        $General->where_not_in('tbl_patient.patient_id',$pid_list);
+        $query = $General->get('tbl_patient');
+        foreach ($query->result() as $row)
+        {
+            $count = $row->idcount;
+        }
+        return $count;
+    }
 
     public function get_all_patients()
     {
@@ -33,6 +52,7 @@ class Search_model extends CI_Model
         $General->select('patient_id, patient_first_name, patient_last_name, patient_gender, TIMESTAMPDIFF(YEAR, patient_birthday, CURDATE()) AS patient_age');
         $General->where_not_in('tbl_patient.patient_id',$pid_list);
         $General->order_by("patient_first_name", "asc");
+        //$General->limit(10,$offset);
         $query = $General->get('tbl_patient');
         return $query->result_array();
     }
